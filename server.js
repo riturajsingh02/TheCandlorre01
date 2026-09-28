@@ -75,11 +75,9 @@ app.use(express.json({
 }));
 app.use(express.urlencoded({ extended: true }));
 
-// Helper to resolve static or HTML file from frontend or root
+// Helper to resolve frontend files exclusively from frontend folder
 function resolveFrontendFile(...subpaths) {
-  const frontendPath = path.join(__dirname, 'frontend', ...subpaths);
-  if (fs.existsSync(frontendPath)) return frontendPath;
-  return path.join(__dirname, ...subpaths);
+  return path.join(__dirname, 'frontend', ...subpaths);
 }
 
 // Sitemaps & robots
@@ -133,10 +131,9 @@ app.use((req, res, next) => {
   next();
 });
 
-// Serve static frontend assets from separated frontend directory first, asset folder, and root fallback
+// Serve static frontend and asset files
 app.use(express.static(path.join(__dirname, 'frontend')));
 app.use('/asset', express.static(path.join(__dirname, 'asset')));
-app.use(express.static(__dirname));
 
 // Direct page routes
 app.get('/', (req, res) => {

@@ -56,23 +56,22 @@ function updateCartUI() {
       <div class="cart-item-row" data-cart-key="${itemKey}">
         <img src="${item.image || 'asset/one.jpg'}" alt="${item.title}" onerror="this.onerror=null; this.src='asset/one.jpg';" />
         <div class="cart-item-info">
-          <h5>${item.title}</h5>
-          ${variantLabel}
-          <p>₹${((item.price || 0) * (item.qty || 1)).toLocaleString('en-IN')}</p>
-          <div class="qty-controls">
-            <button type="button" aria-label="Decrease quantity" onclick="modifyCartItemQty('${itemKey}', -1)">−</button>
-            <span>${item.qty}</span>
-            <button type="button" aria-label="Increase quantity" onclick="modifyCartItemQty('${itemKey}', 1)">+</button>
+          <div class="cart-item-header-row">
+            <h5>${item.title}</h5>
+            <button type="button" class="cart-remove-btn" aria-label="Remove item" onclick="modifyCartItemQty('${itemKey}', -9999)">✕</button>
+          </div>
+          <div class="cart-item-meta">
+            ${variantLabel}
+            <span class="cart-item-price">₹${((item.price || 0) * (item.qty || 1)).toLocaleString('en-IN')}</span>
+          </div>
+          <div class="cart-item-bottom-row">
+            <div class="qty-controls">
+              <button type="button" aria-label="Decrease quantity" onclick="modifyCartItemQty('${itemKey}', -1)">−</button>
+              <span>${item.qty}</span>
+              <button type="button" aria-label="Increase quantity" onclick="modifyCartItemQty('${itemKey}', 1)">+</button>
+            </div>
           </div>
         </div>
-        <button 
-          type="button" 
-          style="color: var(--maroon-light); font-size: 1.1rem; padding: 4px; cursor: pointer;" 
-          aria-label="Remove item" 
-          onclick="modifyCartItemQty('${itemKey}', -9999)"
-        >
-          ✕
-        </button>
       </div>
     `;
   }).join('');
