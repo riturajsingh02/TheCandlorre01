@@ -1,0 +1,38 @@
+[
+  {
+    "id": "sess_56bc5bd107f3196031e88c54ca5fa63c",
+    "userId": "rec_1789829616965_3t7jfle",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiJzZXNzXzU2YmM1YmQxMDdmMzE5NjAzMWU4OGM1NGNhNWZhNjNjIiwidXNlcklkIjoicmVjXzE3ODk4Mjk2MTY5NjVfM3Q3amZsZSIsImlhdCI6MTc4OTgyOTYxNiwiZXhwIjoxNzkyNDIxNjE2fQ.vhMvDbEPWkvVCZ9x-nq8VtVVVPRb4Ggm4ja5ks4YM8M",
+    "userAgent": "",
+    "ipAddress": "127.0.0.1",
+    "remember": true,
+    "isRevoked": false,
+    "expiresAt": "2026-10-19T14:53:36.971Z",
+    "createdAt": "2026-09-19T14:53:36.971Z",
+    "updatedAt": "2026-09-19T14:53:36.971Z"
+  },
+  {
+    "id": "sess_dc35ba11b1e22f531268f91bd4b2bc67",
+    "userId": "rec_1789829616965_3t7jfle",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiJzZXNzX2RjMzViYTExYjFlMjJmNTMxMjY4ZjkxYmQ0YjJiYzY3IiwidXNlcklkIjoicmVjXzE3ODk4Mjk2MTY5NjVfM3Q3amZsZSIsImlhdCI6MTc4OTgyOTYzOCwiZXhwIjoxNzkyNDIxNjM4fQ.sXbIGfCQuNtS3okweI2uc8fp-LYFjzFcBlq7xN24MVE",
+    "userAgent": "",
+    "ipAddress": "127.0.0.1",
+    "remember": true,
+    "isRevoked": true,
+    "expiresAt": "2026-10-19T14:53:58.547Z",
+    "createdAt": "2026-09-19T14:53:58.547Z",
+    "updatedAt": "2026-09-19T14:53:58.563Z"
+  },
+  {
+    "id": "sess_c6ffb2773a8399dbc09fe0db3c7f65b3",
+    "userId": "rec_1789829616965_3t7jfle",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiJzZXNzX2M2ZmZiMjc3M2E4Mzk5ZGJjMDlmZTBkYjNjN2Y2NWIzIiwidXNlcklkIjoicmVjXzE3ODk4Mjk2MTY5NjVfM3Q3amZsZSIsImlhdCI6MTc4OTgyOTY1NCwiZXhwIjoxNzkyNDIxNjU0fQ.qnBMlv52VEHNEnxq7hJAF1clzv75_pcP61davSSrFrY",
+    "userAgent": "",
+    "ipAddress": "127.0.0.1",
+    "remember": true,
+    "isRevoked": false,
+    "expiresAt": "2026-10-19T14:54:14.204Z",
+    "createdAt": "2026-09-19T14:54:14.204Z",
+    "updatedAt": "2026-09-19T14:54:14.204Z"
+  }
+]

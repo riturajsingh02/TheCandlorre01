@@ -1,0 +1,22 @@
+[
+  {
+    "firstName": "Rituraj",
+    "lastName": "Singh",
+    "displayName": "Rituraj Singh",
+    "email": "riturajsinghrana153@gmail.com",
+    "phone": "",
+    "passwordHash": null,
+    "googleId": "google_test_12345",
+    "authProvider": "google",
+    "role": "customer",
+    "tier": "Sanctuary Connoisseur",
+    "isEmailVerified": true,
+    "isPhoneVerified": false,
+    "failedLoginAttempts": 0,
+    "lockoutUntil": null,
+    "lastLoginAt": null,
+    "id": "rec_1789829616965_3t7jfle",
+    "createdAt": "2026-09-19T14:53:36.965Z",
+    "updatedAt": "2026-09-19T14:53:36.965Z"
+  }
+]

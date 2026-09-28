@@ -1,0 +1,125 @@
+[
+  {
+    "id": "act_1790276881689_ttzog",
+    "type": "inventory",
+    "title": "Inventory Adjusted",
+    "description": "Diamond Glow Jar (Black) changed from 10 to 6 units.",
+    "severity": "info",
+    "metadata": {
+      "productId": "test_candle_1",
+      "variantId": "var_black",
+      "sku": "TEST-BLK",
+      "previousQty": 10,
+      "currentQty": 6
+    },
+    "createdAt": "2026-09-24T19:08:01.689Z",
+    "updatedAt": "2026-09-24T19:08:01.689Z"
+  },
+  {
+    "id": "act_1790276881691_z3exa",
+    "type": "inventory",
+    "title": "Inventory Adjusted",
+    "description": "Diamond Glow Jar (Black) changed from 6 to 5 units.",
+    "severity": "info",
+    "metadata": {
+      "productId": "test_candle_1",
+      "variantId": "var_black",
+      "sku": "TEST-BLK",
+      "previousQty": 6,
+      "currentQty": 5
+    },
+    "createdAt": "2026-09-24T19:08:01.691Z",
+    "updatedAt": "2026-09-24T19:08:01.691Z"
+  },
+  {
+    "id": "act_1790276881780_yxh9z",
+    "type": "inventory",
+    "title": "Inventory Adjusted",
+    "description": "Diamond Glow Jar (Black) changed from 5 to 2 units.",
+    "severity": "info",
+    "metadata": {
+      "productId": "test_candle_1",
+      "variantId": "var_black",
+      "sku": "TEST-BLK",
+      "previousQty": 5,
+      "currentQty": 2
+    },
+    "createdAt": "2026-09-24T19:08:01.780Z",
+    "updatedAt": "2026-09-24T19:08:01.780Z"
+  },
+  {
+    "id": "act_1790276881796_xz7sq",
+    "type": "inventory",
+    "title": "Inventory Adjusted",
+    "description": "Diamond Glow Jar (Black) changed from 2 to 0 units.",
+    "severity": "critical",
+    "metadata": {
+      "productId": "test_candle_1",
+      "variantId": "var_black",
+      "sku": "TEST-BLK",
+      "previousQty": 2,
+      "currentQty": 0
+    },
+    "createdAt": "2026-09-24T19:08:01.796Z",
+    "updatedAt": "2026-09-24T19:08:01.796Z"
+  },
+  {
+    "id": "act_1790276881801_we219",
+    "type": "inventory",
+    "title": "Inventory Restocked",
+    "description": "Diamond Glow Jar (Black) changed from 0 to 5 units.",
+    "severity": "info",
+    "metadata": {
+      "productId": "test_candle_1",
+      "variantId": "var_black",
+      "sku": "TEST-BLK",
+      "previousQty": 0,
+      "currentQty": 5
+    },
+    "createdAt": "2026-09-24T19:08:01.801Z",
+    "updatedAt": "2026-09-24T19:08:01.801Z"
+  },
+  {
+    "id": "act_1790276881854_sgwz3",
+    "type": "order",
+    "title": "New Prepaid Order #1234",
+    "description": "Ananya Sharma placed order for ₹2,499 (1 items).",
+    "severity": "info",
+    "metadata": {
+      "orderId": "1234",
+      "orderNumber": "1234",
+      "totalPrice": 2499,
+      "isCod": false
+    },
+    "createdAt": "2026-09-24T19:08:01.854Z",
+    "updatedAt": "2026-09-24T19:08:01.854Z"
+  },
+  {
+    "id": "act_1790276881858_iyk6e",
+    "type": "order",
+    "title": "New COD Order #1235",
+    "description": "Vikram Mehta placed order for ₹1,698 (1 items).",
+    "severity": "warning",
+    "metadata": {
+      "orderId": "1235",
+      "orderNumber": "1235",
+      "totalPrice": 1698,
+      "isCod": true
+    },
+    "createdAt": "2026-09-24T19:08:01.858Z",
+    "updatedAt": "2026-09-24T19:08:01.858Z"
+  },
+  {
+    "id": "act_1790276881874_078ck",
+    "type": "system",
+    "title": "System Error in Shopify Inventory Sync",
+    "description": "Failed with token shpat_***[REDACTED] and key rzp_***[REDACTED]",
+    "severity": "critical",
+    "metadata": {
+      "serviceName": "Shopify Inventory Sync",
+      "safeError": "Failed with token shpat_***[REDACTED] and key rzp_***[REDACTED]"
+    },
+    "createdAt": "2026-09-24T19:08:01.874Z",
+    "updatedAt": "2026-09-24T19:08:01.874Z"
+  }
+]

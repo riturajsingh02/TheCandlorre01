@@ -1,0 +1,15 @@
+[
+  {
+    "id": "adm_1790597346953_de3c9806",
+    "email": "thecandlorre@gmail.com",
+    "name": "The Candlorre Admin",
+    "role": "superadmin",
+    "passwordHash": "$2b$12$W/6QJ5SGO5B6xxFT1d5rYujbYp3i1gCKRdgAfMxciYwUyQm/gst5C",
+    "failedAttempts": 0,
+    "lockoutUntil": null,
+    "createdAt": "2026-09-28T12:09:06.953Z",
+    "updatedAt": "2026-09-28T12:10:00.742Z",
+    "lastLoginAt": "2026-09-28T12:10:00.742Z",
+    "lastLoginIp": "127.0.0.1"
+  }
+]

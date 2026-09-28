@@ -1,0 +1,24 @@
+[
+  {
+    "id": "test_candle_1_var_black",
+    "productId": "test_candle_1",
+    "variantId": "var_black",
+    "sku": "TEST-BLK",
+    "productTitle": "Diamond Glow Jar",
+    "variantTitle": "Black",
+    "productHandle": "",
+    "imageUrl": "",
+    "price": 999,
+    "lastPrice": 849,
+    "quantity": 5,
+    "previousQuantity": 5,
+    "state": "LOW",
+    "previousState": "LOW",
+    "lastAlertSentAt": "2026-09-24T19:08:01.830Z",
+    "lastAlertSentType": "BACK_IN_STOCK",
+    "lastRestockAt": "2026-09-24T19:08:01.801Z",
+    "lastOutOfStockAt": "2026-09-24T19:08:01.795Z",
+    "createdAt": "2026-09-24T19:08:01.683Z",
+    "updatedAt": "2026-09-24T19:08:01.832Z"
+  }
+]

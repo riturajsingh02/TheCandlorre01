@@ -1,0 +1,1905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#2B050B" />
+  <title>The Candlorre — Luxury Hand-Poured Botanical Candles</title>
+  <meta name="description"
+    content="Micro-batch botanical soy wax candles handcrafted with pure cotton wicks, IFRA-certified therapeutic oils, and bespoke fragrances. Free shipping above ₹999. Cash on Delivery available." />
+  <meta property="og:title" content="The Candlorre — Luxury Hand-Poured Botanical Candles" />
+  <meta property="og:description" content="Micro-batch botanical soy wax candles handcrafted with pure cotton wicks, IFRA-certified therapeutic oils, and bespoke fragrances. Free shipping above ₹999. Cash on Delivery available." />
+  <link rel="icon" type="image/x-icon" href="asset/logo.png">
+  <!--
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+  <!-- 
+     UNIFIED DYNAMIC HEADER CONTAINER (ANNOUNCEMENT + NAVIGATION)
+        -->
+  <div class="header-wrapper" id="headerWrapper">
+    <!-- 
+       TOP ANNOUNCEMENT BAR
+          -->
+    <div class="announcement-bar" role="region" aria-label="Store Announcement">
+      <button type="button" class="announcement-nav-btn announcement-prev" aria-label="Previous announcement">
+        <svg aria-hidden="true" focusable="false" width="11" height="11" viewBox="0 0 16 18" fill="none">
+          <path d="M11 1L3 9L11 17" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+        </svg>
+      </button>
+      <div class="announcement-carousel" id="announcementCarousel">
+        <div class="announcement-item active" data-index="0">
+          <span>✦ Free Express Shipping on Orders Above ₹999</span>
+        </div>
+        <div class="announcement-item" data-index="1">
+          <span>♡ Cash on Delivery (COD) Available Across India</span>
+        </div>
+        <div class="announcement-item" data-index="2">
+          <span>🕯️ Bulk Orders Accepted</span>
+        </div>
+        <div class="announcement-item" data-index="3">
+          <span>🌿 100% Natural Botanical Soy Wax</span>
+        </div>
+        <div class="announcement-item" data-index="4">
+          <span>♡ Handcrafted With Love</span>
+        </div>
+      </div>
+      <button type="button" class="announcement-nav-btn announcement-next" aria-label="Next announcement">
+        <svg aria-hidden="true" focusable="false" width="11" height="11" viewBox="0 0 16 18" fill="none">
+          <path d="M5 17L13 9L5 1" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- 
+          STICKY HEADER NAVIGATION (LOGO LEFT, MENU CENTER)
+          -->
+    <header class="site-header" id="header">
+      <!-- Left Group: Mobile Hamburger Button & Brand Logo -->
+      <div class="nav-left-group">
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Navigation Menu" title="Menu">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <div class="nav-brand">
+          <a href="index.html" aria-label="The Candlorre Home">
+            <h1 class="brand-title">The Candlorre</h1>
+            <span class="brand-tagline">ILLUMINATE LUXURY</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Center Navigation Links (Desktop) -->
+      <nav class="nav-center" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#new-arrivals">Candles</a></li>
+          <li>
+            <a href="#rituals">Home Decor <span class="badge-pill">Soon</span></a>
+          </li>
+          <li>
+            <a href="#journal">Journal <span class="badge-pill">Soon</span></a>
+          </li>
+          <li><a href="#faq">Client FAQs</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions (Search, Tracking, Wishlist, Bag, Login) -->
+      <div class="nav-actions">
+        <!-- Search Button -->
+        <button class="action-btn" id="searchTrigger" aria-label="Search Fragrances" title="Search">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+        </button>
+
+        <!-- Order Tracking Page Link -->
+        <a href="tracking.html" class="action-btn" aria-label="Track Order" title="Track Order">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"></path>
+            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+          </svg>
+        </a>
+
+        <!-- Wishlist Button -->
+        <button class="action-btn" id="wishlistTrigger" aria-label="Wishlist" title="View Wishlist">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+          </svg>
+          <span class="counter-badge" id="wishlistCount">0</span>
+        </button>
+
+        <!-- Cart Button -->
+        <button class="action-btn" id="cartTrigger" aria-label="Cart" title="Shopping Bag">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+            <path d="M3 6h18"></path>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="counter-badge" id="cartCount">0</span>
+        </button>
+
+        <!-- Login / Account Page Link -->
+        <a href="login.html" class="action-btn" id="accountHeaderBtn" aria-label="Client Sign In" title="Sign In">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+      </div>
+    </header>
+  </div>
+  <div class="header-spacer" id="headerSpacer" aria-hidden="true"></div>
+
+  <!-- 
+        MOBILE SLIDE-OUT NAVIGATION DRAWER
+        -->
+  <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="mobile-drawer-brand">
+        <h3 class="brand-title mobile-brand-title">The Candlorre</h3>
+        <span class="mobile-brand-sub">ILLUMINATE LUXURY</span>
+      </div>
+      <button class="btn-close" id="closeMobileNavBtn" aria-label="Close menu">✕</button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li>
+        <a href="#catalog" class="mobile-nav-link">
+          <span>Candles (30+ Fragrances)</span>
+          <span class="link-arrow">→</span>
+        </a>
+      </li>
+      <li>
+        <a href="#decor" class="mobile-nav-link">
+          <span>Home Décor <span class="badge-pill">Soon</span></span>
+          <span class="link-arrow">→</span>
+        </a>
+      </li>
+      <li>
+        <a href="#journal" class="mobile-nav-link">
+          <span>Journal <span class="badge-pill">Soon</span></span>
+          <span class="link-arrow">→</span>
+        </a>
+      </li>
+      <li>
+        <a href="#about" class="mobile-nav-link">
+          <span>Our Story &amp; Craft</span>
+          <span class="link-arrow">→</span>
+        </a>
+      </li>
+      <li>
+        <a href="#faq" class="mobile-nav-link">
+          <span>Client FAQs</span>
+          <span class="link-arrow">→</span>
+        </a>
+      </li>
+      <li>
+        <a href="login.html" class="mobile-nav-link" id="mobAccountLink">
+          <span>Client Sign In</span>
+          <span class="link-arrow">→</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <p class="mob-footer-tag">Concierge Assistance</p>
+      <a href="https://wa.me/919762831995?text=Hello%20The%20Candlorre,%20I'd%20like%20assistance%20with%20fragrances"
+        target="_blank" rel="noopener" class="mob-whatsapp-btn">
+        <span>Chat on WhatsApp</span>
+        <span>↗</span>
+      </a>
+      <p class="mob-footer-email">support@thecandlorre.com</p>
+    </div>
+  </aside>
+
+  <!-- 
+       4. LUXURY WELCOME HERO (CLEAN, NO CANDLES)
+        -->
+  <main>
+    <section class="welcome-hero" id="home">
+      <!-- Gradient Defs for Filigree Frames -->
+      <svg width="0" height="0" style="position: absolute;" aria-hidden="true">
+        <defs>
+          <linearGradient id="goldFoilGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFF0C2" />
+            <stop offset="40%" stop-color="#D4AF37" />
+            <stop offset="75%" stop-color="#9C771B" />
+            <stop offset="100%" stop-color="#F5E296" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <!-- Ornate Gold Filigree Border & Corners -->
+      <div class="hero-ornate-frame" aria-hidden="true">
+        <!-- Top Left Flourish -->
+        <svg class="corner-filigree top-left" viewBox="0 0 100 100" fill="none">
+          <path d="M10 10 H60 C35 15 25 35 25 70 V10 Z" fill="url(#goldFoilGrad)" opacity="0.3" />
+          <path d="M8 8 H70 C40 16 16 40 8 70 V8 Z" stroke="url(#goldFoilGrad)" stroke-width="1.5" />
+          <path d="M18 18 C30 25 25 45 18 55" stroke="url(#goldFoilGrad)" stroke-width="1" />
+          <circle cx="18" cy="18" r="3" fill="url(#goldFoilGrad)" />
+          <circle cx="68" cy="8" r="2" fill="url(#goldFoilGrad)" />
+          <circle cx="8" cy="68" r="2" fill="url(#goldFoilGrad)" />
+        </svg>
+
+        <!-- Top Right Flourish -->
+        <svg class="corner-filigree top-right" viewBox="0 0 100 100" fill="none">
+          <path d="M90 10 H40 C65 15 75 35 75 70 V10 Z" fill="url(#goldFoilGrad)" opacity="0.3" />
+          <path d="M92 8 H30 C60 16 84 40 92 70 V8 Z" stroke="url(#goldFoilGrad)" stroke-width="1.5" />
+          <path d="M82 18 C70 25 75 45 82 55" stroke="url(#goldFoilGrad)" stroke-width="1" />
+          <circle cx="82" cy="18" r="3" fill="url(#goldFoilGrad)" />
+          <circle cx="32" cy="8" r="2" fill="url(#goldFoilGrad)" />
+          <circle cx="92" cy="68" r="2" fill="url(#goldFoilGrad)" />
+        </svg>
+
+        <!-- Bottom Left Flourish -->
+        <svg class="corner-filigree bottom-left" viewBox="0 0 100 100" fill="none">
+          <path d="M8 92 H70 C40 84 16 60 8 30 V92 Z" stroke="url(#goldFoilGrad)" stroke-width="1.5" />
+          <path d="M18 82 C30 75 25 55 18 45" stroke="url(#goldFoilGrad)" stroke-width="1" />
+          <circle cx="18" cy="82" r="3" fill="url(#goldFoilGrad)" />
+          <circle cx="68" cy="92" r="2" fill="url(#goldFoilGrad)" />
+          <circle cx="8" cy="32" r="2" fill="url(#goldFoilGrad)" />
+        </svg>
+
+        <!-- Bottom Right Flourish -->
+        <svg class="corner-filigree bottom-right" viewBox="0 0 100 100" fill="none">
+          <path d="M92 92 H30 C60 84 84 60 92 30 V92 Z" stroke="url(#goldFoilGrad)" stroke-width="1.5" />
+          <path d="M82 82 C70 75 75 55 82 45" stroke="url(#goldFoilGrad)" stroke-width="1" />
+          <circle cx="82" cy="82" r="3" fill="url(#goldFoilGrad)" />
+          <circle cx="32" cy="92" r="2" fill="url(#goldFoilGrad)" />
+          <circle cx="92" cy="32" r="2" fill="url(#goldFoilGrad)" />
+        </svg>
+
+        <!-- Inner Inset Double Line -->
+        <div class="inner-gold-hairline"></div>
+      </div>
+
+      <!-- CENTER CONTENT -->
+      <div class="hero-content">
+        <p class="hero-pretitle">✦ Hand Poured • Luxury Candles✦</p>
+        <h2 class="hero-brand-name">The Candlorre</h2>
+
+        <div class="hero-divider-group">
+          <!-- <span class="divider-leaf">❧</span> -->
+          <span class="divider-line-gold"></span>
+          <p class="hero-tagline">Illuminate Luxury</p>
+          <span class="divider-line-gold"></span>
+          <!-- <span class="divider-leaf">☙</span> -->
+        </div>
+
+        <div class="hero-actions">
+          <a href="#rituals" class="btn btn-gold">Explore Our Products</a>
+          <a href="#about" class="btn btn-outline">Our Craftsmanship</a>
+        </div>
+      </div>
+
+      <!-- Scroll indicator cue -->
+      <a href="#catalog" class="scroll-cue" aria-label="Scroll to collection">
+        <span>Scroll to Discover</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M7 10l5 5 5-5"></path>
+        </svg>
+      </a>
+    </section>
+
+    <!-- 
+         5. TRUST PILLARS STRIP
+          -->
+    <section class="trust-strip" aria-label="Brand Guarantees">
+      <div class="trust-card">
+        <div class="trust-icon" aria-hidden="true">🌿</div>
+        <h4>100% Organic Soy Wax</h4>
+        <p>Zero Paraffin • Non-Toxic</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon" aria-hidden="true">⏱️</div>
+        <h4>10+ Hours Clean Burn</h4>
+        <p>Slow, Even Fragrance Throw</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon" aria-hidden="true">✨</div>
+        <h4>IFRA Certified Oils</h4>
+        <p>Therapeutic Aromatherapy</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon" aria-hidden="true">💳</div>
+        <h4>Prepaid &amp; COD Options</h4>
+        <p>Razorpay &amp; Cash On Delivery</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon" aria-hidden="true">♡</div>
+        <h4>Handmade in India</h4>
+        <p>Micro-Batch Hand Poured</p>
+      </div>
+    </section>
+
+    <!-- 
+         6. RITUALS SECTION ( LUXURY BOUTIQUE REDESIGN)
+    -->
+    <section class="editorial-section km-rituals-section" id="rituals">
+      <div class="km-section-header">
+        <div class="km-header-top-row">
+          <div>
+            <div class="km-header-badge">✦ ARTISANAL SENSORY EXPERIENCES ✦</div>
+            <h2 class="km-section-title">Made for your rituals</h2>
+            <p class="km-section-subtitle">
+              Sacred scents handcrafted in micro-batches to calm the mind, ground your energy, and elevate daily self-care into timeless ceremony.
+            </p>
+          </div>
+        </div>
+
+        <!-- -Style Mood / Category Quick Filter Pills -->
+        <div class="km-filter-pills-bar" id="ritualFilterBar" role="tablist" aria-label="Ritual categories">
+          <button type="button" class="km-pill active" data-ritual-filter="all" role="tab" aria-selected="true">All Rituals</button>
+          <button type="button" class="km-pill" data-ritual-filter="luxury" role="tab" aria-selected="false">Premium Candles</button>
+          <button type="button" class="km-pill" data-ritual-filter="chakra" role="tab" aria-selected="false">Chakra Harmony</button>
+          <button type="button" class="km-pill" data-ritual-filter="wooden" role="tab" aria-selected="false">Wooden Earth</button>
+          <button type="button" class="km-pill" data-ritual-filter="diffusers" role="tab" aria-selected="false">Diffusers &amp; Aromas</button>
+          <button type="button" class="km-pill" data-ritual-filter="metal" role="tab" aria-selected="false">Metal Collection</button>
+          <button type="button" class="km-pill" data-ritual-filter="sand" role="tab" aria-selected="false">DIY Sand Wax</button>
+          <button type="button" class="km-pill" data-ritual-filter="accessories" role="tab" aria-selected="false">Flame Care</button>
+        </div>
+      </div>
+
+      <!--  Carousel Wrapper with Left & Right Circular Nav Arrows -->
+      <div class="km-carousel-shell">
+        <button type="button" class="km-nav-arrow km-nav-prev" id="ritualPrevBtn" aria-label="Previous rituals">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+
+        <div class="km-rituals-track" id="ritualsTrack">
+          <!-- Card 1 -->
+          <a href="category.html?cat=Premium%20Luxury%20Candles" class="km-ritual-card" data-cat="luxury" id="ritualCard1">
+            <div class="km-ritual-media">
+              <span class="km-card-tag">BOTANICAL SOY</span>
+              <img src="asset/luxury.jpg" alt="Premium Luxury Candles" loading="lazy" />
+              <div class="km-ritual-overlay"></div>
+            </div>
+            <div class="km-ritual-info">
+              <span class="km-ritual-eyebrow">Hand-Poured Rituals</span>
+              <h3 class="km-ritual-heading">Premium Luxury Candles</h3>
+              <p class="km-ritual-desc">100% natural botanical soy wax with bespoke French extracts.</p>
+              <div class="km-discover-btn">
+                <span>Discover Collection</span>
+                <span class="km-btn-arrow">&rarr;</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="category.html?cat=Seven%20Chakra-%20Positivity%20collection" class="km-ritual-card" data-cat="chakra" id="ritualCard2">
+            <div class="km-ritual-media">
+              <span class="km-card-tag">CHAKRA HARMONY</span>
+              <img src="asset/Seven Chakra Candles- Amethyst and tiger.jpg" alt="Seven Chakra Positivity Collection" loading="lazy" />
+              <div class="km-ritual-overlay"></div>
+            </div>
+            <div class="km-ritual-info">
+              <span class="km-ritual-eyebrow">Sacred Energy Balance</span>
+              <h3 class="km-ritual-heading">Seven Chakra Collection</h3>
+              <p class="km-ritual-desc">Formulated with therapeutic frequencies to harmonize your aura.</p>
+              <div class="km-discover-btn">
+                <span>Discover Collection</span>
+                <span class="km-btn-arrow">&rarr;</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="category.html?cat=Wooden%20Collection" class="km-ritual-card" data-cat="wooden" id="ritualCard3">
+            <div class="km-ritual-media">
+              <span class="km-card-tag">NATURAL GRAIN</span>
+              <img src="asset/wooden.jpg" alt="Wooden Earth Collection" loading="lazy" />
+              <div class="km-ritual-overlay"></div>
+            </div>
+            <div class="km-ritual-info">
+              <span class="km-ritual-eyebrow">Artisan Teakwood Vessels</span>
+              <h3 class="km-ritual-heading">Wooden Collection</h3>
+              <p class="km-ritual-desc">Sustainably carved timber with crackling natural wooden wicks.</p>
+              <div class="km-discover-btn">
+                <span>Discover Collection</span>
+                <span class="km-btn-arrow">&rarr;</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="category.html?cat=Diffusers%20and%20Aromas" class="km-ritual-card" data-cat="diffusers" id="ritualCard4">
+            <div class="km-ritual-media">
+              <span class="km-card-tag">FLAME-FREE AROMA</span>
+              <img src="asset/Neroli Reed Diffuser_4.jpg" alt="Diffusers and Aromas" loading="lazy" />
+              <div class="km-ritual-overlay"></div>
+            </div>
+            <div class="km-ritual-info">
+              <span class="km-ritual-eyebrow">Continuous Olfactory Serenity</span>
+              <h3 class="km-ritual-heading">Diffusers &amp; Aromas</h3>
+              <p class="km-ritual-desc">Pure rattan reeds infusing tranquil botanical essences for 60+ days.</p>
+              <div class="km-discover-btn">
+                <span>Discover Collection</span>
+                <span class="km-btn-arrow">&rarr;</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 5 -->
+          <a href="category.html?cat=Metal%20Collection" class="km-ritual-card" data-cat="metal" id="ritualCard5">
+            <div class="km-ritual-media">
+              <span class="km-card-tag">ROYAL SHINE</span>
+              <img src="asset/Golden Metal Luxe Jar Candle_4.jpg" alt="Metal Collection" loading="lazy" />
+              <div class="km-ritual-overlay"></div>
+            </div>
+            <div class="km-ritual-info">
+              <span class="km-ritual-eyebrow">Light-Catching Objects</span>
+              <h3 class="km-ritual-heading">Metal Collection</h3>
+              <p class="km-ritual-desc">Hammered brass and gilded copper bowls reflecting golden glow.</p>
+              <div class="km-discover-btn">
+                <span>Discover Collection</span>
+                <span class="km-btn-arrow">&rarr;</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 6 -->
+          <a href="category.html?cat=Sand%20Wax%20and%20Wicks%20Combo" class="km-ritual-card" data-cat="sand" id="ritualCard6">
+            <div class="km-ritual-media">
+              <span class="km-card-tag">DIY CEREMONY</span>
+              <img src="asset/sandwax& wicks.jpg" alt="Sand Wax and Wicks Combo" loading="lazy" />
+              <div class="km-ritual-overlay"></div>
+            </div>
+            <div class="km-ritual-info">
+              <span class="km-ritual-eyebrow">Make Your Own Glow</span>
+              <h3 class="km-ritual-heading">Sand Wax &amp; Wicks</h3>
+              <p class="km-ritual-desc">Pearled clean-burning wax designed to turn any vessel into flame.</p>
+              <div class="km-discover-btn">
+                <span>Discover Collection</span>
+                <span class="km-btn-arrow">&rarr;</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 7 -->
+          <a href="category.html?cat=Candle%20Accessories" class="km-ritual-card" data-cat="accessories" id="ritualCard7">
+            <div class="km-ritual-media">
+              <span class="km-card-tag">CARE ATELIER</span>
+              <img src="asset/Accessories.jpg" alt="Candle Accessories" loading="lazy" />
+              <div class="km-ritual-overlay"></div>
+            </div>
+            <div class="km-ritual-info">
+              <span class="km-ritual-eyebrow">Intentional Wick Care</span>
+              <h3 class="km-ritual-heading">Candle Accessories</h3>
+              <p class="km-ritual-desc">Brushed gold snuffers, precision trimmers, and tray rituals.</p>
+              <div class="km-discover-btn">
+                <span>Discover Collection</span>
+                <span class="km-btn-arrow">&rarr;</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <button type="button" class="km-nav-arrow km-nav-next" id="ritualNextBtn" aria-label="Next rituals">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- 
+         7. NEW ARRIVALS ( LUXURY BOUTIQUE REDESIGN)
+    -->
+    <div id="catalog"></div>
+    <section class="editorial-section km-arrivals-section" id="new-arrivals">
+      <div class="km-section-header">
+        <div class="km-header-top-row km-arrivals-header-top">
+          <div class="km-arrivals-header-text">
+            <div class="km-header-badge">✦ FRESH FROM THE ATELIER ✦</div>
+            <h2 class="km-section-title">New Arrivals</h2>
+            <p class="km-section-subtitle">
+              Micro-batch botanical drops handcrafted with pure cotton wicks, lead-free cores, and IFRA-certified therapeutic essences.
+            </p>
+          </div>
+          <div class="km-view-all-wrap">
+            <a href="full-catalog.html" class="km-view-all-pill">
+              <span>View All Catalog</span>
+              <span class="km-btn-arrow">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Filter pills for new arrivals -->
+        <div class="km-filter-pills-bar" id="arrivalFilterBar" role="tablist" aria-label="New arrivals filter">
+          <button type="button" class="km-pill active" data-arrival-filter="all" role="tab" aria-selected="true">All New (10)</button>
+          <button type="button" class="km-pill" data-arrival-filter="candles" role="tab" aria-selected="false">Botanical Jars</button>
+          <button type="button" class="km-pill" data-arrival-filter="diffusers" role="tab" aria-selected="false">Reed Diffusers</button>
+          <button type="button" class="km-pill" data-arrival-filter="sets" role="tab" aria-selected="false">Pillars &amp; Sets</button>
+          <button type="button" class="km-pill" data-arrival-filter="accessories" role="tab" aria-selected="false">Accessories</button>
+        </div>
+      </div>
+
+      <!--  Carousel with Navigation Controls -->
+      <div class="km-carousel-shell">
+        <button type="button" class="km-nav-arrow km-nav-prev" id="arrivalPrevBtn" aria-label="Previous new arrivals">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+
+        <div class="km-arrivals-track" id="arrivalsTrack">
+          <!-- Card 1: Diamond Glow Jar -->
+          <article class="km-product-card" data-category="candles" data-id="5" id="kmCard5">
+            <div class="km-card-figure" onclick="openPDP(5)">
+              <div class="km-figure-badges">
+                <span class="km-badge-new">BESTSELLER</span>
+                <span class="km-badge-discount">15% OFF</span>
+              </div>
+              <button type="button" class="km-wishlist-toggle" aria-label="Save to wishlist" onclick="event.stopPropagation(); kmToggleWishlist(5, this);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                </svg>
+              </button>
+              
+              <div class="km-card-gallery-wrap">
+                <div class="km-card-slider" id="cardSlider5" onscroll="updateCardGalleryDots(this, 5)">
+                  <div class="km-card-slide"><img src="asset/Diamond Glow Jar – Black.jpg" alt="Diamond Glow Jar - View 1" class="km-product-img" loading="lazy" /></div>
+                  <div class="km-card-slide"><img src="asset/Diamond Glow Jar – Black_2.jpg" alt="Diamond Glow Jar - View 2" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Diamond Glow Jar – Black.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/Diamond Glow Jar – Amber.jpg" alt="Diamond Glow Jar - View 3" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Diamond Glow Jar – Black.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/Diamond Glow Jar – Amber_2.jpg" alt="Diamond Glow Jar - View 4" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Diamond Glow Jar – Black.jpg';" /></div>
+                </div>
+                <button type="button" class="km-gallery-arrow km-gallery-prev" aria-label="Previous photo" onclick="event.stopPropagation(); scrollCardGallery(5, -1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+                <button type="button" class="km-gallery-arrow km-gallery-next" aria-label="Next photo" onclick="event.stopPropagation(); scrollCardGallery(5, 1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+                <div class="km-gallery-dots" id="cardDots5">
+                  <span class="km-gallery-dot active" onclick="event.stopPropagation(); scrollCardGalleryTo(5, 0);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(5, 1);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(5, 2);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(5, 3);"></span>
+                </div>
+              </div>
+
+              <div class="km-quickview-btn" onclick="event.stopPropagation(); openPDP(5);">Quick View</div>
+            </div>
+            <div class="km-card-details">
+              <div class="km-collection-label">PREMIUM LUXURY CANDLES</div>
+              <h3 class="km-card-name" onclick="openPDP(5)">Diamond Glow Jar</h3>
+              <div class="km-scent-notes">Bourbon Vanilla · Smoked Amber</div>
+              <div class="km-spec-row">
+                <span>⏳ 45-55 Hours</span>
+                <span>•</span>
+                <span>2 Scent Finishes</span>
+              </div>
+              <div class="km-price-block">
+                <span class="km-price-current">₹849</span>
+                <span class="km-price-original">₹999</span>
+              </div>
+              <button type="button" class="km-add-cart-btn" onclick="kmAddToCart(5, this)">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                  <path d="M3 6h18"></path>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Add to Bag</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 2: Grand Boat Candle -->
+          <article class="km-product-card" data-category="candles" data-id="54" id="kmCard54">
+            <div class="km-card-figure" onclick="openPDP(54)">
+              <div class="km-figure-badges">
+                <span class="km-badge-new">LUXURY PIECE</span>
+                <span class="km-badge-discount">7% OFF</span>
+              </div>
+              <button type="button" class="km-wishlist-toggle" aria-label="Save to wishlist" onclick="event.stopPropagation(); kmToggleWishlist(54, this);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                </svg>
+              </button>
+              
+              <div class="km-card-gallery-wrap">
+                <div class="km-card-slider" id="cardSlider54" onscroll="updateCardGalleryDots(this, 54)">
+                  <div class="km-card-slide"><img src="asset/Grand Boat Candle – Large.jpg" alt="Grand Boat Candle - View 1" class="km-product-img" loading="lazy" /></div>
+                  <div class="km-card-slide"><img src="asset/Grand Boat Candle – Large_2.jpg" alt="Grand Boat Candle - View 2" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Grand Boat Candle – Large.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/Grand Boat Candle – Large_3.jpg" alt="Grand Boat Candle - View 3" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Grand Boat Candle – Large.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/Grand Boat Candle – Large_4.jpg" alt="Grand Boat Candle - View 4" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Grand Boat Candle – Large.jpg';" /></div>
+                </div>
+                <button type="button" class="km-gallery-arrow km-gallery-prev" aria-label="Previous photo" onclick="event.stopPropagation(); scrollCardGallery(54, -1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+                <button type="button" class="km-gallery-arrow km-gallery-next" aria-label="Next photo" onclick="event.stopPropagation(); scrollCardGallery(54, 1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+                <div class="km-gallery-dots" id="cardDots54">
+                  <span class="km-gallery-dot active" onclick="event.stopPropagation(); scrollCardGalleryTo(54, 0);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(54, 1);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(54, 2);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(54, 3);"></span>
+                </div>
+              </div>
+
+              <div class="km-quickview-btn" onclick="event.stopPropagation(); openPDP(54);">Quick View</div>
+            </div>
+            <div class="km-card-details">
+              <div class="km-collection-label">WOODEN COLLECTION</div>
+              <h3 class="km-card-name" onclick="openPDP(54)">Grand Boat Candle</h3>
+              <div class="km-scent-notes">Smoked Teak · Cardamom · Amber</div>
+              <div class="km-spec-row">
+                <span>⏳ 60-80 Hours</span>
+                <span>•</span>
+                <span>Solid Mango Wood</span>
+              </div>
+              <div class="km-price-block">
+                <span class="km-price-current">₹2,149</span>
+                <span class="km-price-original">₹2,299</span>
+              </div>
+              <button type="button" class="km-add-cart-btn" onclick="kmAddToCart(54, this)">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                  <path d="M3 6h18"></path>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Add to Bag</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="km-product-card" data-category="diffusers" data-id="46" id="kmCard46">
+            <div class="km-card-figure" onclick="openPDP(46)">
+              <div class="km-figure-badges">
+                <span class="km-badge-new">BESTSELLER</span>
+                <span class="km-badge-discount">15% OFF</span>
+              </div>
+              <button type="button" class="km-wishlist-toggle" aria-label="Save to wishlist" onclick="event.stopPropagation(); kmToggleWishlist(46, this);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                </svg>
+              </button>
+              
+              <div class="km-card-gallery-wrap">
+                <div class="km-card-slider" id="cardSlider46" onscroll="updateCardGalleryDots(this, 46)">
+                  <div class="km-card-slide"><img src="asset/Oud Reed Diffuser.jpg" alt="Reed Diffuser – Royal Oud - View 1" class="km-product-img" loading="lazy" /></div>
+                  <div class="km-card-slide"><img src="asset/Oud Reed Diffuser_2.jpg" alt="Reed Diffuser – Royal Oud - View 2" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Oud Reed Diffuser.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/Neroli Reed Diffuser.jpg" alt="Reed Diffuser – Neroli - View 3" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Oud Reed Diffuser.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/Neroli Reed Diffuser_2.jpg" alt="Reed Diffuser – Neroli - View 4" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Oud Reed Diffuser.jpg';" /></div>
+                </div>
+                <button type="button" class="km-gallery-arrow km-gallery-prev" aria-label="Previous photo" onclick="event.stopPropagation(); scrollCardGallery(46, -1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+                <button type="button" class="km-gallery-arrow km-gallery-next" aria-label="Next photo" onclick="event.stopPropagation(); scrollCardGallery(46, 1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+                <div class="km-gallery-dots" id="cardDots46">
+                  <span class="km-gallery-dot active" onclick="event.stopPropagation(); scrollCardGalleryTo(46, 0);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(46, 1);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(46, 2);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(46, 3);"></span>
+                </div>
+              </div>
+
+              <div class="km-quickview-btn" onclick="event.stopPropagation(); openPDP(46);">Quick View</div>
+            </div>
+            <div class="km-card-details">
+              <div class="km-collection-label">DIFFUSERS &amp; AROMAS</div>
+              <h3 class="km-card-name" onclick="openPDP(46)">Reed Diffuser</h3>
+              <div class="km-scent-notes">Royal Oud · Tunisian Neroli</div>
+              <div class="km-spec-row">
+                <span>⏳ 60-90 Days</span>
+                <span>•</span>
+                <span>2 Scent Finishes</span>
+              </div>
+              <div class="km-price-block">
+                <span class="km-price-current">₹849</span>
+                <span class="km-price-original">₹999</span>
+              </div>
+              <button type="button" class="km-add-cart-btn" onclick="kmAddToCart(46, this)">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                  <path d="M3 6h18"></path>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Add to Bag</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="km-product-card" data-category="candles" data-id="37" id="kmCard37">
+            <div class="km-card-figure" onclick="openPDP(37)">
+              <div class="km-figure-badges">
+                <span class="km-badge-bestseller">BESTSELLER</span>
+                <span class="km-badge-discount">21% OFF</span>
+              </div>
+              <button type="button" class="km-wishlist-toggle" aria-label="Save to wishlist" onclick="event.stopPropagation(); kmToggleWishlist(37, this);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                </svg>
+              </button>
+              
+              <div class="km-card-gallery-wrap">
+                <div class="km-card-slider" id="cardSlider37" onscroll="updateCardGalleryDots(this, 37)">
+                  <div class="km-card-slide"><img src="asset/Ribbed Glow Pillar – White.jpg" alt="Ribbed Glow Pillar – White - View 1" class="km-product-img" loading="lazy" /></div>
+                  <div class="km-card-slide"><img src="asset/Ribbed Glow Pillar – White_2.jpg" alt="Ribbed Glow Pillar – White - View 2" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Ribbed Glow Pillar – White.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/Ribbed Glow Pillar – Red.jpg" alt="Ribbed Glow Pillar – Red - View 3" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Ribbed Glow Pillar – White.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/Ribbed Glow Pillar – Red_2.jpg" alt="Ribbed Glow Pillar – Red - View 4" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Ribbed Glow Pillar – White.jpg';" /></div>
+                </div>
+                <button type="button" class="km-gallery-arrow km-gallery-prev" aria-label="Previous photo" onclick="event.stopPropagation(); scrollCardGallery(37, -1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+                <button type="button" class="km-gallery-arrow km-gallery-next" aria-label="Next photo" onclick="event.stopPropagation(); scrollCardGallery(37, 1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+                <div class="km-gallery-dots" id="cardDots37">
+                  <span class="km-gallery-dot active" onclick="event.stopPropagation(); scrollCardGalleryTo(37, 0);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(37, 1);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(37, 2);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(37, 3);"></span>
+                </div>
+              </div>
+
+              <div class="km-quickview-btn" onclick="event.stopPropagation(); openPDP(37);">Quick View</div>
+            </div>
+            <div class="km-card-details">
+              <div class="km-collection-label">PREMIUM LUXURY CANDLES</div>
+              <h3 class="km-card-name" onclick="openPDP(37)">Ribbed Glow Pillar</h3>
+              <div class="km-scent-notes">White Lily · Crimson Rose</div>
+              <div class="km-spec-row">
+                <span>⏳ 40-50 Hours</span>
+                <span>•</span>
+                <span>100% Botanical Soy</span>
+              </div>
+              <div class="km-price-block">
+                <span class="km-price-current">₹549</span>
+                <span class="km-price-original">₹699</span>
+              </div>
+              <button type="button" class="km-add-cart-btn" onclick="kmAddToCart(37, this)">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                  <path d="M3 6h18"></path>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Add to Bag</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="km-product-card" data-category="sets" data-id="66" id="kmCard66">
+            <div class="km-card-figure" onclick="openPDP(66)">
+              <div class="km-figure-badges">
+                <span class="km-badge-new">HEALING CRYSTALS</span>
+                <span class="km-badge-discount">7% OFF</span>
+              </div>
+              <button type="button" class="km-wishlist-toggle" aria-label="Save to wishlist" onclick="event.stopPropagation(); kmToggleWishlist(66, this);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                </svg>
+              </button>
+              
+              <div class="km-card-gallery-wrap">
+                <div class="km-card-slider" id="cardSlider66" onscroll="updateCardGalleryDots(this, 66)">
+                  <div class="km-card-slide"><img src="asset/Seven Chakra Candles- Amethyst and tiger.jpg" alt="Seven Chakra Candles- Amethyst and tiger - View 1" class="km-product-img" loading="lazy" /></div>
+                  <div class="km-card-slide"><img src="asset/Seven Chakra Candles- Amethyst and tiger.jpg" alt="Seven Chakra Candles- Amethyst and tiger - View 2" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Seven Chakra Candles- Amethyst and tiger.jpg';" /></div>
+                </div>
+                <button type="button" class="km-gallery-arrow km-gallery-prev" aria-label="Previous photo" onclick="event.stopPropagation(); scrollCardGallery(66, -1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+                <button type="button" class="km-gallery-arrow km-gallery-next" aria-label="Next photo" onclick="event.stopPropagation(); scrollCardGallery(66, 1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+                <div class="km-gallery-dots" id="cardDots66">
+                  <span class="km-gallery-dot active" onclick="event.stopPropagation(); scrollCardGalleryTo(66, 0);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(66, 1);"></span>
+                </div>
+              </div>
+
+              <div class="km-quickview-btn" onclick="event.stopPropagation(); openPDP(66);">Quick View</div>
+            </div>
+            <div class="km-card-details">
+              <div class="km-collection-label">SEVEN CHAKRA POSITIVITY</div>
+              <h3 class="km-card-name" onclick="openPDP(66)">Seven Chakra Candles - Amethyst &amp; Tiger</h3>
+              <div class="km-scent-notes">White Sage · Sacred Frankincense</div>
+              <div class="km-spec-row">
+                <span>⏳ 35-45 Hours</span>
+                <span>•</span>
+                <span>Genuine Crystals</span>
+              </div>
+              <div class="km-price-block">
+                <span class="km-price-current">₹699</span>
+                <span class="km-price-original">₹749</span>
+              </div>
+              <button type="button" class="km-add-cart-btn" onclick="kmAddToCart(66, this)">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                  <path d="M3 6h18"></path>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Add to Bag</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="km-product-card" data-category="candles" data-id="41" id="kmCard41">
+            <div class="km-card-figure" onclick="openPDP(41)">
+              <div class="km-figure-badges">
+                <span class="km-badge-new">NEW ARRIVAL</span>
+                <span class="km-badge-discount">6% OFF</span>
+              </div>
+              <button type="button" class="km-wishlist-toggle" aria-label="Save to wishlist" onclick="event.stopPropagation(); kmToggleWishlist(41, this);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                </svg>
+              </button>
+              
+              <div class="km-card-gallery-wrap">
+                <div class="km-card-slider" id="cardSlider41" onscroll="updateCardGalleryDots(this, 41)">
+                  <div class="km-card-slide"><img src="asset/Golden Metal Luxe Jar Candle.jpg" alt="Golden Metal Luxe Jar Candle - View 1" class="km-product-img" loading="lazy" /></div>
+                  <div class="km-card-slide"><img src="asset/Golden Metal Luxe Jar Candle_2.jpg" alt="Golden Metal Luxe Jar Candle - View 2" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Golden Metal Luxe Jar Candle.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/Golden Metal Luxe Jar Candle_3.jpg" alt="Golden Metal Luxe Jar Candle - View 3" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Golden Metal Luxe Jar Candle.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/Golden Metal Luxe Jar Candle_4.jpg" alt="Golden Metal Luxe Jar Candle - View 4" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Golden Metal Luxe Jar Candle.jpg';" /></div>
+                </div>
+                <button type="button" class="km-gallery-arrow km-gallery-prev" aria-label="Previous photo" onclick="event.stopPropagation(); scrollCardGallery(41, -1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+                <button type="button" class="km-gallery-arrow km-gallery-next" aria-label="Next photo" onclick="event.stopPropagation(); scrollCardGallery(41, 1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+                <div class="km-gallery-dots" id="cardDots41">
+                  <span class="km-gallery-dot active" onclick="event.stopPropagation(); scrollCardGalleryTo(41, 0);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(41, 1);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(41, 2);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(41, 3);"></span>
+                </div>
+              </div>
+
+              <div class="km-quickview-btn" onclick="event.stopPropagation(); openPDP(41);">Quick View</div>
+            </div>
+            <div class="km-card-details">
+              <div class="km-collection-label">METALLIC LUXE</div>
+              <h3 class="km-card-name" onclick="openPDP(41)">Golden Metal Luxe Jar Candle</h3>
+              <div class="km-scent-notes">Spiced Cinnamon · Amber</div>
+              <div class="km-spec-row">
+                <span>⏳ 55 Hours</span>
+                <span>•</span>
+                <span>Handmade Brass</span>
+              </div>
+              <div class="km-price-block">
+                <span class="km-price-current">₹849</span>
+                <span class="km-price-original">₹899</span>
+              </div>
+              <button type="button" class="km-add-cart-btn" onclick="kmAddToCart(41, this)">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                  <path d="M3 6h18"></path>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Add to Bag</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 7 -->
+          <article class="km-product-card" data-category="sets" data-id="11" id="kmCard11">
+            <div class="km-card-figure" onclick="openPDP(11)">
+              <div class="km-figure-badges">
+                <span class="km-badge-new">NEW ARRIVAL</span>
+                <span class="km-badge-discount">8% OFF</span>
+              </div>
+              <button type="button" class="km-wishlist-toggle" aria-label="Save to wishlist" onclick="event.stopPropagation(); kmToggleWishlist(11, this);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                </svg>
+              </button>
+              
+              <div class="km-card-gallery-wrap">
+                <div class="km-card-slider" id="cardSlider11" onscroll="updateCardGalleryDots(this, 11)">
+                  <div class="km-card-slide"><img src="asset/Grand Pillar – White – 12.jpg" alt="Grand Pillar – White – 12 inch - View 1" class="km-product-img" loading="lazy" /></div>
+                  <div class="km-card-slide"><img src="asset/Grand Pillar – White – 12_2.jpg" alt="Grand Pillar – White – 12 inch - View 2" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Grand Pillar – White – 12.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/Grand Pillar – White – 12_3.jpg" alt="Grand Pillar – White – 12 inch - View 3" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Grand Pillar – White – 12.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/Grand Pillar – White – 12_4.jpg" alt="Grand Pillar – White – 12 inch - View 4" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Grand Pillar – White – 12.jpg';" /></div>
+                </div>
+                <button type="button" class="km-gallery-arrow km-gallery-prev" aria-label="Previous photo" onclick="event.stopPropagation(); scrollCardGallery(11, -1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+                <button type="button" class="km-gallery-arrow km-gallery-next" aria-label="Next photo" onclick="event.stopPropagation(); scrollCardGallery(11, 1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+                <div class="km-gallery-dots" id="cardDots11">
+                  <span class="km-gallery-dot active" onclick="event.stopPropagation(); scrollCardGalleryTo(11, 0);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(11, 1);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(11, 2);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(11, 3);"></span>
+                </div>
+              </div>
+
+              <div class="km-quickview-btn" onclick="event.stopPropagation(); openPDP(11);">Quick View</div>
+            </div>
+            <div class="km-card-details">
+              <div class="km-collection-label">PILLARS &amp; VOTIVES</div>
+              <h3 class="km-card-name" onclick="openPDP(11)">Grand Pillar – White – 12"</h3>
+              <div class="km-scent-notes">French Lavender · Sage</div>
+              <div class="km-spec-row">
+                <span>⏳ 70 Hours</span>
+                <span>•</span>
+                <span>Clean Burning</span>
+              </div>
+              <div class="km-price-block">
+                <span class="km-price-current">₹1,749</span>
+                <span class="km-price-original">₹1,899</span>
+              </div>
+              <button type="button" class="km-add-cart-btn" onclick="kmAddToCart(11, this)">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                  <path d="M3 6h18"></path>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Add to Bag</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 8: Oud Reed Diffuser -->
+          <article class="km-product-card" data-category="diffusers" data-id="51" id="kmCard51">
+            <div class="km-card-figure" onclick="openPDP(51)">
+              <div class="km-figure-badges">
+                <span class="km-badge-bestseller">BESTSELLER</span>
+                <span class="km-badge-discount">15% OFF</span>
+              </div>
+              <button type="button" class="km-wishlist-toggle" aria-label="Save to wishlist" onclick="event.stopPropagation(); kmToggleWishlist(51, this);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                </svg>
+              </button>
+
+              <div class="km-card-gallery-wrap">
+                <div class="km-card-slider" id="cardSlider51" onscroll="updateCardGalleryDots(this, 51)">
+                  <div class="km-card-slide"><img src="asset/Oud Reed Diffuser.jpg" alt="Oud Reed Diffuser - View 1" class="km-product-img" loading="lazy" /></div>
+                  <div class="km-card-slide"><img src="asset/Oud Reed Diffuser_2.jpg" alt="Oud Reed Diffuser - View 2" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Oud Reed Diffuser.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/Oud Reed Diffuser_3.jpg" alt="Oud Reed Diffuser - View 3" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Oud Reed Diffuser.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/Oud Reed Diffuser_4.jpg" alt="Oud Reed Diffuser - View 4" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/Oud Reed Diffuser.jpg';" /></div>
+                </div>
+                <button type="button" class="km-gallery-arrow km-gallery-prev" aria-label="Previous photo" onclick="event.stopPropagation(); scrollCardGallery(51, -1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+                <button type="button" class="km-gallery-arrow km-gallery-next" aria-label="Next photo" onclick="event.stopPropagation(); scrollCardGallery(51, 1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+                <div class="km-gallery-dots" id="cardDots51">
+                  <span class="km-gallery-dot active" onclick="event.stopPropagation(); scrollCardGalleryTo(51, 0);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(51, 1);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(51, 2);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(51, 3);"></span>
+                </div>
+              </div>
+
+              <div class="km-quickview-btn" onclick="event.stopPropagation(); openPDP(51);">Quick View</div>
+            </div>
+            <div class="km-card-details">
+              <div class="km-collection-label">DIFFUSERS &amp; AROMAS</div>
+              <h3 class="km-card-name" onclick="openPDP(51)">Oud Reed Diffuser</h3>
+              <div class="km-scent-notes">Royal Oud · Amber · Vetiver</div>
+              <div class="km-spec-row">
+                <span>⏳ 60-90 Days</span>
+                <span>•</span>
+                <span>Therapeutic Essence</span>
+              </div>
+              <div class="km-price-block">
+                <span class="km-price-current">₹849</span>
+                <span class="km-price-original">₹999</span>
+              </div>
+              <button type="button" class="km-add-cart-btn" onclick="kmAddToCart(51, this)">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                  <path d="M3 6h18"></path>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Add to Bag</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 9: Candle Snuffer -->
+          <article class="km-product-card" data-category="accessories" data-id="71" id="kmCard71">
+            <div class="km-card-figure" onclick="openPDP(71)">
+              <div class="km-figure-badges">
+                <span class="km-badge-new">NEW ARRIVAL</span>
+                <span class="km-badge-discount">25% OFF</span>
+              </div>
+              <button type="button" class="km-wishlist-toggle" aria-label="Save Candle Snuffer to wishlist" onclick="event.stopPropagation(); kmToggleWishlist(71, this);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                </svg>
+              </button>
+
+              <div class="km-card-gallery-wrap">
+                <div class="km-card-slider" id="cardSlider71" onscroll="updateCardGalleryDots(this, 71)">
+                  <div class="km-card-slide"><img src="asset/snuffer.jpg" alt="Candle Snuffer - View 1" class="km-product-img" loading="lazy" /></div>
+                  <div class="km-card-slide"><img src="asset/snuffer_2.jpg" alt="Candle Snuffer - View 2" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/snuffer.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/snuffer_3.jpg" alt="Candle Snuffer - View 3" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/snuffer.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/snuffer_4.jpg" alt="Candle Snuffer - View 4" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/snuffer.jpg';" /></div>
+                </div>
+                <button type="button" class="km-gallery-arrow km-gallery-prev" aria-label="Previous photo" onclick="event.stopPropagation(); scrollCardGallery(71, -1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+                <button type="button" class="km-gallery-arrow km-gallery-next" aria-label="Next photo" onclick="event.stopPropagation(); scrollCardGallery(71, 1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+                <div class="km-gallery-dots" id="cardDots71">
+                  <span class="km-gallery-dot active" onclick="event.stopPropagation(); scrollCardGalleryTo(71, 0);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(71, 1);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(71, 2);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(71, 3);"></span>
+                </div>
+              </div>
+
+              <div class="km-quickview-btn" onclick="event.stopPropagation(); openPDP(71);">Quick View</div>
+            </div>
+            <div class="km-card-details">
+              <div class="km-collection-label">CANDLE ACCESSORIES</div>
+              <h3 class="km-card-name" onclick="openPDP(71)">Candle Snuffer</h3>
+              <div class="km-scent-notes">Solid Brass · Hinged Bell</div>
+              <div class="km-spec-row">
+                <span>⏳ Lifetime Care</span>
+                <span>•</span>
+                <span>Smokeless Flame Care</span>
+              </div>
+              <div class="km-price-block">
+                <span class="km-price-current">₹899</span>
+                <span class="km-price-original">₹1199</span>
+              </div>
+              <button type="button" class="km-add-cart-btn" onclick="kmAddToCart(71, this)">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                  <path d="M3 6h18"></path>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Add to Bag</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 10: Wick Trimmer -->
+          <article class="km-product-card" data-category="accessories" data-id="72" id="kmCard72">
+            <div class="km-card-figure" onclick="openPDP(72)">
+              <div class="km-figure-badges">
+                <span class="km-badge-bestseller">BESTSELLER</span>
+                <span class="km-badge-discount">25% OFF</span>
+              </div>
+              <button type="button" class="km-wishlist-toggle" aria-label="Save Wick Trimmer to wishlist" onclick="event.stopPropagation(); kmToggleWishlist(72, this);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                </svg>
+              </button>
+
+              <div class="km-card-gallery-wrap">
+                <div class="km-card-slider" id="cardSlider72" onscroll="updateCardGalleryDots(this, 72)">
+                  <div class="km-card-slide"><img src="asset/wick trimmer.jpg" alt="Wick Trimmer - View 1" class="km-product-img" loading="lazy" /></div>
+                  <div class="km-card-slide"><img src="asset/wick trimmer_2.jpg" alt="Wick Trimmer - View 2" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/wick trimmer.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/wick trimmer_3.jpg" alt="Wick Trimmer - View 3" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/wick trimmer.jpg';" /></div>
+                  <div class="km-card-slide"><img src="asset/wick trimmer_4.jpg" alt="Wick Trimmer - View 4" class="km-product-img" loading="lazy" onerror="this.onerror=null; this.src='asset/wick trimmer.jpg';" /></div>
+                </div>
+                <button type="button" class="km-gallery-arrow km-gallery-prev" aria-label="Previous photo" onclick="event.stopPropagation(); scrollCardGallery(72, -1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+                <button type="button" class="km-gallery-arrow km-gallery-next" aria-label="Next photo" onclick="event.stopPropagation(); scrollCardGallery(72, 1);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+                <div class="km-gallery-dots" id="cardDots72">
+                  <span class="km-gallery-dot active" onclick="event.stopPropagation(); scrollCardGalleryTo(72, 0);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(72, 1);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(72, 2);"></span>
+                  <span class="km-gallery-dot" onclick="event.stopPropagation(); scrollCardGalleryTo(72, 3);"></span>
+                </div>
+              </div>
+
+              <div class="km-quickview-btn" onclick="event.stopPropagation(); openPDP(72);">Quick View</div>
+            </div>
+            <div class="km-card-details">
+              <div class="km-collection-label">CANDLE ACCESSORIES</div>
+              <h3 class="km-card-name" onclick="openPDP(72)">Wick Trimmer</h3>
+              <div class="km-scent-notes">Angled Shears · Debris Tray</div>
+              <div class="km-spec-row">
+                <span>⏳ Lifetime Care</span>
+                <span>•</span>
+                <span>Precision 1/4" Cut</span>
+              </div>
+              <div class="km-price-block">
+                <span class="km-price-current">₹899</span>
+                <span class="km-price-original">₹1199</span>
+              </div>
+              <button type="button" class="km-add-cart-btn" onclick="kmAddToCart(72, this)">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                  <path d="M3 6h18"></path>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Add to Bag</span>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <button type="button" class="km-nav-arrow km-nav-next" id="arrivalNextBtn" aria-label="Next new arrivals">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Centered View All Catalog Action -->
+      <div class="km-arrivals-bottom-action">
+        <a href="full-catalog.html" class="km-view-all-pill km-view-all-pill-main">
+          <span>View All Catalog</span>
+          <span class="km-btn-arrow">&rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 
+         8. EDITORIAL JOURNAL SECTION (COMING SOON)
+          -->
+    <section class="banner-section" id="journal">
+      <div class="banner-card banner-journal">
+        <div class="banner-image">
+          <img
+            src="asset/Grand Boat Candle – Medium_4.jpg"
+            alt="Editorial Reading and Slow Living" loading="lazy" />
+        </div>
+        <div class="banner-content">
+          <span class="banner-tag">The Candlorre Journal</span>
+          <h2 class="banner-title">The Art of Slow Living &amp; Olfactory Notes</h2>
+          <p class="banner-text">
+            Read our forthcoming articles on intentional wick care, scent-pairing rituals for restorative sleep, and
+            deep dives into raw perfumery extracts.
+          </p>
+          <button class="btn btn-outline dark-outline" id="notifyJournalBtn">Read Teasers</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+         9. BRAND STORY & CRAFT
+          -->
+    <section class="story-section" id="about">
+      <div class="story-grid">
+        <div class="story-image-wrap">
+          <img src="asset/Mini Pillar – White – 6_2.jpg" alt="Artisanal Hand Pouring Method" loading="lazy" />
+        </div>
+        <div class="story-text">
+          <span class="section-pretitle">Small Batches, Pure Intent</span>
+          <h2 class="section-title">Handcrafted with Care, Loved by Many</h2>
+          <p>
+            At <strong>The Candlorre</strong>, we believe ambiance is not merely an accessory, but an emotional
+            sanctuary. Every candle is melted, blended with master-perfumer fragrance notes, and hand-poured into
+            heat-resistant vessels using 100% natural, biodegradable soy wax.
+          </p>
+          <p>
+            Zero paraffin. Zero phthalates. Only slow-burning tranquility.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+         10. FAQS ACCORDION
+          -->
+    <section class="faq-section" id="faq">
+      <div class="section-header">
+        <span class="section-pretitle">Client Help &amp; Guidance</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p style="max-width: 600px; margin: 0.5rem auto 0; font-size: 0.88rem; color: var(--text-muted); text-align: center;">
+          Quick answers to common queries regarding candle care, pan-India delivery, COD, transit safety, and bespoke gifting.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What are the shipping charges and delivery timelines?</span>
+            <span class="faq-arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>We offer <strong>FREE Express Shipping</strong> on all orders of ₹999 and above across India (flat ₹99 shipping for orders below ₹999). Metro cities receive delivery in 3–5 business days, and the rest of India in 5–7 business days with end-to-end live tracking.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How does Cash on Delivery (COD) work?</span>
+            <span class="faq-arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Cash on Delivery (COD) is available for orders up to ₹999 across all serviceable PIN codes with a nominal ₹49 courier collection fee. You can pay with cash or via UPI QR code directly upon delivery.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What if my candle or glass diffuser arrives damaged in transit?</span>
+            <span class="faq-arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>We take 100% responsibility for transit protection. Simply notify our customer care team via WhatsApp (+91 9762831995) or email within 48 hours of delivery with photos of the damaged item. We will dispatch an immediate free express replacement or issue a full refund.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What makes The Candlorre wax 100% natural and non-toxic?</span>
+            <span class="faq-arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Our candles are hand-poured with 100% pure botanical soy wax and organic beeswax. We never use petroleum paraffin, synthetic stearic acid, or chemical hardeners. All fine fragrances comply with strict IFRA standards and are 100% free of phthalates, parabens, and hazardous VOCs.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What is the "Memory Burn" and how do I prevent tunneling?</span>
+            <span class="faq-arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>On your initial burn, let the candle burn for 2 to 3 hours until the entire surface melts into an even liquid wax pool to the edge of the glass. Always trim wicks to 1/4 inch (6mm) before each burn to maintain a clean, smoke-free flame.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can I send an order as a gift with a personalised handwritten card?</span>
+            <span class="faq-arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! We provide complimentary handwritten gift calligraphy cards and luxury satin ribbon packaging. You can also contact us for bespoke corporate hampers, wedding favors, and festive gift boxes.</p>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align: center; margin-top: 2.2rem;">
+        <a href="faq.html" class="btn btn-outline dark-outline" style="display: inline-flex; align-items: center; gap: 8px; padding: 0.75rem 1.6rem; font-size: 0.84rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+          <span>Explore All FAQs in Detail</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 
+       11. DRAWERS & MODAL WINDOWS
+        -->
+  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping Cart">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Your Bag (<span id="cartItemCountDisplay">0</span>)</h3>
+      <button class="btn-close" id="closeCartBtn" aria-label="Close cart">✕</button>
+    </div>
+
+    <div class="shipping-meter-wrap">
+      <p id="shippingMeterText">Add ₹999 more for FREE Express Delivery</p>
+      <div class="meter-bar-track">
+        <div class="meter-bar-fill" id="meterBarFill"></div>
+      </div>
+    </div>
+
+    <div class="cart-drawer-items" id="cartItemsContainer"></div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotalText">₹0</span>
+      </div>
+      <button class="btn btn-gold btn-block" id="proceedCheckoutBtn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Wishlist Slide-Out Sanctuary Drawer -->
+  <aside class="wishlist-drawer" id="wishlistDrawer" role="dialog" aria-modal="true" aria-label="Saved Sanctuary">
+    <div class="wishlist-drawer-header">
+      <div>
+        <h3 class="drawer-title">Saved Sanctuary</h3>
+        <span class="drawer-subtitle" id="wishlistSubtitle">0 Fragrances Saved</span>
+      </div>
+      <button class="btn-close" id="closeWishlistBtn" aria-label="Close wishlist">✕</button>
+    </div>
+
+    <div class="wishlist-items-container" id="wishlistItemsContainer">
+      <!-- Populated dynamically via JS -->
+    </div>
+
+    <div class="wishlist-drawer-footer" id="wishlistFooter">
+      <!-- Action buttons populated dynamically -->
+    </div>
+  </aside>
+
+  <!-- Header Search Modal / Overlay -->
+  <div class="search-overlay" id="searchModal" role="dialog" aria-modal="true" aria-label="Search Fragrances">
+    <div class="search-modal-inner">
+      <div class="search-modal-header">
+        <div class="search-input-wrapper">
+          <svg class="search-modal-icon" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+          <input 
+            type="search" 
+            id="headerSearchInput" 
+            class="header-search-input" 
+            placeholder="Search fragrances, olfactory notes (e.g. Lavender, Sandalwood, Vanilla)..." 
+            autocomplete="off"
+            aria-label="Search fragrances"
+          />
+          <button type="button" class="search-clear-btn" id="searchClearBtn" aria-label="Clear search query" hidden>✕</button>
+        </div>
+        <button type="button" class="btn-close" id="closeSearchBtn" aria-label="Close search">✕</button>
+      </div>
+
+      <!-- Quick Popular Tags -->
+      <div class="search-popular-tags">
+        <span class="tags-label">Popular Curations:</span>
+        <button type="button" class="search-tag" data-tag="Lavender">French Lavender</button>
+        <button type="button" class="search-tag" data-tag="Sandalwood">Mysore Sandalwood</button>
+        <button type="button" class="search-tag" data-tag="Diamond Glow">Diamond Glow</button>
+        <button type="button" class="search-tag" data-tag="Pillar">Grand Pillars</button>
+        <button type="button" class="search-tag" data-tag="Vanilla">Warm Vanilla</button>
+      </div>
+
+      <!-- Live Search Results -->
+      <div class="search-results-container" id="searchResultsContainer">
+        <!-- Live search cards rendered here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Details Quick View Modal (PDP) -->
+  <div class="modal pdp-modal" id="pdpModal" role="dialog" aria-modal="true" aria-labelledby="pdpTitle">
+    <button class="modal-close-btn" id="closePdpBtn" aria-label="Close product view" title="Close" onclick="closePDP()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="pdp-modal-grid">
+      <div class="pdp-media" id="pdpMedia">
+        <div class="pdp-main-slider-wrap">
+          <div class="pdp-slider-track" id="pdpSliderTrack">
+            <img id="pdpImage" src="" alt="Product Detail" loading="lazy" />
+          </div>
+          <button type="button" class="pdp-gallery-arrow pdp-gallery-prev" id="pdpPrevBtn" aria-label="Previous photo" title="Previous photo" onclick="scrollPdpGallery(-1)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button type="button" class="pdp-gallery-arrow pdp-gallery-next" id="pdpNextBtn" aria-label="Next photo" title="Next photo" onclick="scrollPdpGallery(1)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+        <div class="pdp-thumbs-row" id="pdpThumbsRow"></div>
+      </div>
+      <div class="pdp-info">
+        <div class="pdp-header-meta">
+          <span class="pdp-category-tag" id="pdpCategory"></span>
+          <span class="pdp-stock-status" id="pdpStockBadge"><span class="status-pulse-dot"></span> In Stock &amp; Hand-Poured</span>
+        </div>
+        <h2 class="pdp-title" id="pdpTitle"></h2>
+        <div class="pdp-pricing">
+          <span class="pdp-current-price" id="pdpPrice"></span>
+          <span class="pdp-orig-price" id="pdpOrigPrice"></span>
+          <span class="pdp-tax-note">Inclusive of all luxury taxes</span>
+        </div>
+
+        <!-- Baobab Collection-Style Variant Selector Block -->
+        <div class="pdp-variant-block" id="pdpVariantBlock" style="display: none;">
+          <div class="pdp-variant-label-row">
+            <span class="pdp-variant-type-title" id="pdpVariantTypeTitle">Select Option:</span>
+            <span class="pdp-variant-current-val" id="pdpVariantCurrentVal"></span>
+          </div>
+          <div class="pdp-variant-selector-grid" id="pdpVariantSelectorGrid"></div>
+        </div>
+
+        <p class="pdp-desc" id="pdpDescription"></p>
+
+        <!-- Fragrance Architecture Card -->
+        <div class="scent-pyramid-card">
+          <div class="scent-card-header">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+            </svg>
+            <span>Fragrance Architecture</span>
+          </div>
+          <div class="scent-grid">
+            <div class="scent-item">
+              <span class="scent-label">Top Notes:</span>
+              <span class="scent-val" id="pdpTopNotes"></span>
+            </div>
+            <div class="scent-item">
+              <span class="scent-label">Heart Notes:</span>
+              <span class="scent-val" id="pdpHeartNotes"></span>
+            </div>
+            <div class="scent-item">
+              <span class="scent-label">Base Notes:</span>
+              <span class="scent-val" id="pdpBaseNotes"></span>
+            </div>
+          </div>
+          <div class="scent-footer-meta">
+            <span><strong>Burn Duration:</strong> <span id="pdpBurnTime"></span></span>
+            <span class="dot-sep">•</span>
+            <span><strong>Wax:</strong> 100% Botanical Soy</span>
+          </div>
+        </div>
+
+        <!-- Pincode Serviceability & COD Widget -->
+        <div class="pincode-widget">
+          <label for="pincodeInput">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            Check Pincode Serviceability &amp; COD:
+          </label>
+          <div class="pincode-input-group">
+            <input type="text" id="pincodeInput" placeholder="Enter 6-digit Pincode" maxlength="6" inputmode="numeric" />
+            <button type="button" id="checkPincodeBtn">Verify Delivery</button>
+          </div>
+          <p class="pincode-message" id="pincodeMsg" aria-live="polite"></p>
+        </div>
+
+        <button class="btn btn-gold btn-block pdp-add-bag-btn" id="pdpAddToCartBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+            <path d="M3 6h18"></path>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          Add to Shopping Bag
+        </button>
+
+        <div class="pdp-trust-row">
+          <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"></path></svg> Artisanal Hand-Poured</span>
+          <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"></path></svg> Smokeless Burn</span>
+          <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"></path></svg> Fast Dispatch</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Multi-Step Checkout Modal -->
+  <div class="modal checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <button class="modal-close-btn" id="closeCheckoutBtn" aria-label="Close checkout">✕</button>
+    <h3 class="checkout-title" id="checkoutTitle">Express Checkout</h3>
+
+    <form id="checkoutForm">
+      <div class="form-group">
+        <label for="custName">Full Name</label>
+        <input type="text" id="custName" required placeholder="Enter your full name" />
+      </div>
+
+      <div class="form-group">
+        <label for="custPhone">Mobile Number (For Courier Tracking Updates)</label>
+        <input type="tel" id="custPhone" required placeholder="Enter 10-digit mobile number" />
+      </div>
+
+      <div class="form-group">
+        <label for="custAddress">Delivery Address</label>
+        <textarea id="custAddress" rows="2" required placeholder="House / Flat no., Building, Street, Landmark"></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="custCity">City</label>
+          <input type="text" id="custCity" required placeholder="Enter city" />
+        </div>
+        <div class="form-group">
+          <label for="custPincode">Pincode</label>
+          <input type="text" id="custPincode" required placeholder="Enter 6-digit PIN code" />
+        </div>
+      </div>
+
+      <!-- Checkout Order Summary -->
+      <div class="checkout-order-summary" id="checkoutOrderSummary">
+        <div class="checkout-summary-header">
+          <span class="checkout-summary-title">Order Summary</span>
+          <span class="checkout-summary-count" id="checkoutSummaryCount">0 items</span>
+        </div>
+        <div class="checkout-summary-list" id="checkoutSummaryList"></div>
+      </div>
+
+      <!-- Discount Codes Section (Reference Match) -->
+      <div class="checkout-discounts-section" id="checkoutDiscountsSection">
+        <h4 class="checkout-discount-heading">Discount Codes</h4>
+        <div class="discount-cards-stack">
+          <!-- Card 1: SAVE5 -->
+          <div class="discount-offer-card" id="discountCardSave5" data-code="SAVE5" role="button" tabindex="0" title="Click to copy and apply SAVE5">
+            <div class="discount-seal-icon" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 32.50 18.00 Q 34.77 21.83 31.06 24.29 Q 31.45 28.72 27.04 29.34 Q 25.46 33.50 21.23 32.14 Q 18.00 35.20 14.77 32.14 Q 10.54 33.50 8.96 29.34 Q 4.55 28.72 4.94 24.29 Q 1.23 21.83 3.50 18.00 Q 1.23 14.17 4.94 11.71 Q 4.55 7.28 8.96 6.66 Q 10.54 2.50 14.77 3.86 Q 18.00 0.80 21.23 3.86 Q 25.46 2.50 27.04 6.66 Q 31.45 7.28 31.06 11.71 Q 34.77 14.17 32.50 18.00" fill="#E53935"/>
+                <text x="18" y="23" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="14.5">%</text>
+              </svg>
+            </div>
+            <div class="discount-offer-body">
+              <div class="discount-offer-text">Get Flat 5% off on your first order.</div>
+              <div class="discount-offer-sub">Use Code: <strong>"SAVE5"</strong></div>
+            </div>
+            <div class="discount-card-action">
+              <span class="discount-action-btn" id="actionBtnSave5">Apply</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Prepaid 5% -->
+          <div class="discount-offer-card" id="discountCardPrepaid" role="button" tabindex="0" title="Applied automatically on Prepaid payment">
+            <div class="discount-seal-icon" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 32.50 18.00 Q 34.77 21.83 31.06 24.29 Q 31.45 28.72 27.04 29.34 Q 25.46 33.50 21.23 32.14 Q 18.00 35.20 14.77 32.14 Q 10.54 33.50 8.96 29.34 Q 4.55 28.72 4.94 24.29 Q 1.23 21.83 3.50 18.00 Q 1.23 14.17 4.94 11.71 Q 4.55 7.28 8.96 6.66 Q 10.54 2.50 14.77 3.86 Q 18.00 0.80 21.23 3.86 Q 25.46 2.50 27.04 6.66 Q 31.45 7.28 31.06 11.71 Q 34.77 14.17 32.50 18.00" fill="#E53935"/>
+                <text x="18" y="23" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="14.5">%</text>
+              </svg>
+            </div>
+            <div class="discount-offer-body">
+              <div class="discount-offer-text">Extra 5% off on all prepaid orders!</div>
+              <div class="discount-offer-sub"><strong>Applied on Your Checkout</strong></div>
+            </div>
+            <div class="discount-card-action">
+              <span class="discount-status-badge" id="prepaidBadge">Active</span>
+            </div>
+          </div>
+
+          <!-- Card 3: BUY2 -->
+          <div class="discount-offer-card" id="discountCardBuy2" data-code="BUY2" role="button" tabindex="0" title="Click to copy and apply BUY2">
+            <div class="discount-seal-icon" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 32.50 18.00 Q 34.77 21.83 31.06 24.29 Q 31.45 28.72 27.04 29.34 Q 25.46 33.50 21.23 32.14 Q 18.00 35.20 14.77 32.14 Q 10.54 33.50 8.96 29.34 Q 4.55 28.72 4.94 24.29 Q 1.23 21.83 3.50 18.00 Q 1.23 14.17 4.94 11.71 Q 4.55 7.28 8.96 6.66 Q 10.54 2.50 14.77 3.86 Q 18.00 0.80 21.23 3.86 Q 25.46 2.50 27.04 6.66 Q 31.45 7.28 31.06 11.71 Q 34.77 14.17 32.50 18.00" fill="#E53935"/>
+                <text x="18" y="23" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="14.5">%</text>
+              </svg>
+            </div>
+            <div class="discount-offer-body">
+              <div class="discount-offer-text">Get 10% off on purchase of 2 Items.</div>
+              <div class="discount-offer-sub">Use Code: <strong>"BUY2"</strong></div>
+            </div>
+            <div class="discount-card-action">
+              <span class="discount-action-btn" id="actionBtnBuy2">Apply</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Promo Code Input & Feedback -->
+        <div class="checkout-promo-row">
+          <div class="checkout-promo-input-group">
+            <input type="text" id="checkoutPromoInput" placeholder="Enter coupon code" autocomplete="off" autocorrect="off" autocapitalize="characters" />
+            <button type="button" class="btn-checkout-promo-apply" id="checkoutPromoApplyBtn">Apply</button>
+          </div>
+          <div class="checkout-promo-msg" id="checkoutPromoMsg" style="display:none;"></div>
+        </div>
+      </div>
+
+      <fieldset class="payment-fieldset">
+        <legend>Select Payment Method</legend>
+        <div class="payment-methods-grid">
+          <label class="payment-card selected" id="labelPrepaid">
+            <input type="radio" name="paymentType" value="prepaid" checked />
+            <span class="pay-title">Prepaid (UPI / Cards)</span>
+            <span class="pay-sub">Razorpay Secure Gateway</span>
+          </label>
+
+          <label class="payment-card" id="labelCod">
+            <input type="radio" name="paymentType" value="cod" />
+            <span class="pay-title">Cash on Delivery (COD)</span>
+            <span class="pay-sub">Pay directly upon parcel delivery</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Order Pricing Breakdown -->
+      <div class="checkout-breakdown" id="checkoutBreakdown">
+        <div class="checkout-breakdown-row">
+          <span class="breakdown-label">Subtotal</span>
+          <span class="breakdown-value" id="checkoutBreakdownSubtotal">₹0</span>
+        </div>
+        <div class="checkout-breakdown-row discount-row" id="checkoutBreakdownDiscountRow" style="display:none;">
+          <span class="breakdown-label" id="checkoutBreakdownDiscountLabel">Discount</span>
+          <span class="breakdown-value discount-text" id="checkoutBreakdownDiscountVal">-₹0</span>
+        </div>
+        <div class="checkout-breakdown-row">
+          <span class="breakdown-label">Delivery Fee</span>
+          <span class="breakdown-value free-shipping-text" id="checkoutBreakdownShipping">FREE</span>
+        </div>
+        <div class="checkout-breakdown-row total-row">
+          <span class="breakdown-label">Final Total</span>
+          <span class="breakdown-value total-val">₹<span id="checkoutFinalTotal">0</span></span>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-gold btn-block" id="placeOrderBtn">
+        Confirm Order (₹<span id="checkoutAmountTotal">0</span>)
+      </button>
+    </form>
+  </div>
+
+  <!-- Policy Viewer Modal -->
+  <div class="modal policy-modal" id="policyModal" role="dialog" aria-modal="true" aria-labelledby="policyModalTitle">
+    <button class="modal-close-btn" id="closePolicyBtn" aria-label="Close policy">✕</button>
+    <h3 class="policy-modal-title" id="policyModalTitle">Store Policy</h3>
+    <div class="policy-modal-body" id="policyModalBody"></div>
+  </div>
+
+  <!-- 
+       12. FLOATING WHATSAPP SUPPORT BUTTON
+        -->
+  <a href="https://wa.me/919762831995?text=Hello%20The%20Candlorre,%20I'd%20like%20assistance%20with%20fragrances"
+    class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Concierge on WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92zM12.04 20.14c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a7.87 7.87 0 0 1-1.22-4.37c0-4.36 3.55-7.91 7.91-7.91 4.36 0 7.91 3.55 7.91 7.91 0 4.36-3.55 7.91-7.91 7.91zm4.34-5.93c-.24-.12-1.41-.7-1.63-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.41-.58 1.61-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z">
+      </path>
+    </svg>
+  </a>
+
+  <!-- 
+       13. MOBILE APP BOTTOM NAVIGATION BAR
+        -->
+  <nav class="mobile-nav-bar" aria-label="Mobile View Navigation">
+    <button class="mobile-tab" id="mobHomeBtn">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+      </svg>
+      <span>Home</span>
+    </button>
+    <button class="mobile-tab" id="mobShopBtn">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect>
+        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+      </svg>
+      <span>Shop</span>
+    </button>
+    <button class="mobile-tab" id="mobWishlistBtn">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path
+          d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+        </path>
+      </svg>
+      <span>Wishlist</span>
+    </button>
+    <button class="mobile-tab" id="mobBagBtn">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+        <path d="M3 6h18"></path>
+      </svg>
+      <span>Bag</span>
+    </button>
+  </nav>
+
+  <!-- 
+       14. INTERACTIVE TOAST NOTIFICATION
+        -->
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite"></div>
+
+  <!-- 
+       15. -INSPIRED LUXURY FOOTER
+        -->
+  <footer class="site-footer">
+    <!-- Trust Strip -->
+    <div class="footer-trust-strip">
+      <div class="footer-trust-grid">
+        <div class="footer-trust-item">
+          <div class="footer-trust-icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <div class="footer-trust-text">
+            <h5>100% Botanical Soy</h5>
+            <p>Zero paraffin, toxin-free burn</p>
+          </div>
+        </div>
+
+        <div class="footer-trust-item">
+          <div class="footer-trust-icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <div class="footer-trust-text">
+            <h5>Cruelty-Free &amp; Vegan</h5>
+            <p>Pure therapeutic essential oils</p>
+          </div>
+        </div>
+
+        <div class="footer-trust-item">
+          <div class="footer-trust-icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3z"></path></svg>
+          </div>
+          <div class="footer-trust-text">
+            <h5>Hand-Poured in India</h5>
+            <p>Micro-batch artisan craft</p>
+          </div>
+        </div>
+
+        <div class="footer-trust-item">
+          <div class="footer-trust-icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          </div>
+          <div class="footer-trust-text">
+            <h5>Pan-India Delivery</h5>
+            <p>Free express shipping over ₹999</p>
+          </div>
+        </div>
+
+        <div class="footer-trust-item">
+          <div class="footer-trust-icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+          </div>
+          <div class="footer-trust-text">
+            <h5>Secure Checkout</h5>
+            <p>UPI, Cards, COD &amp; NetBanking</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Newsletter VIP Section -->
+    <div class="footer-newsletter-section">
+      <div class="footer-newsletter-wrap">
+        <div class="footer-newsletter-text">
+          <span class="footer-newsletter-eyebrow">The Candlorre VIP Circle</span>
+          <h3 class="footer-newsletter-title">Subscribe to our newsletter</h3>
+          <p class="footer-newsletter-desc">Get 10% off your inaugural order, private fragrance previews, and seasonal botanical drop alerts directly in your inbox.</p>
+        </div>
+        <form class="footer-newsletter-form" onsubmit="event.preventDefault(); if (typeof window.showToast === 'function') { window.showToast('Thank you for subscribing to The Candlorre VIP Circle! ♡'); } else { const b = this.querySelector('button'); if(b) b.textContent='Subscribed ✓'; } this.reset();">
+          <input type="email" class="footer-newsletter-input" placeholder="Enter your email address..." required aria-label="Email address for newsletter" />
+          <button type="submit" class="footer-newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Main Navigation Body -->
+    <div class="footer-main-body">
+      <div class="footer-grid">
+        <!-- Exact Logo & Bio preserved as requested -->
+        <div class="footer-col brand-col">
+          <div class="footer-brand-wrap">
+            <a href="index.html" class="footer-logo">The Candlorre</a>
+            <span class="footer-tagline">ILLUMINATE LUXURY</span>
+          </div>
+          <p class="footer-bio">
+            Micro-batch botanical soy wax candles handcrafted with pure cotton wicks and fine therapeutic oils. Designed
+            for slow living and curated relaxation.
+          </p>
+
+          <div class="footer-contact-details">
+            <a href="tel:+919762831995" class="footer-contact-row">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+91 9762831995</span>
+            </a>
+            <div class="footer-contact-row">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Mon – Sat, 09:30 AM – 6:30 PM IST</span>
+            </div>
+            <a href="mailto:support@thecandlorre.com" class="footer-contact-row">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>support@thecandlorre.com</span>
+            </a>
+          </div>
+
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Pinterest">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.25 2.65 7.9 6.44 9.32-.09-.79-.17-2.01.04-2.88.19-.78 1.22-5.18 1.22-5.18s-.31-.62-.31-1.54c0-1.44.84-2.52 1.88-2.52.88 0 1.31.66 1.31 1.45 0 .89-.57 2.22-.86 3.46-.24 1.04.52 1.89 1.55 1.89 1.86 0 3.29-1.96 3.29-4.79 0-2.5-1.8-4.25-4.43-4.25-3.04 0-4.83 2.28-4.83 4.64 0 .89.34 1.85.77 2.37.08.1.09.19.07.29-.07.29-.23.95-.26 1.07-.04.16-.14.2-.31.12-1.15-.55-1.87-2.27-1.87-3.66 0-2.98 2.17-5.72 6.25-5.72 3.29 0 5.85 2.34 5.85 5.46 0 3.27-2.06 5.9-4.92 5.9-1.07 0-2.08-.55-2.42-1.21 0 0-.53 2.01-.66 2.52-.24.93-.89 2.1-1.32 2.81C10.45 23.83 11.21 24 12 24c5.52 0 10-4.48 10-10S17.52 2 12 2z"></path></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46c-1.08.29-1.94 1.15-2.23 2.24C.71 8.41.71 12 .71 12s0 3.59.47 5.3c.29 1.09 1.15 1.95 2.23 2.24C5.12 20 12 20 12 20s6.88 0 8.59-.46c1.08-.29 1.95-1.15 2.24-2.24.46-1.71.46-5.3.46-5.3s0-3.59-.46-5.3h-.29zM9.54 15.57V8.43L15.82 12l-6.28 3.57z"></path></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="X">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M21.05 3h-4.32l-5.69 7.42L6.5 3H2.1l7.35 10.37L2 21h4.32l6.03-7.85L17.2 21h4.4L13.9 10.02z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Collections</h4>
+          <ul class="footer-links">
+            <li><a href="full-catalog.html?category=candles">Amber Jar Candles</a></li>
+            <li><a href="full-catalog.html?category=candles">Frosted Luxe Tumblers</a></li>
+            <li><a href="full-catalog.html?category=Diffusers and Aromas">Reed Diffusers &amp; Oils</a></li>
+            <li><a href="full-catalog.html?category=Metal Collection">Luxury Brass &amp; Metal</a></li>
+            <li><a href="full-catalog.html?category=Wooden Collection">Wooden Wick Sanctuary</a></li>
+            <li><a href="category.html?cat=Candle%20Accessories">Candle Accessories &amp; Care</a></li>
+            <li><a href="full-catalog.html">Complete Catalog </a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Policies</h4>
+          <ul class="footer-links">
+            <li><a href="return-refund-policy.html">Return &amp; Refund Policy</a></li>
+            <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy &amp; Cookies Policy</a></li>
+            <li><a href="shipping-policy.html">Shipping &amp; COD Policy</a></li>
+            <li><a href="return-refund-policy.html#cancellations">Cancellation Policy</a></li>
+            <li><a href="shipping-policy.html#cod">Payment &amp; COD Terms</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="tracking.html">Track Your Order</a></li>
+            <li><a href="contact-us.html">Contact Us &amp; Help Desk</a></li>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="about-us.html">About Our Atelier</a></li>
+            <li><a href="faq.html#candle-care">Candle Care &amp; Burn Guide</a></li>
+            <li><a href="contact-us.html#gifting">Corporate &amp; Wedding Gifting</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Row & SSL Badges -->
+    <div class="footer-bottom-wrap">
+      <div class="footer-bottom-row">
+        <p class="footer-copyright">
+          © 2026 The Candlorre home & decor LLP. All rights reserved. Handcrafted with devotion in India.
+        </p>
+        <div class="footer-legal-inline">
+          <a href="return-refund-policy.html">Return &amp; Refund</a>
+          <a href="terms-and-conditions.html">Terms</a>
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="shipping-policy.html">Shipping</a>
+        </div>
+      </div>
+
+      <div class="footer-payment-strip">
+        <span class="footer-payment-note">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          100% Encrypted 256-Bit SSL Payments
+        </span>
+        <div class="footer-payment-badges">
+          <span class="payment-badge-pill payment-pill-upi" title="UPI - Unified Payments Interface">
+            <svg class="payment-logo-svg" width="40" height="18" viewBox="0 0 70 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="UPI">
+              <path d="M12 3L3 21H10L19 3H12Z" fill="#097939"/>
+              <path d="M18 3L9 21H16L25 3H18Z" fill="#ED752E"/>
+              <path d="M30 6V15C30 17.5 31.8 19 34.5 19C37.2 19 39 17.5 39 15V6H35.5V14.8C35.5 15.8 34.8 16.3 34.5 16.3C34.2 16.3 33.5 15.8 33.5 14.8V6H30Z" fill="#097939"/>
+              <path d="M42 6V19H45.5V14.5H48.5C51.5 14.5 53.5 12.8 53.5 10.2C53.5 7.6 51.5 6 48.5 6H42ZM45.5 8.7H48.5C49.8 8.7 50.3 9.3 50.3 10.2C50.3 11.1 49.8 11.8 48.5 11.8H45.5V8.7Z" fill="#097939"/>
+              <path d="M57 6H60.5V19H57V6Z" fill="#097939"/>
+            </svg>
+          </span>
+          <span class="payment-badge-pill payment-pill-visa" title="Visa">
+            <svg class="payment-logo-svg" width="38" height="18" viewBox="0 0 54 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Visa">
+              <path d="M18.5 2.5L12.5 16.5H8.2L5 5.5C4.8 4.7 4.6 4.4 4 4C3 3.5 1.5 3 0 2.7L0.3 2.5H7C7.9 2.5 8.7 3.1 8.9 4.1L10.5 12.3L14.7 2.5H18.5Z" fill="#1A1F71"/>
+              <path d="M22.5 2.5H18.8L15.9 16.5H19.7L22.5 2.5Z" fill="#1A1F71"/>
+              <path d="M30.4 2.5C28.2 2.5 26.8 3.6 26.8 5.1C26.8 8.1 31.1 8.2 31.1 10.4C31.1 11.3 30.3 11.9 29.3 11.9C27.5 11.9 26.3 11.1 25.5 10.6L24.8 13.8C25.9 14.3 27.6 14.8 29.5 14.8C32 14.8 33.7 13.5 33.7 11.8C33.7 8.6 29.3 8.3 29.3 6.3C29.3 5.7 30 5.1 31 5.1C32.4 5.1 33.5 5.7 34.1 6L34.7 3.1C33.9 2.7 32.2 2.5 30.4 2.5Z" fill="#1A1F71"/>
+              <path d="M42 2.5H38.5C37.7 2.5 37.1 2.9 36.8 3.6L31.5 16.5H35.4L36.2 14.3H41.1L41.5 16.5H45L42 2.5ZM37.3 11.3C37.6 10.5 38.8 7.3 38.8 7.3C38.8 7.3 39.2 6.2 39.4 5.6L39.7 7.2L40.4 11.3H37.3Z" fill="#1A1F71"/>
+              <path d="M5 5.5C4.8 4.7 4.6 4.4 4 4C3 3.5 1.5 3 0 2.7L0.3 2.5H7C7.9 2.5 8.7 3.1 8.9 4.1L5 5.5Z" fill="#F7B600"/>
+            </svg>
+          </span>
+          <span class="payment-badge-pill payment-pill-mastercard" title="Mastercard">
+            <svg class="payment-logo-svg" width="32" height="20" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mastercard">
+              <circle cx="13" cy="12" r="10" fill="#EB001B"/>
+              <circle cx="25" cy="12" r="10" fill="#F79E1B"/>
+              <path d="M19 5.3A10 10 0 0 1 22.8 12 10 10 0 0 1 19 18.7 10 10 0 0 1 15.2 12 10 10 0 0 1 19 5.3Z" fill="#FF5F00"/>
+            </svg>
+          </span>
+          <span class="payment-badge-pill payment-pill-rupay" title="RuPay">
+            <svg class="payment-logo-svg" width="46" height="18" viewBox="0 0 68 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="RuPay">
+              <text x="2" y="15" font-family="'Montserrat', 'Arial', sans-serif" font-size="13.5" font-weight="900" fill="#0C2340">Ru</text>
+              <text x="21" y="15" font-family="'Montserrat', 'Arial', sans-serif" font-size="13.5" font-weight="900" fill="#0075BE">Pay</text>
+              <path d="M50 4L45 10L50 16H54.5L49.5 10L54.5 4H50Z" fill="#0075BE"/>
+              <path d="M56 4L51 10L56 16H60.5L55.5 10L60.5 4H56Z" fill="#F47920"/>
+            </svg>
+          </span>
+          <span class="payment-badge-pill payment-pill-netbanking" title="Net Banking">
+            <svg class="payment-logo-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2B050B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-label="Net Banking">
+              <path d="M3 10h18M3 14h18M3 6l9-4 9 4v2H3V6zM4 10v4M8 10v4M12 10v4M16 10v4M20 10v4M2 18h20v3H2v-3z"/>
+            </svg>
+            <span class="payment-badge-text">NET BANKING</span>
+          </span>
+          <span class="payment-badge-pill payment-pill-cod" title="Cash on Delivery">
+            <svg class="payment-logo-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-label="Cash on Delivery">
+              <rect x="2" y="6" width="20" height="12" rx="2"/>
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M6 12h.01M18 12h.01"/>
+            </svg>
+            <span class="payment-badge-text">COD</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External Script -->
+  <script src="js/core/analytics.js"></script>
+  <script src="js/core/data.js"></script>
+  <script src="js/shopify.js"></script>
+  <script src="js/core/nav.js"></script>
+  <script src="js/core/state.js"></script>
+  <script src="js/core/dom.js"></script>
+  <script src="js/features/toast.js"></script>
+  <script src="js/features/catalog.js"></script>
+  <script src="js/features/cart.js"></script>
+  <script src="js/features/wishlist.js"></script>
+  <script src="js/features/product.js"></script>
+  <script src="js/features/checkout.js"></script>
+  <script src="js/features/account-tracking.js"></script>
+  <script src="js/features/policies.js"></script>
+  <script src="js/features/events.js"></script>
+</body>
+
+</html>

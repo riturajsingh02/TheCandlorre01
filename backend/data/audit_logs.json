@@ -1,0 +1,24 @@
+[
+  {
+    "action": "ADMIN_LOGIN",
+    "actor": "thecandlorre@gmail.com",
+    "metadata": {
+      "ip": "127.0.0.1",
+      "timestamp": "2026-09-28T12:09:53.295Z"
+    },
+    "id": "rec_1790597393295_e783525aacd4",
+    "createdAt": "2026-09-28T12:09:53.295Z",
+    "updatedAt": "2026-09-28T12:09:53.295Z"
+  },
+  {
+    "action": "ADMIN_LOGIN",
+    "actor": "thecandlorre@gmail.com",
+    "metadata": {
+      "ip": "127.0.0.1",
+      "timestamp": "2026-09-28T12:10:00.744Z"
+    },
+    "id": "rec_1790597400744_7329a28a2e00",
+    "createdAt": "2026-09-28T12:10:00.744Z",
+    "updatedAt": "2026-09-28T12:10:00.744Z"
+  }
+]

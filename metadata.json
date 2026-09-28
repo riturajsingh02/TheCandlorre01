@@ -1,0 +1,8 @@
+{
+  "name": "The Candlorre",
+  "description": "Micro-batch botanical soy wax candles handcrafted with pure cotton wicks, IFRA-certified therapeutic oils, and bespoke fragrances.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

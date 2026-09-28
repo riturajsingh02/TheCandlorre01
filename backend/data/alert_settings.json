@@ -1,0 +1,36 @@
+[
+  {
+    "id": "global_store_alert_settings",
+    "alertEmail": "thecandlorre@gmail.com",
+    "fromEmail": "The Candlorre Alerts <alerts@thecandlorre.com>",
+    "emailProvider": "resend",
+    "lowStockThreshold": 5,
+    "criticalStockThreshold": 2,
+    "warningStockThreshold": 10,
+    "enableDailyInventoryReport": true,
+    "enableDailySalesReport": true,
+    "enableWeeklyReport": false,
+    "dailyInventoryReportHour": 9,
+    "dailySalesReportHour": 21,
+    "enabledAlerts": {
+      "lowStock": true,
+      "criticalStock": true,
+      "outOfStock": true,
+      "backInStock": true,
+      "inventoryChange": true,
+      "newOrder": true,
+      "codOrder": true,
+      "paymentFailed": true,
+      "paymentConfirmed": true,
+      "refundIssued": true,
+      "orderStatus": true,
+      "priceChange": true,
+      "productCreated": true,
+      "productUpdated": true,
+      "productDeleted": true,
+      "systemError": true
+    },
+    "createdAt": "2026-09-24T19:08:01.678Z",
+    "updatedAt": "2026-09-24T19:08:01.678Z"
+  }
+]
