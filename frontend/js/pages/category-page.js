@@ -36,12 +36,25 @@ document.addEventListener('DOMContentLoaded', () => {
       ? Math.round(((product.origPrice - product.price) / product.origPrice) * 100) 
       : 0;
 
+    const stock = typeof product.stock === 'number'
+      ? product.stock
+      : (Array.isArray(product.variants) && product.variants.length > 0
+          ? product.variants.reduce((sum, v) => sum + (typeof v.stock === 'number' ? v.stock : 0), 0)
+          : 15);
+
+    const isComingSoon = Boolean(product.isComingSoon);
+    const isOutOfStock = !isComingSoon && (product.available === false || stock <= 0);
+    const isLowStock = !isComingSoon && !isOutOfStock && stock > 0 && stock < 10;
+
     return `
       <article class="km-product-card" data-id="${product.id}" data-category="${product.category}" id="kmCatCard${product.id}">
         <div class="km-card-figure" onclick="openPDP(${product.id})">
           <div class="km-figure-badges">
-            ${product.badge ? `<span class="km-badge-new">${product.badge}</span>` : ''}
-            ${discountPct > 0 ? `<span class="km-badge-discount">${discountPct}% OFF</span>` : ''}
+            ${isComingSoon ? '<span class="km-badge-new">COMING SOON</span>' : ''}
+            ${isOutOfStock ? '<span class="km-badge-oos">OUT OF STOCK</span>' : ''}
+            ${!isOutOfStock && !isComingSoon && isLowStock ? `<span class="km-badge-stock-urgent">🔥 Only ${stock} Left</span>` : ''}
+            ${!isOutOfStock && !isComingSoon && !isLowStock && product.badge ? `<span class="km-badge-new">${product.badge}</span>` : ''}
+            ${!isOutOfStock && discountPct > 0 ? `<span class="km-badge-discount">${discountPct}% OFF</span>` : ''}
           </div>
 
           <button 
@@ -70,6 +83,15 @@ document.addEventListener('DOMContentLoaded', () => {
             <span>${product.category && product.category.toLowerCase().includes('accessories') ? 'Solid Brass &amp; Metal Care' : '100% Botanical Soy'}</span>
           </div>
 
+          ${isComingSoon 
+            ? `<div class="km-stock-status-line coming-soon"><span class="stock-bullet gold"></span> Coming Soon • In Atelier</div>`
+            : isOutOfStock
+              ? `<div class="km-stock-status-line out-of-stock"><span class="stock-bullet red"></span> Out of Stock</div>`
+              : isLowStock
+                ? `<div class="km-stock-status-line low-stock"><span class="stock-bullet amber pulse"></span> <strong>Only ${stock} left in stock</strong> — order soon!</div>`
+                : `<div class="km-stock-status-line in-stock"><span class="stock-bullet green"></span> In Stock &amp; Hand-Poured</div>`
+          }
+
           <div class="km-price-block">
             <span class="km-price-current">₹${product.price.toLocaleString('en-IN')}</span>
             ${product.origPrice > product.price ? `<span class="km-price-original">₹${product.origPrice.toLocaleString('en-IN')}</span>` : ''}
@@ -77,16 +99,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
           <button 
             type="button" 
-            class="km-add-cart-btn" 
-            onclick="window.kmAddToCart ? kmAddToCart(${product.id}, this) : addToCart(${product.id})"
-            ${product.stock <= 0 ? 'disabled' : ''}
+            class="km-add-cart-btn ${isOutOfStock ? 'oos-btn' : ''}" 
+            onclick="${isOutOfStock || isComingSoon ? '' : `window.kmAddToCart ? kmAddToCart(${product.id}, this) : addToCart(${product.id})`}"
+            ${isOutOfStock || isComingSoon ? 'disabled' : ''}
           >
             <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
               <path d="M3 6h18"></path>
               <path d="M16 10a4 4 0 0 1-8 0"></path>
             </svg>
-            <span>${product.stock <= 0 ? 'Sold Out' : 'Add to Bag'}</span>
+            <span>${isComingSoon ? 'Coming Soon' : isOutOfStock ? 'Out of Stock' : 'Add to Bag'}</span>
           </button>
         </div>
       </article>
