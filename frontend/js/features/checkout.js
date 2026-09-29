@@ -490,6 +490,35 @@ function openCheckout() {
     showToast("Please add candles to your bag first.");
     return;
   }
+
+  // Verify and sanitize inventory before proceeding to checkout
+  let cartAdjusted = false;
+  let hasOutOfStockItem = false;
+  
+  cart.forEach(item => {
+    if (typeof getCartItemInventory === 'function') {
+      const inv = getCartItemInventory(item);
+      if (inv.isOutOfStock || inv.stock <= 0) {
+        hasOutOfStockItem = true;
+      } else if (inv.stock > 0 && item.qty > inv.stock) {
+        item.qty = inv.stock;
+        cartAdjusted = true;
+      }
+    }
+  });
+
+  if (cartAdjusted) {
+    localStorage.setItem('theCandlorre_cart', JSON.stringify(cart));
+    if (typeof updateCartUI === 'function') updateCartUI();
+    showToast("Quantities were adjusted to match available stock.");
+  }
+
+  if (hasOutOfStockItem) {
+    showToast("Your bag contains out-of-stock items. Please remove them before checkout.");
+    toggleCartDrawer(true);
+    return;
+  }
+
   toggleCartDrawer(false);
 
   ensureCheckoutFormFields();
