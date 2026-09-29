@@ -259,7 +259,7 @@ const CANDLE_INVENTORY = [
     ],
     desc: "Sculptural ribbed architectural pillar candle hand-poured with botanical soy wax. Features elegant fluted geometry that catches candlelight in cascading ridges.",
     dimensions: "7.5 × 7.5 × 12 cm (280g)",
-    stock: 9,
+    stock: 25,
     variants: [
       {
         id: "ribbed-pillar-white",
@@ -270,7 +270,7 @@ const CANDLE_INVENTORY = [
         burn: "40-50 Hours",
         dimensions: "7.5 × 7.5 × 12 cm (280g)",
         available: true,
-        stock: 4,
+        stock: 11,
         badge: "NEW ARRIVAL",
         notes: {
           top: "Pure Cotton Flower & White Lily",
@@ -293,7 +293,7 @@ const CANDLE_INVENTORY = [
         burn: "40-50 Hours",
         dimensions: "7.5 × 7.5 × 12 cm (280g)",
         available: true,
-        stock: 5,
+        stock: 11,
         badge: "NEW ARRIVAL",
         notes: {
           top: "Crimson Clove & Pomegranate",
@@ -315,6 +315,9 @@ const CANDLE_INVENTORY = [
         origPrice: 699,
         burn: "40-50 Hours",
         dimensions: "7.5 × 7.5 × 12 cm (280g)",
+        // available: true,
+        // stock: 14,
+        // badge: "BESTSELLER",
         available: false,
         isOutOfStock: true,
         stock: 0,
@@ -341,6 +344,9 @@ const CANDLE_INVENTORY = [
         origPrice: 699,
         burn: "40-50 Hours",
         dimensions: "7.5 × 7.5 × 12 cm (280g)",
+        // available: true,
+        // stock: 11,
+        // badge: "NEW ARRIVAL",
         available: false,
         isOutOfStock: true,
         stock: 0,
@@ -469,7 +475,7 @@ const CANDLE_INVENTORY = [
     ],
     desc: "Sculpted from sustainable seasoned hardwood into an elongated boat silhouette. Multi-wick botanical candle creating an enchanting horizontal fireplace flame.",
     dimensions: "38 × 12 × 7 cm (850g Wax)",
-    stock: 7,
+    stock: 12,
     variants: [
       {
         id: "grand-boat-large",
@@ -479,7 +485,7 @@ const CANDLE_INVENTORY = [
         burn: "70-85 Hours",
         dimensions: "42 × 13 × 7 cm (950g Wax · 3 Wicks)",
         available: true,
-        stock: 3,
+        stock: 6,
         badge: "LUXURY STATEMENT",
         notes: {
           top: "Smoked Teak & Cardamom",
@@ -503,7 +509,7 @@ const CANDLE_INVENTORY = [
         burn: "55-65 Hours",
         dimensions: "32 × 11 × 6 cm (650g Wax · 2 Wicks)",
         available: true,
-        stock: 4,
+        stock: 6,
         badge: "BESTSELLER",
         notes: {
           top: "Smoked Teak & Cardamom",
@@ -679,7 +685,7 @@ const CANDLE_INVENTORY = [
     ],
     desc: "Monolithic 12-inch hand-poured botanical pillar candle with smooth satin finish. Designed for dramatic mantelpieces, hurricane glass lanterns, and entrance halls.",
     dimensions: "10 cm ⌀ × 30 cm Height (12\" · 1.2kg)",
-    stock: 5,
+    stock: 15,
     variants: [
       {
         id: "grand-pillar-white",
@@ -690,7 +696,7 @@ const CANDLE_INVENTORY = [
         burn: "85-100 Hours",
         dimensions: "10 cm ⌀ × 30 cm (12\" · 1.2kg)",
         available: true,
-        stock: 5,
+        stock: 8,
         badge: "SIGNATURE PILLAR",
         notes: {
           top: "Pure Cotton Flower & Bergamot",
@@ -804,7 +810,7 @@ const CANDLE_INVENTORY = [
     ],
     desc: "Refined 9-inch hand-poured botanical pillar candle with balanced height and steady, smokeless illumination for consoles and candle trays.",
     dimensions: "8.5 cm ⌀ × 23 cm Height (9\" · 850g)",
-    stock: 4,
+    stock: 18,
     variants: [
       {
         id: "classic-pillar-white",
@@ -815,7 +821,7 @@ const CANDLE_INVENTORY = [
         burn: "65-75 Hours",
         dimensions: "8.5 cm ⌀ × 23 cm (9\" · 850g)",
         available: true,
-        stock: 4,
+        stock: 8,
         badge: "BESTSELLER",
         notes: {
           top: "Pure Cotton Flower & Bergamot",
@@ -929,7 +935,7 @@ const CANDLE_INVENTORY = [
     ],
     desc: "Compact 6-inch hand-poured botanical pillar candle, versatile for grouping in tiered trios or styling on nightstands.",
     dimensions: "7.5 cm ⌀ × 15 cm Height (6\" · 550g)",
-    stock: 3,
+    stock: 20,
     variants: [
       {
         id: "mini-pillar-white",
@@ -940,7 +946,7 @@ const CANDLE_INVENTORY = [
         burn: "45-55 Hours",
         dimensions: "7.5 cm ⌀ × 15 cm (6\" · 550g)",
         available: true,
-        stock: 3,
+        stock: 8,
         badge: "ESSENTIAL",
         notes: {
           top: "Pure Cotton Flower & Bergamot",
@@ -1054,7 +1060,7 @@ const CANDLE_INVENTORY = [
     ],
     desc: "Wide-aperture shallow ceramic bowl featuring three pure cotton wicks for a generous, luminous pool of melted botanical wax and rapid fragrance diffusion.",
     dimensions: "14 × 14 × 6.5 cm (450g Wax)",
-    stock: 4
+    stock: 22
   },
 
   // 8. DOUBLE GLOW JAR CANDLE
@@ -1190,7 +1196,7 @@ const CANDLE_INVENTORY = [
     ],
     desc: "Gilded metallic vessel handcrafted with a brushed gold patina. Radiates brilliant reflective luminosity across table settings and shelves.",
     dimensions: "8.5 × 8.5 × 10 cm (300g)",
-    stock: 6
+    stock: 20
   },
 
   // 11. GOLDEN METAL BOWL CANDLE
@@ -1332,7 +1338,7 @@ const CANDLE_INVENTORY = [
     ],
     desc: "Flame-free continuous therapeutic home fragrance infused with concentrated botanical essential oils and porous natural rattan reeds in an artisan apothecary vessel.",
     dimensions: "150ml Glass Bottle + 8 Reeds",
-    stock: 8,
+    stock: 54,
     variants: [
       {
         id: "reed-diffuser-oud",
@@ -1343,7 +1349,7 @@ const CANDLE_INVENTORY = [
         burn: "60-90 Days Continuous Aroma",
         dimensions: "150ml Glass Bottle + 8 Reeds",
         available: true,
-        stock: 4,
+        stock: 24,
         badge: "BESTSELLER",
         notes: {
           top: "Smoky Incense & Cardamom",
@@ -1368,7 +1374,7 @@ const CANDLE_INVENTORY = [
         burn: "60-90 Days Continuous Aroma",
         dimensions: "150ml Glass Apothecary Bottle + 8 Reeds",
         available: true,
-        stock: 4,
+        stock: 30,
         badge: "NEW ARRIVAL",
         notes: {
           top: "Pure Tunisian Neroli & Petitgrain",
@@ -1467,7 +1473,7 @@ const CANDLE_INVENTORY = [
     ],
     desc: "Holistic positivity candle embedded with genuine raw Amethyst and Tiger's Eye crystals. Crafted to harmonize energy centers, deepen meditation, and promote serenity.",
     dimensions: "9 × 9 × 8 cm (300g)",
-    stock: 3
+    stock: 18
   },
 
   // 20. CANDLE SNUFFER
@@ -1495,7 +1501,7 @@ const CANDLE_INVENTORY = [
     ],
     desc: "Artisanal brushed brass candle snuffer with a free-pivoting bell designed to gently extinguish candle flames without blowing wax or producing unwanted smoke. Preserves cotton wicks and maintains vessel cleanliness.",
     dimensions: "21 cm Length (120g Solid Brass)",
-    stock: 5
+    stock: 45
   },
 
   // 21. WICK TRIMMER
@@ -1523,7 +1529,7 @@ const CANDLE_INVENTORY = [
     ],
     desc: "Heavyweight brass candle wick trimmer featuring angled cutting jaws and a built-in debris collection reservoir. Effortlessly trims cotton wicks to the optimal 1/4-inch length before every lighting to eliminate soot, prevent mushrooming, and extend burn duration.",
     dimensions: "18 × 6 × 3 cm (140g Metal)",
-    stock: 6
+    stock: 40
   }
 ];
 

@@ -1954,73 +1954,6 @@ body.drawer-open {
   color: var(--maroon-light);
 }
 
-.cart-item-stock-row {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin: 4px 0 6px;
-  flex-wrap: wrap;
-}
-
-.cart-item-stock-tag {
-  font-size: 0.68rem;
-  font-weight: 600;
-  padding: 2px 7px;
-  border-radius: 4px;
-  letter-spacing: 0.3px;
-  line-height: 1.3;
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-}
-
-.cart-item-stock-tag.stock-urgent {
-  background: #FEF2F2;
-  color: #B91C1C;
-  border: 1px solid rgba(185, 28, 28, 0.25);
-}
-
-.cart-item-stock-tag.stock-oos {
-  background: #F3F4F6;
-  color: #4B5563;
-  border: 1px solid #D1D5DB;
-  text-decoration: line-through;
-}
-
-.cart-item-stock-tag.stock-soon {
-  background: #FFFBEB;
-  color: #B45309;
-  border: 1px solid rgba(180, 83, 9, 0.25);
-}
-
-.cart-item-stock-tag.stock-plenty {
-  background: #F0FDF4;
-  color: #15803D;
-  border: 1px solid rgba(21, 128, 61, 0.2);
-}
-
-.cart-max-reached-note {
-  font-size: 0.62rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: #92400E;
-  background: #FEF3C7;
-  border: 1px solid #FCD34D;
-  border-radius: 3px;
-  padding: 1px 5px;
-}
-
-.cart-item-unit-rate {
-  font-size: 0.7rem;
-  color: var(--text-muted, #766E65);
-}
-
-.cart-item-oos-row {
-  opacity: 0.75;
-  background: #F9FAFB;
-}
-
 .cart-item-bottom-row {
   display: flex;
   align-items: center;
@@ -2032,65 +1965,24 @@ body.drawer-open {
   display: inline-flex;
   align-items: center;
   border: 1px solid var(--border-subtle);
-  border-radius: 4px;
+  border-radius: 3px;
   background: #fff;
-  overflow: hidden;
-  box-shadow: 0 1px 3px rgba(43, 5, 11, 0.05);
 }
 
 .qty-controls button {
   background: none;
   border: none;
-  padding: 3px 8px;
-  font-size: 0.8rem;
-  font-weight: 700;
+  padding: 1px 6px;
+  font-size: 0.75rem;
   cursor: pointer;
   color: var(--text-dark);
-  transition: all 0.15s ease;
-  user-select: none;
 }
 
-.qty-controls button:hover:not(:disabled) {
-  background: var(--bg-surface, #F3ECE1);
-  color: var(--cabernet, #2B050B);
-}
-
-.qty-controls button:disabled,
-.qty-controls button.disabled {
-  opacity: 0.28;
-  cursor: not-allowed;
-  background: #F3F4F6;
-}
-
-.qty-controls span,
-.qty-controls .cart-qty-value {
-  font-size: 0.8rem;
-  padding: 0 6px;
+.qty-controls span {
+  font-size: 0.75rem;
+  padding: 0 5px;
   color: var(--text-dark);
-  font-weight: 600;
-  min-width: 18px;
-  text-align: center;
-}
-
-.checkout-item-stock-tag {
-  display: inline-block;
-  font-size: 0.65rem;
-  font-weight: 600;
-  padding: 1px 5px;
-  border-radius: 3px;
-  margin-left: 4px;
-}
-
-.checkout-item-stock-tag.low {
-  background: #FEF2F2;
-  color: #B91C1C;
-  border: 1px solid rgba(185, 28, 28, 0.2);
-}
-
-.checkout-item-stock-tag.oos {
-  background: #F3F4F6;
-  color: #6B7280;
-  border: 1px solid #D1D5DB;
+  font-weight: 500;
 }
 
 .cart-drawer-footer {
@@ -11139,215 +11031,4 @@ select {
   opacity: 0.8;
   color: #FFFFFF;
 }
-
-/* =========================================================
-   INVENTORY COUNTDOWN & OUT OF STOCK BADGES & INDICATORS
-   ========================================================= */
-
-/* 1. Card Media Badge: Out of Stock */
-.km-badge-oos {
-  background: #7F1D1D;
-  color: #FEE2E2;
-  border: 1px solid rgba(239, 68, 68, 0.5);
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  padding: 3px 8px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* 2. Card Media Badge: Low Stock Urgency (< 10 left) */
-.km-badge-stock-urgent {
-  background: linear-gradient(135deg, #78350F 0%, #B45309 100%);
-  color: #FEF3C7;
-  border: 1px solid rgba(245, 158, 11, 0.6);
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-  padding: 3px 8px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  box-shadow: 0 2px 8px rgba(180, 83, 9, 0.25);
-  animation: gentlePulse 2.5s infinite ease-in-out;
-}
-
-@keyframes gentlePulse {
-  0%, 100% {
-    transform: scale(1);
-    box-shadow: 0 2px 8px rgba(180, 83, 9, 0.25);
-  }
-  50% {
-    transform: scale(1.02);
-    box-shadow: 0 3px 12px rgba(245, 158, 11, 0.45);
-  }
-}
-
-/* 3. Card Details Inventory Status Line */
-.km-stock-status-line {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.72rem;
-  line-height: 1.3;
-  margin-bottom: 0.65rem;
-  font-weight: 500;
-}
-
-.km-stock-status-line.low-stock {
-  color: #B45309;
-  font-weight: 600;
-}
-
-.km-stock-status-line.low-stock strong {
-  color: #92400E;
-  font-weight: 700;
-}
-
-.km-stock-status-line.out-of-stock {
-  color: #991B1B;
-  font-weight: 600;
-}
-
-.km-stock-status-line.in-stock {
-  color: #15803D;
-}
-
-.km-stock-status-line.coming-soon {
-  color: #B45309;
-}
-
-.stock-bullet {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  display: inline-block;
-  flex-shrink: 0;
-}
-
-.stock-bullet.green {
-  background: #16A34A;
-}
-
-.stock-bullet.amber {
-  background: #D97706;
-}
-
-.stock-bullet.red {
-  background: #DC2626;
-}
-
-.stock-bullet.gold {
-  background: #D4AF37;
-}
-
-.stock-bullet.pulse {
-  animation: pulseAmber 1.8s infinite;
-}
-
-@keyframes pulseAmber {
-  0% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.7); }
-  70% { box-shadow: 0 0 0 6px rgba(217, 119, 6, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0); }
-}
-
-/* 4. Disabled & Out-of-Stock Card Buttons */
-.km-add-cart-btn[disabled],
-.km-add-cart-btn.oos-btn {
-  background: #6B7280 !important;
-  border-color: #6B7280 !important;
-  color: #F3F4F6 !important;
-  cursor: not-allowed !important;
-  opacity: 0.75 !important;
-  transform: none !important;
-  box-shadow: none !important;
-}
-
-/* 5. PDP Quick View Stock Status - Low Stock */
-.pdp-stock-status.low-stock {
-  color: #92400E;
-  background: rgba(245, 158, 11, 0.12);
-  padding: 0.2rem 0.65rem;
-  border-radius: 20px;
-  border: 1px solid rgba(245, 158, 11, 0.35);
-  font-weight: 700;
-}
-
-.status-pulse-dot.amber {
-  background: #D97706;
-  box-shadow: 0 0 0 rgba(217, 119, 6, 0.4);
-  animation: pulseAmber 1.8s infinite;
-}
-
-/* PDP Urgency Callout Banner */
-.pdp-stock-urgency-banner {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
-  border: 1px solid rgba(245, 158, 11, 0.45);
-  border-left: 4px solid #D97706;
-  border-radius: 6px;
-  padding: 0.65rem 0.9rem;
-  margin-bottom: 0.85rem;
-  font-size: 0.8rem;
-  color: #78350F;
-  line-height: 1.4;
-}
-
-.pdp-stock-urgency-banner strong {
-  color: #92400E;
-  font-weight: 700;
-}
-
-.urgency-fire {
-  font-size: 1rem;
-  line-height: 1;
-}
-
-/* Swatch & Pill Low Stock Tags */
-.swatch-low-tag,
-.pill-low-tag {
-  font-size: 0.62rem;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  background: rgba(217, 119, 6, 0.15);
-  color: #B45309;
-  padding: 1px 5px;
-  border-radius: 3px;
-  font-weight: 700;
-}
-
-/* Live Search Modal Stock Indicators */
-.search-stock-tag {
-  display: inline-block;
-  font-size: 0.64rem;
-  font-weight: 700;
-  padding: 1px 6px;
-  border-radius: 3px;
-  margin-left: 6px;
-}
-
-.search-stock-tag.low {
-  background: rgba(217, 119, 6, 0.15);
-  color: #B45309;
-}
-
-.search-stock-tag.oos {
-  background: rgba(220, 38, 38, 0.12);
-  color: #991B1B;
-}
-
-.btn-wishlist-cart[disabled] {
-  background: #9CA3AF !important;
-  border-color: #9CA3AF !important;
-  color: #FFFFFF !important;
-  cursor: not-allowed !important;
-  opacity: 0.75 !important;
-}
-
 

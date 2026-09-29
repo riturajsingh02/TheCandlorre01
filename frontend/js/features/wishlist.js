@@ -34,75 +34,55 @@ function getWishlistCartQty(productId) {
 }
 
 function addToCartFromWishlist(productId) {
-  const numId = typeof productId === 'string' && !isNaN(Number(productId)) ? Number(productId) : productId;
-  const product = (typeof CANDLE_INVENTORY !== 'undefined' ? CANDLE_INVENTORY : (window.CANDLE_INVENTORY || []))
-    .find(item => item.id === numId || item.id === productId);
-  
+  const product = CANDLE_INVENTORY.find(item => item.id === productId);
   if (!product) return;
-  const availableStock = typeof product.stock === 'number' ? product.stock : 20;
-
-  if (product.isComingSoon) {
-    if (typeof showToast === 'function') showToast('This candle is coming soon!');
-    return;
-  }
-  if (product.isOutOfStock || availableStock <= 0) {
-    if (typeof showToast === 'function') showToast('This candle is currently out of stock.');
+  if (product.stock <= 0) {
+    if (typeof showToast === 'function') showToast('This candle is currently sold out.');
     return;
   }
 
   let variant = product.variants?.[0];
-  const cartKey = `${product.id}:${variant?.id || 'standard'}`;
-  const existing = cart.find(item => item.cartKey === cartKey || (item.id === product.id && item.selectedVariant === (variant?.title || 'Standard')));
-  
+  const cartKey = `${productId}:${variant?.id || 'standard'}`;
+  const existing = cart.find(item => item.cartKey === cartKey);
   if (existing) {
-    if (existing.qty >= availableStock) {
-      if (typeof showToast === 'function') showToast(`Cannot add more! Only ${availableStock} left in stock.`);
+    if (existing.qty >= product.stock) {
+      if (typeof showToast === 'function') showToast('Maximum available quantity reached.');
       return;
     }
     existing.qty += 1;
   } else {
     cart.push({
-      id: product.id,
-      handle: product.handle || '',
-      title: product.title,
-      category: product.category,
-      price: Number(variant?.price || product.price),
-      origPrice: Number(variant?.origPrice || product.origPrice || product.price),
-      image: variant?.image || product.image || 'asset/one.jpg',
-      selectedVariant: variant?.title || 'Standard',
+      ...product,
+      qty: 1,
       cartKey,
-      qty: 1
+      selectedVariant: variant?.title || 'Standard',
+      price: Number(variant?.price || product.price)
     });
   }
 
   localStorage.setItem('theCandlorre_cart', JSON.stringify(cart));
   if (typeof updateCartUI === 'function') updateCartUI();
   renderWishlistDrawer();
-  if (typeof showToast === 'function') showToast(`Added ${product.title} to bag ♡`);
+  if (typeof showToast === 'function') showToast('Added to bag ♡');
 }
 
 function updateWishlistCartQty(productId, delta) {
-  const numId = typeof productId === 'string' && !isNaN(Number(productId)) ? Number(productId) : productId;
-  const product = (typeof CANDLE_INVENTORY !== 'undefined' ? CANDLE_INVENTORY : (window.CANDLE_INVENTORY || []))
-    .find(item => item.id === numId || item.id === productId);
-  
+  const product = CANDLE_INVENTORY.find(item => item.id === productId);
   if (!product) return;
-  const existing = cart.find(item => item.id === numId || item.id === productId);
+  const existing = cart.find(item => item.id === productId);
   if (!existing) {
     if (delta > 0) addToCartFromWishlist(productId);
     return;
   }
 
-  const availableStock = typeof product.stock === 'number' ? product.stock : 20;
-
-  if (delta > 0 && existing.qty >= availableStock) {
-    if (typeof showToast === 'function') showToast(`Cannot add more than ${availableStock} in the bag. Only ${availableStock} left in stock.`);
+  if (delta > 0 && existing.qty >= product.stock) {
+    if (typeof showToast === 'function') showToast('Maximum available quantity reached.');
     return;
   }
 
   existing.qty += delta;
   if (existing.qty <= 0) {
-    cart = cart.filter(item => item.id !== numId && item.id !== productId);
+    cart = cart.filter(item => item.id !== productId);
     if (typeof showToast === 'function') showToast('Removed from bag');
   } else {
     if (typeof showToast === 'function') showToast(`Bag quantity: ${existing.qty}`);

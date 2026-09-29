@@ -84,13 +84,7 @@ function selectPdpVariant(variantId) {
  */
 function renderPdpVariantState(product, variant) {
   const isComingSoon = product.isComingSoon || (variant && variant.isComingSoon);
-  const currentStock = variant 
-    ? (typeof variant.stock === 'number' ? variant.stock : 0) 
-    : (typeof product.stock === 'number' ? product.stock : (Array.isArray(product.variants) ? product.variants.reduce((sum, v) => sum + (v.stock || 0), 0) : 15));
-
-  const isOutOfStock = !isComingSoon && (variant ? (variant.available === false || variant.isOutOfStock || currentStock <= 0) : (product.available === false || currentStock <= 0));
-  const isLowStock = !isComingSoon && !isOutOfStock && currentStock > 0 && currentStock < 10;
-
+  const isOutOfStock = !isComingSoon && (variant ? (variant.available === false || variant.isOutOfStock || variant.stock === 0) : (product.available === false || product.stock === 0));
   const currentPrice = variant ? variant.price : product.price;
   const origPrice = variant ? (variant.origPrice || product.origPrice) : product.origPrice;
   const currentNotes = variant?.notes || product.notes || { top: '', heart: '', base: '' };
@@ -114,9 +108,6 @@ function renderPdpVariantState(product, variant) {
     } else if (isOutOfStock) {
       stockBadge.className = 'pdp-stock-status out-of-stock';
       stockBadge.innerHTML = `<span class="status-pulse-dot red"></span> Out of Stock • Handcrafted Upon Order`;
-    } else if (isLowStock) {
-      stockBadge.className = 'pdp-stock-status low-stock';
-      stockBadge.innerHTML = `<span class="status-pulse-dot amber"></span> Low Stock • Only ${currentStock} left in stock!`;
     } else {
       stockBadge.className = 'pdp-stock-status';
       stockBadge.innerHTML = `<span class="status-pulse-dot"></span> In Stock &amp; Hand-Poured`;
@@ -134,26 +125,6 @@ function renderPdpVariantState(product, variant) {
     } else {
       dom.pdpOrigPrice.textContent = '';
       dom.pdpOrigPrice.style.display = 'none';
-    }
-  }
-
-  // 2b. Low Stock Urgency Banner in PDP
-  let urgencyBanner = document.getElementById('pdpUrgencyBanner');
-  if (!urgencyBanner) {
-    urgencyBanner = document.createElement('div');
-    urgencyBanner.id = 'pdpUrgencyBanner';
-    urgencyBanner.className = 'pdp-stock-urgency-banner';
-    const pricingBlock = dom.pdpPrice?.closest('.pdp-pricing') || document.querySelector('.pdp-pricing');
-    if (pricingBlock && pricingBlock.parentNode) {
-      pricingBlock.parentNode.insertBefore(urgencyBanner, pricingBlock.nextSibling);
-    }
-  }
-  if (urgencyBanner) {
-    if (isLowStock) {
-      urgencyBanner.style.display = 'flex';
-      urgencyBanner.innerHTML = `<span class="urgency-fire">🔥</span> <span>Hurry! Only <strong>${currentStock} unit${currentStock === 1 ? '' : 's'} remaining</strong> in our atelier. Order soon before it sells out!</span>`;
-    } else {
-      urgencyBanner.style.display = 'none';
     }
   }
 
@@ -219,22 +190,14 @@ function renderPdpVariantState(product, variant) {
       const typeLabel = product.variantTypeLabel || (product.variantType === 'color' ? 'Select Color' : 'Select Size');
       if (variantTypeTitle) variantTypeTitle.textContent = `${typeLabel}:`;
       if (variantCurrentVal) {
-        const variantStatus = isComingSoon 
-          ? ' (Coming Soon)' 
-          : isOutOfStock 
-            ? ' (Out of Stock)' 
-            : isLowStock 
-              ? ` (Only ${currentStock} left)` 
-              : '';
+        const variantStatus = (variant?.available === false || variant?.isOutOfStock) ? ' (Out of Stock)' : '';
         variantCurrentVal.textContent = (variant ? variant.title : '') + variantStatus;
       }
 
       variantSelectorGrid.innerHTML = variants.map(v => {
         const isSelected = variant && variant.id === v.id;
         const isColor = Boolean(v.colorHex) || product.variantType === 'color';
-        const vStock = typeof v.stock === 'number' ? v.stock : (v.available === false ? 0 : 10);
-        const vOutOfStock = !v.isComingSoon && (v.available === false || v.isOutOfStock || vStock <= 0);
-        const vLowStock = !v.isComingSoon && !vOutOfStock && vStock > 0 && vStock < 10;
+        const vOutOfStock = !v.isComingSoon && (v.available === false || v.isOutOfStock || v.stock === 0);
 
         if (isColor) {
           return `
@@ -242,14 +205,13 @@ function renderPdpVariantState(product, variant) {
               type="button" 
               class="pdp-swatch-btn ${isSelected ? 'active' : ''} ${v.isComingSoon ? 'coming-soon' : ''} ${vOutOfStock ? 'out-of-stock' : ''}" 
               data-variant-id="${v.id}"
-              title="${v.title}${vOutOfStock ? ' (Out of Stock)' : vLowStock ? ` (Only ${vStock} left)` : ''} — ₹${Number(v.price).toLocaleString('en-IN')}"
+              title="${v.title}${vOutOfStock ? ' (Out of Stock)' : ''} — ₹${Number(v.price).toLocaleString('en-IN')}"
               onclick="selectPdpVariant('${v.id}')"
             >
               <span class="pdp-swatch-circle" style="background-color: ${v.colorHex || '#d4af37'};"></span>
               <span class="pdp-swatch-name">${v.title}</span>
               ${v.isComingSoon ? '<span class="swatch-soon-tag">Soon</span>' : ''}
               ${vOutOfStock ? '<span class="swatch-oos-tag">Out of Stock</span>' : ''}
-              ${vLowStock ? `<span class="swatch-low-tag">Only ${vStock} left</span>` : ''}
             </button>
           `;
         }
@@ -265,7 +227,6 @@ function renderPdpVariantState(product, variant) {
             <span class="pdp-pill-price">₹${Number(v.price).toLocaleString('en-IN')}</span>
             ${v.isComingSoon ? '<span class="pill-soon-tag">Soon</span>' : ''}
             ${vOutOfStock ? '<span class="pill-oos-tag">Out of Stock</span>' : ''}
-            ${vLowStock ? `<span class="pill-low-tag">Only ${vStock} left</span>` : ''}
           </button>
         `;
       }).join('');
@@ -280,13 +241,10 @@ function renderPdpVariantState(product, variant) {
     if (variants.length > 1) {
       dom.pdpVariantWrap.hidden = false;
       dom.pdpVariantSelect.innerHTML = variants.map(v => {
-        const vStock = typeof v.stock === 'number' ? v.stock : (v.available === false ? 0 : 10);
-        const vOutOfStock = !v.isComingSoon && (v.available === false || v.isOutOfStock || vStock <= 0);
-        const vLowStock = !v.isComingSoon && !vOutOfStock && vStock > 0 && vStock < 10;
-        const stockSuffix = vOutOfStock ? ' (Out of Stock)' : vLowStock ? ` (Only ${vStock} left!)` : '';
+        const vOutOfStock = !v.isComingSoon && (v.available === false || v.isOutOfStock || v.stock === 0);
         return `
         <option value="${v.id}" ${variant && variant.id === v.id ? 'selected' : ''}>
-          ${v.title}${stockSuffix} — ₹${Number(v.price).toLocaleString('en-IN')}
+          ${v.title}${vOutOfStock ? ' (Out of Stock)' : ''} — ₹${Number(v.price).toLocaleString('en-IN')}
         </option>
       `;
       }).join('');
