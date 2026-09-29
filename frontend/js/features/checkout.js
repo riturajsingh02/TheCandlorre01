@@ -110,16 +110,28 @@ function renderCheckoutSummary() {
     return;
   }
 
-  summaryList.innerHTML = cart.map(item => `
-    <div class="checkout-summary-item">
-      <img src="${item.image}" alt="${item.title}" />
-      <div class="checkout-summary-item-info">
-        <p class="checkout-summary-item-name">${item.title}</p>
-        <p class="checkout-summary-item-sub">${item.selectedVariant || 'Standard'} × ${item.qty}</p>
+  summaryList.innerHTML = cart.map(item => {
+    let stockTag = '';
+    if (typeof getCartItemInventory === 'function') {
+      const inv = getCartItemInventory(item);
+      if (inv.isOutOfStock || inv.stock <= 0) {
+        stockTag = `<span class="checkout-item-stock-tag oos">Out of Stock</span>`;
+      } else if (inv.isLowStock) {
+        stockTag = `<span class="checkout-item-stock-tag low">🔥 Only ${inv.stock} left</span>`;
+      }
+    }
+
+    return `
+      <div class="checkout-summary-item">
+        <img src="${item.image}" alt="${item.title}" />
+        <div class="checkout-summary-item-info">
+          <p class="checkout-summary-item-name">${item.title}</p>
+          <p class="checkout-summary-item-sub">${item.selectedVariant || 'Standard'} × ${item.qty} ${stockTag}</p>
+        </div>
+        <div class="checkout-summary-item-price">₹${(item.price * item.qty).toLocaleString('en-IN')}</div>
       </div>
-      <div class="checkout-summary-item-price">₹${(item.price * item.qty).toLocaleString('en-IN')}</div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 }
 
 function calculateCheckoutTotals() {

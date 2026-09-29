@@ -339,26 +339,39 @@ function renderLiveSearchResults(query) {
     <div style="font-size: 0.72rem; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; font-weight: 600;">
       ${headingText}
     </div>
-    ${matches.map(item => `
+    ${matches.map(item => {
+      const itemStock = typeof item.stock === 'number'
+        ? item.stock
+        : (Array.isArray(item.variants) && item.variants.length > 0
+            ? item.variants.reduce((sum, v) => sum + (typeof v.stock === 'number' ? v.stock : 0), 0)
+            : 15);
+      const isOos = !item.isComingSoon && (item.available === false || itemStock <= 0);
+      const isLow = !item.isComingSoon && !isOos && itemStock > 0 && itemStock < 10;
+
+      return `
       <div class="search-result-row" data-id="${item.id}" onclick="closeSearchModal(); openPDP(${item.id});">
         <img src="${item.image}" alt="${item.title}" class="search-result-thumb" />
         <div class="search-result-info">
           <h5 class="search-result-title">${item.title}</h5>
           <p class="search-result-notes">${item.notes?.top || 'Botanical soy wax'} • ${item.notes?.heart || 'IFRA certified oils'}</p>
-          <span class="search-result-price">₹${item.price.toLocaleString('en-IN')}</span>
+          <div style="display:flex; align-items:center; gap:6px;">
+            <span class="search-result-price">₹${item.price.toLocaleString('en-IN')}</span>
+            ${isOos ? '<span class="search-stock-tag oos">Out of Stock</span>' : isLow ? `<span class="search-stock-tag low">Only ${itemStock} left</span>` : ''}
+          </div>
         </div>
         <div class="search-result-actions" onclick="event.stopPropagation();">
-          <button type="button" class="btn-wishlist-cart" onclick="addToCart(${item.id}); showToast('Added to bag ♡');">
+          <button type="button" class="btn-wishlist-cart" ${isOos ? 'disabled' : ''} onclick="${isOos ? '' : `addToCart(${item.id}); showToast('Added to bag ♡');`}">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="display:inline-block; vertical-align: -1px; margin-right: 4px;">
               <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <path d="M16 10a4 4 0 0 1-8 0"></path>
             </svg>
-            Add to Bag
+            ${isOos ? 'Sold Out' : 'Add to Bag'}
           </button>
         </div>
       </div>
-    `).join('')}
+    `;
+    }).join('')}
   `;
 }
 
@@ -573,6 +586,98 @@ function setupLuxuryShowcaseSections() {
       if (arrivalsTrack) arrivalsTrack.scrollTo({ left: 0, behavior: 'smooth' });
     });
   });
+
+  // 5. Dynamic Stock Synchronization for Arrivals Track
+  function syncArrivalsTrackStock() {
+    const cards = document.querySelectorAll('#arrivalsTrack .km-product-card');
+    cards.forEach(card => {
+      const pId = card.dataset.id ? Number(card.dataset.id) : null;
+      if (!pId) return;
+      const product = (window.CANDLE_INVENTORY || []).find(p => p.id === pId);
+      if (!product) return;
+
+      const stock = typeof product.stock === 'number'
+        ? product.stock
+        : (Array.isArray(product.variants) && product.variants.length > 0
+            ? product.variants.reduce((sum, v) => sum + (typeof v.stock === 'number' ? v.stock : 0), 0)
+            : 15);
+
+      const isComingSoon = Boolean(product.isComingSoon);
+      const isOutOfStock = !isComingSoon && (product.available === false || stock <= 0);
+      const isLowStock = !isComingSoon && !isOutOfStock && stock > 0 && stock < 10;
+
+      // Update badge in km-figure-badges
+      const badgesWrap = card.querySelector('.km-figure-badges');
+      if (badgesWrap) {
+        const discountPct = product.origPrice > product.price 
+          ? Math.round(((product.origPrice - product.price) / product.origPrice) * 100) 
+          : 0;
+        badgesWrap.innerHTML = `
+          ${isComingSoon ? '<span class="km-badge-new">COMING SOON</span>' : ''}
+          ${isOutOfStock ? '<span class="km-badge-oos">OUT OF STOCK</span>' : ''}
+          ${!isOutOfStock && !isComingSoon && isLowStock ? `<span class="km-badge-stock-urgent">🔥 Only ${stock} Left</span>` : ''}
+          ${!isOutOfStock && !isComingSoon && !isLowStock && product.badge ? `<span class="km-badge-new">${product.badge}</span>` : ''}
+          ${!isOutOfStock && discountPct > 0 ? `<span class="km-badge-discount">${discountPct}% OFF</span>` : ''}
+        `;
+      }
+
+      // Update or insert stock status line in km-card-details
+      const detailsWrap = card.querySelector('.km-card-details');
+      if (detailsWrap) {
+        let statusLine = detailsWrap.querySelector('.km-stock-status-line');
+        if (!statusLine) {
+          statusLine = document.createElement('div');
+          const priceBlock = detailsWrap.querySelector('.km-price-block');
+          if (priceBlock) {
+            detailsWrap.insertBefore(statusLine, priceBlock);
+          } else {
+            detailsWrap.appendChild(statusLine);
+          }
+        }
+        if (statusLine) {
+          if (isComingSoon) {
+            statusLine.className = 'km-stock-status-line coming-soon';
+            statusLine.innerHTML = '<span class="stock-bullet gold"></span> Coming Soon • In Atelier';
+          } else if (isOutOfStock) {
+            statusLine.className = 'km-stock-status-line out-of-stock';
+            statusLine.innerHTML = '<span class="stock-bullet red"></span> Out of Stock';
+          } else if (isLowStock) {
+            statusLine.className = 'km-stock-status-line low-stock';
+            statusLine.innerHTML = `<span class="stock-bullet amber pulse"></span> <strong>Only ${stock} left in stock</strong> — order soon!`;
+          } else {
+            statusLine.className = 'km-stock-status-line in-stock';
+            statusLine.innerHTML = '<span class="stock-bullet green"></span> In Stock &amp; Hand-Poured';
+          }
+        }
+      }
+
+      // Update Add to Bag button
+      const addBtn = card.querySelector('.km-add-cart-btn');
+      if (addBtn) {
+        if (isComingSoon) {
+          addBtn.disabled = true;
+          addBtn.className = 'km-add-cart-btn';
+          const span = addBtn.querySelector('span');
+          if (span) span.textContent = 'Coming Soon';
+          else addBtn.innerHTML = '<span>Coming Soon</span>';
+        } else if (isOutOfStock) {
+          addBtn.disabled = true;
+          addBtn.className = 'km-add-cart-btn oos-btn';
+          const span = addBtn.querySelector('span');
+          if (span) span.textContent = 'Out of Stock';
+          else addBtn.innerHTML = '<span>Out of Stock</span>';
+        } else {
+          addBtn.disabled = false;
+          addBtn.className = 'km-add-cart-btn';
+          const span = addBtn.querySelector('span');
+          if (span) span.textContent = 'Add to Bag';
+        }
+      }
+    });
+  }
+
+  syncArrivalsTrackStock();
+  window.addEventListener('Candlorre:catalogLoaded', syncArrivalsTrackStock);
 }
 
 
