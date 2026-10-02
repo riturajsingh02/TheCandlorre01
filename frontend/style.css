@@ -3004,6 +3004,119 @@ body.drawer-open {
   margin-left: auto;
 }
 
+/* =========================================================
+   PDP VARIANT SELECTOR CARD (MATCH SCREENSHOT)
+   ========================================================= */
+.pdp-variant-block {
+  background: #FAF7F2;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(43, 5, 11, 0.04);
+}
+
+.pdp-variant-label-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.pdp-variant-type-title {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #1F1717;
+}
+
+.pdp-variant-current-val {
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2B050B;
+}
+
+.pdp-variant-selector-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+/* Swatch / Pill Option Buttons */
+.pdp-swatch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.42rem 1.1rem 0.42rem 0.65rem;
+  border-radius: 999px;
+  background: #FFFFFF;
+  border: 1px solid #E5E0D8;
+  color: #2B050B;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  user-select: none;
+}
+
+.pdp-swatch-btn:hover {
+  border-color: #D4AF37;
+  transform: translateY(-1px);
+}
+
+.pdp-swatch-btn.active {
+  background: #1C0A0D;
+  border: 1.5px solid #D4AF37;
+  color: #FAF6F0;
+  box-shadow: 0 3px 10px rgba(43, 5, 11, 0.22);
+}
+
+.pdp-swatch-circle {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.pdp-swatch-btn.active .pdp-swatch-circle {
+  box-shadow: 0 0 0 1.5px #FAF6F0;
+}
+
+.pdp-swatch-name {
+  font-size: 0.84rem;
+  letter-spacing: 0.3px;
+}
+
+.pdp-size-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: #FFFFFF;
+  border: 1px solid #E5E0D8;
+  color: #2B050B;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pdp-size-pill.active {
+  background: #1C0A0D;
+  border: 1.5px solid #D4AF37;
+  color: #FAF6F0;
+  box-shadow: 0 3px 10px rgba(43, 5, 11, 0.22);
+}
+
 .pdp-desc {
   font-size: 0.88rem;
   color: var(--text-dark);

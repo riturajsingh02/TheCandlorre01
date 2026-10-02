@@ -76,7 +76,7 @@
         <ul class="nav-links">
           <li><a href="index.html#new-arrivals">Candles</a></li>
           <li>
-            <a href="index.html#rituals">Home Decor <span class="badge-pill">Soon</span></a>
+            <a href="category.html?cat=Home Decor">Home Decor</a>
           </li>
           <li>
             <a href="index.html#journal">Journal <span class="badge-pill">Soon</span></a>
@@ -160,8 +160,8 @@
         </a>
       </li>
       <li>
-        <a href="index.html#rituals" class="mobile-nav-link">
-          <span>Home Décor <span class="badge-pill">Soon</span></span>
+        <a href="category.html?cat=Home Decor" class="mobile-nav-link">
+          <span>Home Décor (4 Curated Pieces)</span>
           <span class="link-arrow">→</span>
         </a>
       </li>
@@ -211,7 +211,11 @@
     <div class="km-filter-pills-bar" id="collectionPillsBar" role="tablist" aria-label="Quick Category Filters">
       <button type="button" class="km-pill active" data-category-filter="all" onclick="setCollectionPill('all')">
         <span>All Products</span>
-        <span class="pill-count">(26)</span>
+        <span class="pill-count">(30)</span>
+      </button>
+      <button type="button" class="km-pill" data-category-filter="Home Decor" onclick="setCollectionPill('Home Decor')">
+        <span>Home Décor</span>
+        <span class="pill-count">(4)</span>
       </button>
       <button type="button" class="km-pill" data-category-filter="Premium Luxury Candles" onclick="setCollectionPill('Premium Luxury Candles')">
         <span>Premium Luxury Candles</span>
@@ -327,10 +331,17 @@
         <div class="km-filter-options-list">
           <label class="km-filter-checkbox-label">
             <span class="label-text">
+              <input type="checkbox" class="type-filter" value="Home Decor" onchange="filterProducts()" />
+              <span>Home Décor</span>
+            </span>
+            <span class="km-filter-count-tag">4</span>
+          </label>
+          <label class="km-filter-checkbox-label">
+            <span class="label-text">
               <input type="checkbox" class="type-filter" value="Premium Luxury Candles" onchange="filterProducts()" />
               <span>Premium Luxury Candles</span>
             </span>
-            <span class="km-filter-count-tag">40</span>
+            <span class="km-filter-count-tag">15</span>
           </label>
           <label class="km-filter-checkbox-label">
             <span class="label-text">

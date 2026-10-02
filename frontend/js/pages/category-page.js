@@ -1,7 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
-  let catName = params.get('cat') || 'Premium Luxury Candles';
-  if (catName === 'Gift Hampers') catName = 'Gift Hampers';
+  let rawCat = params.get('cat') || params.get('category') || 'Home Decor';
+  
+  // Normalize category name
+  let catName = rawCat;
+  const rawLower = rawCat.toLowerCase().replace(/[-_]/g, ' ').replace(/[éè]/g, 'e').trim();
+  if (rawLower.includes('decor')) {
+    catName = 'Home Decor';
+  } else if (rawLower.includes('metal')) {
+    catName = 'Metal Collection';
+  } else if (rawLower.includes('diffuser') || rawLower.includes('aroma')) {
+    catName = 'Diffusers and Aromas';
+  } else if (rawLower.includes('wooden')) {
+    catName = 'Wooden Collection';
+  } else if (rawLower.includes('chakra') || rawLower.includes('positivity')) {
+    catName = 'Seven Chakra- Positivity collection';
+  } else if (rawLower.includes('accessori')) {
+    catName = 'Candle Accessories';
+  } else if (rawLower.includes('essential')) {
+    catName = 'Home essentials';
+  } else if (rawLower.includes('candle') || rawLower.includes('premium')) {
+    catName = 'Premium Luxury Candles';
+  }
 
   const title = document.getElementById('categoryTitleName');
   const pretitle = document.getElementById('categoryPretitle');
@@ -14,12 +34,18 @@ document.addEventListener('DOMContentLoaded', () => {
   if (description) {
     if (catName.toLowerCase().includes('accessories')) {
       description.textContent = 'Elevate your burn ritual with our curated brass and matte-finish candle care accessories, crafted for clean burns, precise wick trimming, and graceful smokeless extinguishing.';
+    } else if (catName.toLowerCase().includes('decor')) {
+      description.textContent = 'Discover our exclusive Home Décor collection featuring artisanal gold statement goblets, suspended architectural lanterns, crystal fluted bowls, and tiered candle stands.';
     } else {
       description.textContent = `Immerse in our hand-poured artisan selection of ${catName.toLowerCase()}, formulated with 100% natural organic soy wax and IFRA-certified therapeutic fragrance blends.`;
     }
   }
 
-  const matchedProducts = CANDLE_INVENTORY.filter(item => item.category.toLowerCase() === catName.toLowerCase());
+  const matchedProducts = CANDLE_INVENTORY.filter(item => {
+    const itemCat = (item.category || '').toLowerCase().replace(/[-_]/g, ' ').replace(/[éè]/g, 'e');
+    const targetCat = catName.toLowerCase().replace(/[-_]/g, ' ').replace(/[éè]/g, 'e');
+    return itemCat === targetCat || (targetCat.includes('decor') && itemCat.includes('decor'));
+  });
 
   if (matchedProducts.length === 0) {
     grid.innerHTML = `

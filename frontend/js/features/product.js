@@ -211,13 +211,14 @@ function renderPdpVariantState(product, variant) {
   const variantSelectorGrid = dom.pdpVariantSelectorGrid || document.getElementById('pdpVariantSelectorGrid');
 
   const variants = Array.isArray(product.variants) ? product.variants : [];
+  const hasDistinctVariants = variants.length > 1 || Boolean(product.variantType) || Boolean(product.variantTypeLabel) || (variants.length === 1 && variants[0].title && variants[0].title.toLowerCase() !== 'standard');
 
   if (variantBlock && variantSelectorGrid) {
-    if (variants.length > 1) {
+    if (hasDistinctVariants && variants.length > 0) {
       variantBlock.style.display = 'block';
 
-      const typeLabel = product.variantTypeLabel || (product.variantType === 'color' ? 'Select Color' : 'Select Size');
-      if (variantTypeTitle) variantTypeTitle.textContent = `${typeLabel}:`;
+      const typeLabel = product.variantTypeLabel || (product.variantType === 'color' ? 'FINISH & SCENT' : (product.variantType === 'category' ? 'CATEGORY' : 'SIZE'));
+      if (variantTypeTitle) variantTypeTitle.textContent = `${typeLabel.toUpperCase()}:`;
       if (variantCurrentVal) {
         const variantStatus = isComingSoon 
           ? ' (Coming Soon)' 
@@ -226,17 +227,18 @@ function renderPdpVariantState(product, variant) {
             : isLowStock 
               ? ` (Only ${currentStock} left)` 
               : '';
-        variantCurrentVal.textContent = (variant ? variant.title : '') + variantStatus;
+        variantCurrentVal.textContent = (variant ? variant.title : (variants[0]?.title || '')) + variantStatus;
       }
 
       variantSelectorGrid.innerHTML = variants.map(v => {
-        const isSelected = variant && variant.id === v.id;
-        const isColor = Boolean(v.colorHex) || product.variantType === 'color';
+        const isSelected = (variant && variant.id === v.id) || (!variant && variants[0]?.id === v.id);
+        const hasColor = Boolean(v.colorHex) || product.variantType === 'color' || product.handle === 'elan-gold-goblet';
+        const colorVal = v.colorHex || (product.handle === 'elan-gold-goblet' ? '#D4AF37' : '#2B050B');
         const vStock = typeof v.stock === 'number' ? v.stock : (v.available === false ? 0 : 10);
         const vOutOfStock = !v.isComingSoon && (v.available === false || v.isOutOfStock || vStock <= 0);
         const vLowStock = !v.isComingSoon && !vOutOfStock && vStock > 0 && vStock < 10;
 
-        if (isColor) {
+        if (hasColor || product.variantType === 'color' || product.variantType === 'category' || product.handle === 'elan-gold-goblet') {
           return `
             <button 
               type="button" 
@@ -245,7 +247,7 @@ function renderPdpVariantState(product, variant) {
               title="${v.title}${vOutOfStock ? ' (Out of Stock)' : vLowStock ? ` (Only ${vStock} left)` : ''} — ₹${Number(v.price).toLocaleString('en-IN')}"
               onclick="selectPdpVariant('${v.id}')"
             >
-              <span class="pdp-swatch-circle" style="background-color: ${v.colorHex || '#d4af37'};"></span>
+              <span class="pdp-swatch-circle" style="background-color: ${colorVal};"></span>
               <span class="pdp-swatch-name">${v.title}</span>
               ${v.isComingSoon ? '<span class="swatch-soon-tag">Soon</span>' : ''}
               ${vOutOfStock ? '<span class="swatch-oos-tag">Out of Stock</span>' : ''}
