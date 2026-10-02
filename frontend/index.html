@@ -350,6 +350,7 @@
         <!-- -Style Mood / Category Quick Filter Pills -->
         <div class="km-filter-pills-bar" id="ritualFilterBar" role="tablist" aria-label="Ritual categories">
           <button type="button" class="km-pill active" data-ritual-filter="all" role="tab" aria-selected="true">All Rituals</button>
+          <button type="button" class="km-pill" data-ritual-filter="decor" role="tab" aria-selected="false">Home Decor</button>
           <button type="button" class="km-pill" data-ritual-filter="luxury" role="tab" aria-selected="false">Premium Candles</button>
           <button type="button" class="km-pill" data-ritual-filter="chakra" role="tab" aria-selected="false">Chakra Harmony</button>
           <button type="button" class="km-pill" data-ritual-filter="wooden" role="tab" aria-selected="false">Wooden Earth</button>
@@ -357,7 +358,6 @@
           <button type="button" class="km-pill" data-ritual-filter="metal" role="tab" aria-selected="false">Metal Collection</button>
           <button type="button" class="km-pill" data-ritual-filter="sand" role="tab" aria-selected="false">DIY Sand Wax</button>
           <button type="button" class="km-pill" data-ritual-filter="accessories" role="tab" aria-selected="false">Flame Care</button>
-          <button type="button" class="km-pill" data-ritual-filter="decor" role="tab" aria-selected="false">Home Decor</button>
         </div>
       </div>
 
@@ -370,7 +370,25 @@
         </button>
 
         <div class="km-rituals-track" id="ritualsTrack">
-          <!-- Card 1 -->
+          <!-- Card 1: Home Decor -->
+          <a href="category.html?cat=Home%20Decor" class="km-ritual-card" data-cat="decor" id="ritualCardDecor">
+            <div class="km-ritual-media">
+              <span class="km-card-tag">CURATED SPACES</span>
+              <img src="asset/Elan.jpeg" alt="Home Decor Collection" loading="lazy" />
+              <div class="km-ritual-overlay"></div>
+            </div>
+            <div class="km-ritual-info">
+              <span class="km-ritual-eyebrow">Artisanal Living Accents</span>
+              <h3 class="km-ritual-heading">Home Decor</h3>
+              <p class="km-ritual-desc">Statement goblets, architectural lanterns, and crystal fluted centerpieces.</p>
+              <div class="km-discover-btn">
+                <span>Discover Collection</span>
+                <span class="km-btn-arrow">&rarr;</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 2: Premium Luxury Candles -->
           <a href="category.html?cat=Premium%20Luxury%20Candles" class="km-ritual-card" data-cat="luxury" id="ritualCard1">
             <div class="km-ritual-media">
               <span class="km-card-tag">BOTANICAL SOY</span>
@@ -388,7 +406,7 @@
             </div>
           </a>
 
-          <!-- Card 2 -->
+          <!-- Card 3: Seven Chakra Collection -->
           <a href="category.html?cat=Seven%20Chakra-%20Positivity%20collection" class="km-ritual-card" data-cat="chakra" id="ritualCard2">
             <div class="km-ritual-media">
               <span class="km-card-tag">CHAKRA HARMONY</span>
@@ -406,7 +424,7 @@
             </div>
           </a>
 
-          <!-- Card 3 -->
+          <!-- Card 4: Wooden Collection -->
           <a href="category.html?cat=Wooden%20Collection" class="km-ritual-card" data-cat="wooden" id="ritualCard3">
             <div class="km-ritual-media">
               <span class="km-card-tag">NATURAL GRAIN</span>
@@ -424,7 +442,7 @@
             </div>
           </a>
 
-          <!-- Card 4 -->
+          <!-- Card 5: Diffusers & Aromas -->
           <a href="category.html?cat=Diffusers%20and%20Aromas" class="km-ritual-card" data-cat="diffusers" id="ritualCard4">
             <div class="km-ritual-media">
               <span class="km-card-tag">FLAME-FREE AROMA</span>
@@ -442,7 +460,7 @@
             </div>
           </a>
 
-          <!-- Card 5 -->
+          <!-- Card 6: Metal Collection -->
           <a href="category.html?cat=Metal%20Collection" class="km-ritual-card" data-cat="metal" id="ritualCard5">
             <div class="km-ritual-media">
               <span class="km-card-tag">ROYAL SHINE</span>
@@ -460,7 +478,7 @@
             </div>
           </a>
 
-          <!-- Card 6 -->
+          <!-- Card 7: Sand Wax & Wicks -->
           <a href="category.html?cat=Sand%20Wax%20and%20Wicks%20Combo" class="km-ritual-card" data-cat="sand" id="ritualCard6">
             <div class="km-ritual-media">
               <span class="km-card-tag">DIY CEREMONY</span>
@@ -478,7 +496,7 @@
             </div>
           </a>
 
-          <!-- Card 7 -->
+          <!-- Card 8: Candle Accessories -->
           <a href="category.html?cat=Candle%20Accessories" class="km-ritual-card" data-cat="accessories" id="ritualCard7">
             <div class="km-ritual-media">
               <span class="km-card-tag">CARE ATELIER</span>
@@ -489,24 +507,6 @@
               <span class="km-ritual-eyebrow">Intentional Wick Care</span>
               <h3 class="km-ritual-heading">Candle Accessories</h3>
               <p class="km-ritual-desc">Brushed gold snuffers, precision trimmers, and tray rituals.</p>
-              <div class="km-discover-btn">
-                <span>Discover Collection</span>
-                <span class="km-btn-arrow">&rarr;</span>
-              </div>
-            </div>
-          </a>
-
-          <!-- Card 8: Home Decor -->
-          <a href="category.html?cat=Home%20Decor" class="km-ritual-card" data-cat="decor" id="ritualCard8">
-            <div class="km-ritual-media">
-              <span class="km-card-tag">CURATED SPACES</span>
-              <img src="asset/Elan.jpeg" alt="Home Decor Collection" loading="lazy" />
-              <div class="km-ritual-overlay"></div>
-            </div>
-            <div class="km-ritual-info">
-              <span class="km-ritual-eyebrow">Artisanal Living Accents</span>
-              <h3 class="km-ritual-heading">Home Decor</h3>
-              <p class="km-ritual-desc">Statement goblets, architectural lanterns, and crystal fluted centerpieces.</p>
               <div class="km-discover-btn">
                 <span>Discover Collection</span>
                 <span class="km-btn-arrow">&rarr;</span>
