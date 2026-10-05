@@ -1665,6 +1665,266 @@ const CANDLE_INVENTORY = [
     desc: "Heavyweight crystalline fluted bowl candle featuring triple pure cotton wicks for a captivating panoramic glow and intense therapeutic fragrance throw.",
     dimensions: "18 × 18 × 9 cm (650g Botanical Soy Wax)",
     stock: 20
+  },
+  {
+    id: 91,
+    handle: "the-harmony-shankh-fragrance-oil-diffuser",
+    title: "The Harmony Shankh fragrance oil diffuser",
+    category: "Diffusers and Aromas",
+    price: 1199,
+    origPrice: 1499,
+    burn: "60-90 Days Continuous Aroma",
+    badge: "NEW ARRIVAL",
+    isComingSoon: false,
+    notes: {
+      top: "Sacred Lotus & White Musk",
+      heart: "Sandalwood & Jasmine",
+      base: "Warm Amber & Cedar"
+    },
+    image: "asset/harmony.jpeg",
+    images: [
+      "asset/harmony.jpeg",
+      "asset/harmony2.jpeg",
+      "asset/harmony3.jpeg",
+      "asset/harmony4.jpeg"
+    ],
+    desc: "Sacred Shankh-inspired luxury ceramic fragrance oil diffuser. Delivers serene botanical aromas and meditative harmony.",
+    dimensions: "200ml + Reeds / Burner",
+    stock: 25
+  },
+  {
+    id: 92,
+    handle: "elyra-nazar-evil-eye-pillar-candle",
+    title: "Elyra Nazar- Evil Eye Pillar candle",
+    category: "Premium Luxury Candles",
+    price: 849,
+    origPrice: 999,
+    burn: "45-55 Hours",
+    badge: "BESTSELLER",
+    isComingSoon: false,
+    notes: {
+      top: "Pure Cotton & White Sage",
+      heart: "Lavender & Blue Iris",
+      base: "Amber & Sandalwood"
+    },
+    image: "asset/elyra_nazar.jpeg",
+    images: [
+      "asset/elyra_nazar.jpeg",
+      "asset/elyra_nazar2.jpeg",
+      "asset/elyra_nazar3.jpeg",
+      "asset/elyra_nazar4.jpeg"
+    ],
+    desc: "Protective Evil Eye pillar candle hand-poured with botanical soy wax and sacred amber notes.",
+    dimensions: "8 × 8 × 12 cm (300g)",
+    stock: 20
+  },
+  {
+    id: 93,
+    handle: "regalia-crystal-candle-stand",
+    title: "Regalia Crystal Candle Stand (pillar candles/taper candles)",
+    category: "Home Decor",
+    price: 2899,
+    origPrice: 3299,
+    burn: "Lifetime Stand",
+    badge: "LUXURY STATEMENT",
+    isComingSoon: false,
+    notes: {
+      top: "Faceted Crystal",
+      heart: "Polished Metal Trim",
+      base: "Weighted Stability"
+    },
+    image: "asset/regalia_crystal.jpeg",
+    images: [
+      "asset/regalia_crystal.jpeg",
+      "asset/regalia_crystal2.jpeg",
+      "asset/regalia_crystal3.jpeg",
+      "asset/regalia_crystal4.jpeg"
+    ],
+    desc: "Exquisite faceted crystal candle stand designed for both pillar and taper candles.",
+    dimensions: "15 × 15 × 25 cm",
+    stock: 15
+  },
+  {
+    id: 94,
+    handle: "long-garden-walkway-candle",
+    title: "Long Garden Walkway Candle",
+    category: "Premium Luxury Candles",
+    price: 749,
+    origPrice: 899,
+    burn: "40-50 Hours",
+    badge: "NEW ARRIVAL",
+    isComingSoon: false,
+    notes: {
+      top: "Fresh Cut Grass & Green Ivy",
+      heart: "Wild Jasmine & Honeysuckle",
+      base: "Earth Moss & Cedar"
+    },
+    image: "asset/long_garden_walkway.jpeg",
+    images: [
+      "asset/long_garden_walkway.jpeg",
+      "asset/long_garden_walkway2.jpeg",
+      "asset/long_garden_walkway3.jpeg",
+      "asset/long_garden_walkway4.jpeg"
+    ],
+    desc: "Elongated botanical garden candle designed to illuminate outdoor pathways and patios with botanical serenity.",
+    dimensions: "25 × 6 × 6 cm (350g)",
+    stock: 22
+  },
+  {
+    id: 95,
+    handle: "golden-sparrow-glass-candle",
+    title: "Golden sparrow glass candle",
+    category: "Premium Luxury Candles",
+    price: 649,
+    origPrice: 799,
+    burn: "35-45 Hours",
+    badge: "BESTSELLER",
+    isComingSoon: false,
+    notes: {
+      top: "Sweet Mandarin & Neroli",
+      heart: "Golden Amber & Honey",
+      base: "Vanilla Bean & Sandalwood"
+    },
+    image: "asset/golden_sparrow.jpeg",
+    images: [
+      "asset/golden_sparrow.jpeg",
+      "asset/golden_sparrow2.jpeg",
+      "asset/golden_sparrow3.jpeg",
+      "asset/golden_sparrow4.jpeg"
+    ],
+    desc: "Gilded glass jar candle adorned with a delicate golden sparrow motif.",
+    dimensions: "8 × 8 × 9 cm (250g)",
+    stock: 25
+  },
+  {
+    id: 96,
+    handle: "midnight-amber-glass-candle-wooden-wick",
+    title: "Midnight Amber Glass candle with wooden wick",
+    category: "Wooden Collection",
+    price: 599,
+    origPrice: 749,
+    burn: "45-55 Hours",
+    badge: "BESTSELLER",
+    isComingSoon: false,
+    notes: {
+      top: "Smoky Incense & Cardamom",
+      heart: "Dark Amber & Patchouli",
+      base: "Aged Cedarwood & Vanilla"
+    },
+    image: "asset/midnight_amber.jpeg",
+    images: [
+      "asset/midnight_amber.jpeg",
+      "asset/midnight_amber2.jpeg",
+      "asset/midnight_amber3.jpeg",
+      "asset/midnight_amber4.jpeg"
+    ],
+    desc: "Rich amber glass jar featuring a crackling wooden wick and hypnotic nocturnal amber fragrance.",
+    dimensions: "9 × 9 × 10 cm (300g)",
+    stock: 30
+  },
+  {
+    id: 97,
+    handle: "crystal-shell-serene-candle",
+    title: "Crystal shell serene candle",
+    category: "Premium Luxury Candles",
+    price: 499,
+    origPrice: 649,
+    burn: "30-40 Hours",
+    badge: "NEW ARRIVAL",
+    isComingSoon: false,
+    notes: {
+      top: "Sea Salt & Ocean Mist",
+      heart: "White Orchid & Water Lily",
+      base: "Driftwood & Clean Musk"
+    },
+    image: "asset/crystal_shell.jpeg",
+    images: [
+      "asset/crystal_shell.jpeg",
+      "asset/crystal_shell2.jpeg",
+      "asset/crystal_shell3.jpeg",
+      "asset/crystal_shell4.jpeg"
+    ],
+    desc: "Delicate shell-shaped crystalline soy candle evoking coastal serenity and ocean breeze.",
+    dimensions: "10 × 9 × 6 cm (220g)",
+    stock: 28
+  },
+  {
+    id: 98,
+    handle: "wax-tablet-velvet-oud",
+    title: "Wax tablet- Velvet Oud",
+    category: "Diffusers and Aromas",
+    price: 599,
+    origPrice: 749,
+    burn: "3-4 Months Hanging Aroma",
+    badge: "NEW ARRIVAL",
+    isComingSoon: false,
+    notes: {
+      top: "Royal Oud & Saffron",
+      heart: "Rose & Smoky Incense",
+      base: "Dark Amber & Vetiver"
+    },
+    image: "asset/wax_tablet_velvet_oud.jpeg",
+    images: [
+      "asset/wax_tablet_velvet_oud.jpeg",
+      "asset/wax_tablet_velvet_oud2.jpeg",
+      "asset/wax_tablet_velvet_oud3.jpeg",
+      "asset/wax_tablet_velvet_oud4.jpeg"
+    ],
+    desc: "Hanging botanical scented wax tablet infused with rich Velvet Oud and botanical ornaments.",
+    dimensions: "10 × 6 × 1.5 cm",
+    stock: 35
+  },
+  {
+    id: 99,
+    handle: "wax-tablet-verdant-lemongrass",
+    title: "Wax Tablet- Verdant Lemongrass",
+    category: "Diffusers and Aromas",
+    price: 599,
+    origPrice: 749,
+    burn: "3-4 Months Hanging Aroma",
+    badge: "BESTSELLER",
+    isComingSoon: false,
+    notes: {
+      top: "Crisp Lemongrass & Verbena",
+      heart: "Eucalyptus & Green Tea",
+      base: "White Cedar & Musk"
+    },
+    image: "asset/wax_tablet_verdant_lemongrass.jpeg",
+    images: [
+      "asset/wax_tablet_verdant_lemongrass.jpeg",
+      "asset/wax_tablet_verdant_lemongrass2.jpeg",
+      "asset/wax_tablet_verdant_lemongrass3.jpeg",
+      "asset/wax_tablet_verdant_lemongrass4.jpeg"
+    ],
+    desc: "Refreshing hanging botanical wax tablet scented with crisp verdant lemongrass and citrus notes.",
+    dimensions: "10 × 6 × 1.5 cm",
+    stock: 35
+  },
+  {
+    id: 100,
+    handle: "zenith-trio-matte-black-candle-holder-set",
+    title: "Zenith trio matte black candle holder set",
+    category: "Metal Collection",
+    price: 2849,
+    origPrice: 2999,
+    burn: "Lifetime Metal Set",
+    badge: "LUXURY STATEMENT",
+    isComingSoon: false,
+    notes: {
+      top: "Matte Noir Finish",
+      heart: "Architectural Tiered Set",
+      base: "Heavy Cast Iron"
+    },
+    image: "asset/zenith_trio.jpeg",
+    images: [
+      "asset/zenith_trio.jpeg",
+      "asset/zenith_trio2.jpeg",
+      "asset/zenith_trio3.jpeg",
+      "asset/zenith_trio4.jpeg"
+    ],
+    desc: "Set of three architectural matte black metal candle holders of varying heights for striking modern tablescapes.",
+    dimensions: "Tiered Set of 3 (Heights 20, 25, 30 cm)",
+    stock: 15
   }
 ];
 
