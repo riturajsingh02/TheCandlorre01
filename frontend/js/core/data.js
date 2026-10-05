@@ -1904,7 +1904,7 @@ const CANDLE_INVENTORY = [
     id: 100,
     handle: "zenith-trio-matte-black-candle-holder-set",
     title: "Zenith trio matte black candle holder set",
-    category: "Metal Collection",
+    category: "Candle Accessories",
     price: 2849,
     origPrice: 2999,
     burn: "Lifetime Metal Set",

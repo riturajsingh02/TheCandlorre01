@@ -223,14 +223,28 @@ function filterProducts() {
 
   let filtered = [...CANDLE_INVENTORY];
 
+  function matchesCategory(itemCatRaw, targetCatRaw) {
+    if (!itemCatRaw || !targetCatRaw) return false;
+    const itemCat = itemCatRaw.toLowerCase().trim();
+    const targetCat = targetCatRaw.toLowerCase().trim();
+    if (itemCat === targetCat) return true;
+    if (targetCat.includes('diffuser') && itemCat.includes('diffuser')) return true;
+    if (targetCat.includes('chakra') && itemCat.includes('chakra')) return true;
+    if (targetCat.includes('essential') && itemCat.includes('essential')) return true;
+    if (targetCat.includes('decor') && itemCat.includes('decor')) return true;
+    if (targetCat.includes('accessory') && itemCat.includes('accessor')) return true;
+    if (itemCat.includes(targetCat) || targetCat.includes(itemCat)) return true;
+    return false;
+  }
+
   // Quick Category Pill Filter
   if (activeCollectionPill && activeCollectionPill !== 'all') {
-    filtered = filtered.filter(item => item.category.toLowerCase() === activeCollectionPill.toLowerCase());
+    filtered = filtered.filter(item => matchesCategory(item.category, activeCollectionPill));
   }
 
   // Checkbox Categories (Additive / Disjunctive)
   if (activeTypes.length > 0) {
-    filtered = filtered.filter(item => activeTypes.includes(item.category));
+    filtered = filtered.filter(item => activeTypes.some(t => matchesCategory(item.category, t)));
   }
 
   // Search Query
