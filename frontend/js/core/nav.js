@@ -31,17 +31,19 @@
         </a>
       </li>
       <li>
-        <a href="tracking.html" class="mobile-nav-link">
-          <span>Track Order</span>
+        <a href="category.html?cat=Home Decor" class="mobile-nav-link">
+          <span>Home Décor (Sculptural Pieces)</span>
           <span class="link-arrow">→</span>
         </a>
       </li>
       <li>
-        <a href="about-us.html" class="mobile-nav-link">
-          <span>Our Story &amp; Craft</span>
+        <a href="our-story.html" class="mobile-nav-link">
+          <span>Our Story</span>
           <span class="link-arrow">→</span>
         </a>
       </li>
+      <li>
+        <a href="tracking.html" class="mobile-nav-link">
       <li>
         <a href="faq.html" class="mobile-nav-link">
           <span>Client FAQs</span>

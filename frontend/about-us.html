@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Story &amp; Philosophy — The Candlorre</title>
-  <meta name="description" content="Discover the artisans, botanical soy wax philosophy, and clean luxury ethos behind The Candlorre." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#2B050B" />
+  <title>Our Story — The Candlorre | The Art of Slow Living &amp; Mindful Sanctuaries</title>
+  <meta name="description"
+    content="Discover the story behind The Candlorre. Inspired by slow living, botanical craft, and mindful spaces — exploring our curated worlds of handcrafted candles, sculptural home décor, bespoke fragrances, and intentional accessories." />
+  <meta property="og:title" content="Our Story — The Candlorre" />
+  <meta property="og:description"
+    content="Inspired by slow living, botanical craft, and mindful spaces — exploring our curated worlds of handcrafted candles, sculptural home décor, bespoke fragrances, and intentional accessories." />
+  <meta property="og:image" content="asset/Grand Boat Candle – Large.jpg" />
   <link rel="icon" type="image/x-icon" href="asset/logo.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Monsieur+La+Doulaise&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="page-our-story">
 
   <!-- UNIFIED HEADER -->
   <div class="header-wrapper" id="headerWrapper">
+    <!-- Top Announcement Bar -->
     <div class="announcement-bar" role="region" aria-label="Store Announcement">
       <button type="button" class="announcement-nav-btn announcement-prev" aria-label="Previous announcement">
         <svg aria-hidden="true" focusable="false" width="11" height="11" viewBox="0 0 16 18" fill="none">
@@ -29,13 +41,13 @@
           <span>♡ Cash on Delivery (COD) Available Across India</span>
         </div>
         <div class="announcement-item" data-index="2">
-          <span>🕯️ Bulk Orders Accepted</span>
+          <span>🕯️ Bulk &amp; Bespoke Gifting Orders Accepted</span>
         </div>
         <div class="announcement-item" data-index="3">
           <span>🌿 100% Natural Botanical Soy Wax</span>
         </div>
         <div class="announcement-item" data-index="4">
-          <span>♡ Handcrafted With Love</span>
+          <span>♡ Handcrafted With Love in Micro-Batches</span>
         </div>
       </div>
       <button type="button" class="announcement-nav-btn announcement-next" aria-label="Next announcement">
@@ -45,6 +57,7 @@
       </button>
     </div>
 
+    <!-- Sticky Header Navigation -->
     <header class="site-header" id="header">
       <div class="nav-left-group">
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Navigation Menu" title="Menu">
@@ -63,23 +76,25 @@
         </div>
       </div>
 
+      <!-- Desktop Nav Links -->
       <nav class="nav-center" aria-label="Main Navigation">
         <ul class="nav-links">
-          <li><a href="full-catalog.html">Candles &amp; Scents</a></li>
-          <li><a href="about-us.html" class="active">Our Story</a></li>
+          <li><a href="index.html#new-arrivals">Candles</a></li>
+          <li><a href="category.html?cat=Home Decor">Home Decor</a></li>
+          <li><a href="our-story.html" class="active" style="color: var(--gold-dark); font-weight: 600;">Our Story</a></li>
           <li><a href="tracking.html">Track Order</a></li>
-          <li><a href="contact-us.html">Customer Care</a></li>
-          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="index.html#faq">Client FAQs</a></li>
         </ul>
       </nav>
 
+      <!-- Right Header Actions -->
       <div class="nav-actions">
-        <a href="full-catalog.html" class="action-btn" aria-label="Search Fragrances" title="Search">
+        <button class="action-btn" id="searchTrigger" aria-label="Search Fragrances" title="Search">
           <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <circle cx="11" cy="11" r="8"></circle>
             <path d="m21 21-4.3-4.3"></path>
           </svg>
-        </a>
+        </button>
 
         <a href="tracking.html" class="action-btn" aria-label="Track Order" title="Track Order">
           <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -89,17 +104,26 @@
           </svg>
         </a>
 
-        <a href="full-catalog.html" class="action-btn" aria-label="Wishlist" title="View Wishlist">
+        <button class="action-btn" id="wishlistTrigger" aria-label="Wishlist" title="View Wishlist">
           <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
           </svg>
-        </a>
+          <span class="counter-badge" id="wishlistCount">0</span>
+        </button>
 
-        <a href="full-catalog.html" class="action-btn" aria-label="Shopping Bag" title="Shopping Bag">
+        <button class="action-btn" id="cartTrigger" aria-label="Cart" title="Shopping Bag">
           <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
             <path d="M3 6h18"></path>
             <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="counter-badge" id="cartCount">0</span>
+        </button>
+
+        <a href="login.html" class="action-btn" id="accountHeaderBtn" aria-label="Client Sign In" title="Sign In">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
           </svg>
         </a>
       </div>
@@ -107,7 +131,7 @@
   </div>
   <div class="header-spacer" id="headerSpacer" aria-hidden="true"></div>
 
-  <!-- MOBILE SLIDE-OUT NAVIGATION DRAWER -->
+  <!-- Mobile Navigation Drawer -->
   <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
     <div class="mobile-drawer-header">
       <div class="mobile-drawer-brand">
@@ -120,13 +144,25 @@
     <ul class="mobile-nav-list">
       <li>
         <a href="index.html#new-arrivals" class="mobile-nav-link">
-          <span>Candles  (30+ Fragrances)</span>
+          <span>Candles (30+ Fragrances)</span>
+          <span class="link-arrow">→</span>
+        </a>
+      </li>
+      <li>
+        <a href="category.html?cat=Home Decor" class="mobile-nav-link">
+          <span>Home Décor (Sculptural Pieces)</span>
+          <span class="link-arrow">→</span>
+        </a>
+      </li>
+      <li>
+        <a href="our-story.html" class="mobile-nav-link active">
+          <span>Our Story</span>
           <span class="link-arrow">→</span>
         </a>
       </li>
       <li>
         <a href="full-catalog.html" class="mobile-nav-link">
-          <span>Full Catalog </span>
+          <span>Full Catalog</span>
           <span class="link-arrow">→</span>
         </a>
       </li>
@@ -137,20 +173,8 @@
         </a>
       </li>
       <li>
-        <a href="about-us.html" class="mobile-nav-link">
-          <span>Our Story &amp; Craft</span>
-          <span class="link-arrow">→</span>
-        </a>
-      </li>
-      <li>
-        <a href="faq.html" class="mobile-nav-link">
+        <a href="index.html#faq" class="mobile-nav-link">
           <span>Client FAQs</span>
-          <span class="link-arrow">→</span>
-        </a>
-      </li>
-      <li>
-        <a href="contact-us.html" class="mobile-nav-link">
-          <span>Customer Care</span>
           <span class="link-arrow">→</span>
         </a>
       </li>
@@ -164,7 +188,7 @@
 
     <div class="mobile-drawer-footer">
       <p class="mob-footer-tag">Concierge Assistance</p>
-      <a href="https://wa.me/919762831995?text=Hello%20The%20Candlorre,%20I%27d%20like%20assistance%20with%20fragrances"
+      <a href="https://wa.me/919762831995?text=Hello%20The%20Candlorre,%20I'd%20like%20assistance%20with%20fragrances"
         target="_blank" rel="noopener" class="mob-whatsapp-btn">
         <span>Chat on WhatsApp</span>
         <span>↗</span>
@@ -173,95 +197,449 @@
   </aside>
   <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
 
+  <!-- MAIN STORY EDITORIAL LAYOUT -->
+  <main class="story-page-container">
 
-  <!-- MAIN ABOUT PAGE -->
-  <main class="policy-page-wrapper">
-    <nav class="policy-breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Home</a>
-      <span class="sep">/</span>
-      <span>Our Story &amp; Philosophy</span>
+    <!-- BREADCRUMB -->
+    <nav class="story-breadcrumb" aria-label="Breadcrumb">
+      <div class="story-container">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Our Story</span>
+      </div>
     </nav>
 
-    <section class="policy-hero-card">
-      <div class="policy-hero-info">
-        <span class="policy-hero-tag">The Atelier Story</span>
-        <h1 class="policy-hero-title">Crafting Slow Sensory Sanctuaries</h1>
-        <p class="policy-hero-sub">
-          The Candlorre was founded on a simple conviction: modern spaces deserve cleaner, more thoughtful rituals. We hand-pour natural botanical soy candles that awaken nostalgia, ground the soul, and transform everyday rooms into tranquil retreats.
-        </p>
-      </div>
-      <div class="policy-hero-meta">
-        <div><strong>Handcrafted:</strong> In Micro-Batches</div>
-        <div><strong>Wax Base:</strong> 100% Pure Botanical Soy</div>
-        <div><strong>Standards:</strong> IFRA-Certified &amp; Non-Toxic</div>
-      </div>
-    </section>
-
-    <div class="policy-content-grid">
-      <aside class="policy-toc-sidebar">
-        <h3 class="policy-toc-title">Our Pillars</h3>
-        <ul class="policy-toc-list">
-          <li><a href="#philosophy">1. The Candlorre Ethos</a></li>
-          <li><a href="#soy-wax">2. 100% Botanical Soy Wax</a></li>
-          <li><a href="#fragrance">3. IFRA Fine Fragrance Blends</a></li>
-          <li><a href="#artisanal">4. Hand-Poured Micro-Batches</a></li>
-          <li><a href="#sustainability">5. Sustainable Reusable Vessels</a></li>
-        </ul>
-      </aside>
-
-      <div class="policy-main-content">
-        <article class="policy-block" id="philosophy">
-          <h2 class="policy-block-heading"><span class="num">1</span> The Candlorre Ethos</h2>
-          <p class="policy-text">
-            In an era of relentless speed, true luxury is quiet time. We design candles not as ornamental novelties, but as sensory anchors for your dawn reflections, intimate dinners, and bedtime unwinding. Every candle we pour is an invitation to slow down, breathe deeply, and revel in warm golden ambiance.
+    <!-- SECTION 1: EDITORIAL HERO (MISA-INSPIRED AESTHETIC) -->
+    <section class="story-hero-section">
+      <div class="story-hero-inner">
+        <div class="story-hero-text">
+          <span class="story-badge">THE ATELIER • OUR STORY</span>
+          <h1 class="story-hero-title">
+            The Art of Slow Living &amp; Mindful Spaces
+          </h1>
+          <p class="story-hero-script">
+            A gentle pause in a hurried world.
           </p>
-        </article>
-
-        <article class="policy-block" id="soy-wax">
-          <h2 class="policy-block-heading"><span class="num">2</span> 100% Pure Botanical Soy Wax</h2>
-          <p class="policy-text">
-            Unlike commercial candles formulated with petroleum-derived paraffin wax, The Candlorre uses purely biodegradable, renewable soy wax:
+          <p class="story-hero-desc">
+            We began with a singular conviction: in an era of relentless speed, true luxury is the quiet pause. 
+            Inspired by the Scandinavian philosophy of <em>Lagom</em> — not too little, not too much, just right — 
+            and the ancient reverence for botanical alchemy, <strong>The Candlorre</strong> curates home objects that 
+            ground the soul, awaken nostalgia, and transform everyday rooms into tranquil sanctuaries.
           </p>
-          <ul class="policy-list">
-            <li><strong>Zero Black Soot:</strong> Burns cleanly without releasing toxic benzene or toluene particulates into your indoor air.</li>
-            <li><strong>Longer, Cooler Burn:</strong> Soy wax melts at a lower temperature, delivering up to 50% longer burn hours than petroleum wax.</li>
-            <li><strong>Consistent Fragrance Diffusion:</strong> Gently diffuses delicate top, heart, and base notes without scorching the delicate aromatic oils.</li>
-          </ul>
-        </article>
-
-        <article class="policy-block" id="fragrance">
-          <h2 class="policy-block-heading"><span class="num">3</span> IFRA-Certified Therapeutic Aromas</h2>
-          <p class="policy-text">
-            Our master fragrance profiles are developed in partnership with leading perfume ateliers adhering strictly to International Fragrance Association (IFRA) safety standards. Our blends are free of parabens, phthalates, and formaldehyde donors, ensuring safe inhalation for families and pets.
-          </p>
-        </article>
-
-        <article class="policy-block" id="artisanal">
-          <h2 class="policy-block-heading"><span class="num">4</span> Hand-Poured Micro-Batches</h2>
-          <p class="policy-text">
-            No mass automated conveyor lines. Each candle is hand-poured in small batches of 30 units at our Indian workshop. Wicks are centered manually, hot wax temperatures are monitored with precision, and each vessel cures for a minimum of 7 days to ensure peak hot throw performance.
-          </p>
-        </article>
-
-        <article class="policy-block" id="sustainability">
-          <h2 class="policy-block-heading"><span class="num">5</span> Reusable Vessels &amp; Zero Plastic</h2>
-          <p class="policy-text">
-            Our thick amber apothecary jars, frosted matte glass tumblers, and brass canisters are designed for perpetual second lives: repurpose them as desk organizers, makeup brush holders, succulent planters, or tea light lanterns. Our transit packaging uses biodegradable honeycomb paper and recycled cartons.
-          </p>
-        </article>
-
-        <div class="policy-contact-box">
-          <div>
-            <h4>Experience the Atelier Collection</h4>
-            <p>Explore our curated library of botanical candles, diffusers, and luxury gift hampers.</p>
+          <div class="story-hero-actions">
+            <a href="#worlds" class="story-btn story-btn-gold">Explore The Four Worlds</a>
+            <a href="#philosophy" class="story-btn story-btn-outline">Our Philosophy</a>
           </div>
-          <div class="policy-contact-actions">
-            <a href="full-catalog.html" class="policy-contact-btn">Explore Fragrances</a>
-            <a href="contact-us.html" class="policy-contact-btn secondary">Contact Us</a>
+        </div>
+
+        <div class="story-hero-gallery">
+          <div class="story-hero-card primary">
+            <img src="asset/Grand Boat Candle – Large.jpg" alt="The Candlorre Grand Boat Candle Centerpiece" loading="eager" />
+            <div class="story-hero-caption">
+              <span>Home Décor • The Grand Boat Centerpiece</span>
+            </div>
+          </div>
+          <div class="story-hero-card secondary">
+            <img src="asset/3-wick.jpeg" alt="Botanical Soy 3-Wick Candle" loading="eager" />
+            <div class="story-hero-caption">
+              <span>Candles • 100% Botanical Soy</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- SECTION 2: THE PHILOSOPHY (LAGOM & THE SANCTUARY) -->
+    <section class="story-philosophy-section" id="philosophy">
+      <div class="story-container">
+        <div class="story-philosophy-header">
+          <span class="story-section-pretitle">OUR ETHOS</span>
+          <h2 class="story-section-title">The Sanctuary You Call Home</h2>
+          <div class="story-divider-gold"></div>
+        </div>
+
+        <div class="story-philosophy-grid">
+          <div class="story-philosophy-image-col">
+            <div class="story-frame-wrap">
+              <img src="asset/long_garden_walkway.jpeg" alt="Botanical Serenity and Mindful Living" loading="lazy" />
+              <div class="story-frame-badge">
+                <span class="frame-num">100%</span>
+                <span class="frame-txt">Plant-Based Botanical Wax</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-philosophy-text-col">
+            <blockquote class="story-pullquote">
+              "Ambiance is not merely an ornament; it is an emotional sanctuary where light and memory intertwine."
+            </blockquote>
+
+            <p class="story-body-text">
+              Every home carries a rhythm. Sometimes it is frantic; sometimes it is weary. We craft each element 
+              at The Candlorre to be an intentional anchor for your morning meditations, evening reading nooks, 
+              intimate dinners, and quiet bedtime rituals.
+            </p>
+
+            <p class="story-body-text">
+              We reject the cold impersonality of mass production. Instead, we embrace the patient beauty of 
+              micro-batches, hand-selected pure cotton wicks, IFRA-certified therapeutic essences, and 
+              reusable sculptural vessels created to live forever in your space.
+            </p>
+
+            <div class="story-stats-row">
+              <div class="story-stat-item">
+                <span class="stat-number">30+</span>
+                <span class="stat-label">Bespoke Fragrance Formulations</span>
+              </div>
+              <div class="story-stat-item">
+                <span class="stat-number">0%</span>
+                <span class="stat-label">Paraffin, Benzene or Phthalates</span>
+              </div>
+              <div class="story-stat-item">
+                <span class="stat-number">7 Days</span>
+                <span class="stat-label">Slow Artisan Cure Time</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: THE FOUR CURATED WORLDS (CANDLES, DECOR, FRAGRANCES, ACCESSORIES) -->
+    <section class="story-worlds-section" id="worlds">
+      <div class="story-container">
+        <div class="story-worlds-intro">
+          <span class="story-section-pretitle">THE FOUR CURATED WORLDS</span>
+          <h2 class="story-section-title">A Symphony of Light, Scent &amp; Form</h2>
+          <p class="story-section-desc">
+            Just like Misa’s slow-living ethos, our craft bridges functional illumination, sculptural sculpture, 
+            fine olfactive perfumery, and intentional daily accessories.
+          </p>
+        </div>
+
+        <!-- WORLD 1: CANDLES -->
+        <article class="story-chapter-card" id="world-candles">
+          <div class="story-chapter-grid">
+            <div class="story-chapter-visual">
+              <div class="story-visual-stack">
+                <img src="asset/Triple Glow Bowl Candle.jpg" alt="Botanical Soy Triple Glow Bowl Candle" class="stack-main" loading="lazy" />
+                <img src="asset/Diamond Glow Jar – Amber.jpg" alt="Amber Diamond Glow Jar" class="stack-sub" loading="lazy" />
+              </div>
+              <span class="story-visual-tag">CHAPTER 01 • BOTANICAL CANDLES</span>
+            </div>
+
+            <div class="story-chapter-info">
+              <span class="story-chapter-num">01</span>
+              <span class="story-chapter-category">Hand-Poured Soy Candles</span>
+              <h3 class="story-chapter-title">Micro-Batch Light &amp; Golden Flame</h3>
+              <p class="story-chapter-lead">
+                Hand-poured with pure, biodegradable soy wax, lead-free cotton wicks, and an obsession with clean combustion.
+              </p>
+              <p class="story-body-text">
+                Unlike commercial candles laden with petroleum-derived paraffin and synthetic chemical hardeners, 
+                every candle we pour burns cooler, melts evenly to the container edge, and delivers a clean, soot-free flame. 
+                Whether you select our multi-wick luxury bowls, faceted diamond glow jars, or statuesque architectural pillars, 
+                each piece is cured for a minimum of seven days so the fragrance binds harmoniously with the botanical wax.
+              </p>
+              <ul class="story-feature-list">
+                <li>✦ <strong>100% Pure Botanical Soy:</strong> Clean, non-toxic burn safe for children and pets.</li>
+                <li>✦ <strong>Even Edge-to-Edge Melt Pool:</strong> Formulated to prevent frustrating tunneling.</li>
+                <li>✦ <strong>45 to 70 Hours of Serenity:</strong> Extended slow burn that outlasts petroleum wax.</li>
+              </ul>
+              <div class="story-chapter-cta">
+                <a href="index.html#new-arrivals" class="story-btn story-btn-gold">Explore Botanical Candles</a>
+                <span class="story-cta-hint">Over 30 therapeutic fragrance blends available</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- WORLD 2: HOME DECOR -->
+        <article class="story-chapter-card reverse" id="world-decor">
+          <div class="story-chapter-grid">
+            <div class="story-chapter-info">
+              <span class="story-chapter-num">02</span>
+              <span class="story-chapter-category">Artisanal Home Décor</span>
+              <h3 class="story-chapter-title">Sculptural Objects of Timeless Serenity</h3>
+              <p class="story-chapter-lead">
+                Pieces designed to elevate the aesthetic of your room long before the wick is ever struck.
+              </p>
+              <p class="story-body-text">
+                We believe candle vessels should never be discarded. Our home décor line explores sculptural geometry, 
+                tactile stoneware textures, ribbed architectural curves, and crystalline brilliance. 
+                From our signature <strong>Grand Boat Candle</strong> centerpieces that transform dining banquets and credenzas 
+                into majestic focal points, to ribbed pillars, lotus bowls, and crystal shells, each piece stands as an authentic 
+                work of decorative art that outlives its candle flame.
+              </p>
+              <ul class="story-feature-list">
+                <li>✦ <strong>Heirloom Reusable Vessels:</strong> Easily cleaned with warm soapy water for second lives.</li>
+                <li>✦ <strong>Hand-Cast Stoneware &amp; Faceted Glass:</strong> Heavy, tactile, luxury materiality.</li>
+                <li>✦ <strong>Statement Centerpieces:</strong> Curated for mantlepieces, coffee tables, and dining consoles.</li>
+              </ul>
+              <div class="story-chapter-cta">
+                <a href="category.html?cat=Home Decor" class="story-btn story-btn-gold">Explore Home Décor</a>
+                <span class="story-cta-hint">Grand boat candles, ribbed pillars &amp; crystal vessels</span>
+              </div>
+            </div>
+
+            <div class="story-chapter-visual">
+              <div class="story-visual-stack">
+                <img src="asset/Grand Boat Candle – Large.jpg" alt="Grand Boat Candle Large Centerpiece" class="stack-main" loading="lazy" />
+                <img src="asset/Ribbed Glow Pillar – White.jpg" alt="Ribbed Glow Pillar White" class="stack-sub" loading="lazy" />
+              </div>
+              <span class="story-visual-tag">CHAPTER 02 • SCULPTURAL HOME DÉCOR</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- WORLD 3: FRAGRANCES -->
+        <article class="story-chapter-card" id="world-fragrances">
+          <div class="story-chapter-grid">
+            <div class="story-chapter-visual">
+              <div class="story-visual-stack">
+                <img src="asset/Neroli Reed Diffuser.jpg" alt="Neroli Reed Diffuser in Amber Glass" class="stack-main" loading="lazy" />
+                <img src="asset/wax_tablet_velvet_oud.jpeg" alt="Botanical Wax Tablet Velvet Oud" class="stack-sub" loading="lazy" />
+              </div>
+              <span class="story-visual-tag">CHAPTER 03 • OLFACTIVE ARCHITECTURE</span>
+            </div>
+
+            <div class="story-chapter-info">
+              <span class="story-chapter-num">03</span>
+              <span class="story-chapter-category">Bespoke Fragrances &amp; Diffusers</span>
+              <h3 class="story-chapter-title">The Architecture of Scent</h3>
+              <p class="story-chapter-lead">
+                Fine perfumery developed with IFRA-certified master noses for a delicate, evocative throw.
+              </p>
+              <p class="story-body-text">
+                Scent is the most intimate evocative sense — capable of transporting you across decades in a single breath. 
+                Our fragrances follow the Swedish standard of <em>Lagom</em>: never an overpowering headache-inducing fog, 
+                nor an underwhelming whisper. Through multi-layered pyramids of sparkling top notes, blooming florals, 
+                and grounding smoky resins, our cold-diffusion reed diffusers and wax blends weave continuous aroma into your air.
+              </p>
+              <div class="story-scent-notes-grid">
+                <div class="note-pill">
+                  <strong>Top Notes:</strong> Neroli, Bergamot, Pink Peppercorn
+                </div>
+                <div class="note-pill">
+                  <strong>Heart Notes:</strong> Damask Rose, French Lavender, Raw Cacao
+                </div>
+                <div class="note-pill">
+                  <strong>Base Notes:</strong> Velvet Oud, Smoked Amber, Aged Sandalwood
+                </div>
+              </div>
+              <div class="story-chapter-cta">
+                <a href="category.html?cat=Diffusers & Aromas" class="story-btn story-btn-gold">Explore Fragrances &amp; Diffusers</a>
+                <span class="story-cta-hint">Continuous reed diffusion &amp; wardrobe botanicals</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- WORLD 4: ACCESSORIES -->
+        <article class="story-chapter-card reverse" id="world-accessories">
+          <div class="story-chapter-grid">
+            <div class="story-chapter-info">
+              <span class="story-chapter-num">04</span>
+              <span class="story-chapter-category">Mindful Accessories &amp; Rituals</span>
+              <h3 class="story-chapter-title">The Sacred Ceremony of Light</h3>
+              <p class="story-chapter-lead">
+                Solid brass wick trimmers, snuffer bells, and botanical wardrobe tablets that transform candle care into a ritual.
+              </p>
+              <p class="story-body-text">
+                Candle maintenance is not an afterthought; it is an intentional meditation. Trimming your wick to 
+                precisely 1/4 inch before each strike prevents soot, controls the flame height, and doubles the life of your candle. 
+                Our solid brass wick trimmers catch charred debris effortlessly, while our elegant bell snuffers extinguish the flame 
+                without blowing wax or releasing harsh smoke. Together with botanically pressed soy wardrobe tablets, 
+                our accessories elevate everyday domestic life into an art form.
+              </p>
+              <ul class="story-feature-list">
+                <li>✦ <strong>Solid Brass Craftsmanship:</strong> Weighted, durable, and finished in matte gold and vintage black.</li>
+                <li>✦ <strong>Smoke-Free Extinguishing:</strong> Bell snuffers preserve the fragrance pool from smoke contamination.</li>
+                <li>✦ <strong>Wardrobe Wax Tablets:</strong> Embedded with real dried botanicals for linen drawers and closets.</li>
+              </ul>
+              <div class="story-chapter-cta">
+                <a href="category.html?cat=Candle Accessories" class="story-btn story-btn-gold">Explore Care Accessories</a>
+                <span class="story-cta-hint">Wick trimmers, snuffers &amp; botanical tablets</span>
+              </div>
+            </div>
+
+            <div class="story-chapter-visual">
+              <div class="story-visual-stack">
+                <img src="asset/Accessories.jpg" alt="Luxury Candle Accessories Set" class="stack-main" loading="lazy" />
+                <img src="asset/snuffer.jpg" alt="Artisan Bell Candle Snuffer" class="stack-sub" loading="lazy" />
+              </div>
+              <span class="story-visual-tag">CHAPTER 04 • SACRED RITUALS</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: EDITORIAL MANIFESTO / CRAFTSMANSHIP COMMITMENTS -->
+    <section class="story-manifesto-section">
+      <div class="story-container">
+        <div class="story-manifesto-header">
+          <span class="story-section-pretitle">OUR PROMISE</span>
+          <h2 class="story-section-title">The Candlorre Atelier Standards</h2>
+          <p class="story-section-desc">
+            Five non-negotiable craftsmanship pillars behind every creation that leaves our studio.
+          </p>
+        </div>
+
+        <div class="story-manifesto-grid">
+          <div class="manifesto-card">
+            <div class="manifesto-icon">🌿</div>
+            <h3 class="manifesto-title">100% Botanical Soy</h3>
+            <p class="manifesto-text">
+              Renewable, pesticide-free plant soy wax. Zero petroleum paraffin, zero harsh chemical additives.
+            </p>
+          </div>
+
+          <div class="manifesto-card">
+            <div class="manifesto-icon">🕯️</div>
+            <h3 class="manifesto-title">Lead-Free Pure Cotton</h3>
+            <p class="manifesto-text">
+              Braided unbleached cotton and organic paper cores ensure clean, upright, soot-free combustion.
+            </p>
+          </div>
+
+          <div class="manifesto-card">
+            <div class="manifesto-icon">🌸</div>
+            <h3 class="manifesto-title">IFRA Master Fragrances</h3>
+            <p class="manifesto-text">
+              Therapeutic-grade perfume oils formulated strictly to International Fragrance Association guidelines.
+            </p>
+          </div>
+
+          <div class="manifesto-card">
+            <div class="manifesto-icon">👐</div>
+            <h3 class="manifesto-title">Hand-Poured in India</h3>
+            <p class="manifesto-text">
+              Poured in small micro-batches of thirty, hand-centered, and slow-cured for seven days for perfect fragrance bind.
+            </p>
+          </div>
+
+          <div class="manifesto-card">
+            <div class="manifesto-icon">♻️</div>
+            <h3 class="manifesto-title">Perpetual Second Lives</h3>
+            <p class="manifesto-text">
+              Stoneware, terracotta, and cut-glass vessels designed to be repurposed forever as planters or vanity decor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: "CURATED FROM OUR STORY" PRODUCT SHOWCASE -->
+    <section class="story-shop-section">
+      <div class="story-container">
+        <div class="story-shop-header">
+          <span class="story-section-pretitle">SHOP THE STORY</span>
+          <h2 class="story-section-title">Signature Pieces from the Atelier</h2>
+          <p class="story-section-desc">
+            Experience our four worlds firsthand with these handpicked bestsellers.
+          </p>
+        </div>
+
+        <div class="story-shop-grid">
+          <!-- Item 1: Candle -->
+          <article class="story-product-card">
+            <div class="story-product-image">
+              <span class="story-prod-badge">CANDLES</span>
+              <img src="asset/Triple Glow Bowl Candle.jpg" alt="Triple Glow Bowl Candle" loading="lazy" />
+              <a href="index.html#new-arrivals" class="story-prod-quicklink">View Candle</a>
+            </div>
+            <div class="story-product-info">
+              <span class="story-prod-category">Botanical Soy 3-Wick</span>
+              <h3 class="story-prod-title">Triple Glow Bowl Candle</h3>
+              <p class="story-prod-notes">Bourbon Vanilla • Smoked Amber • Wild Fig</p>
+              <div class="story-prod-price-row">
+                <span class="story-prod-price">₹1,899</span>
+                <span class="story-prod-orig">₹2,299</span>
+              </div>
+              <a href="index.html#new-arrivals" class="story-prod-btn">Explore Candle</a>
+            </div>
+          </article>
+
+          <!-- Item 2: Home Decor -->
+          <article class="story-product-card">
+            <div class="story-product-image">
+              <span class="story-prod-badge">HOME DÉCOR</span>
+              <img src="asset/Grand Boat Candle – Large.jpg" alt="Grand Boat Candle Large" loading="lazy" />
+              <a href="category.html?cat=Home Decor" class="story-prod-quicklink">View Piece</a>
+            </div>
+            <div class="story-product-info">
+              <span class="story-prod-category">Sculptural Stoneware</span>
+              <h3 class="story-prod-title">Grand Boat Candle — Large</h3>
+              <p class="story-prod-notes">Five Cotton Wicks • Reusable Statement Platter</p>
+              <div class="story-prod-price-row">
+                <span class="story-prod-price">₹3,299</span>
+                <span class="story-prod-orig">₹3,899</span>
+              </div>
+              <a href="category.html?cat=Home Decor" class="story-prod-btn">Explore Décor</a>
+            </div>
+          </article>
+
+          <!-- Item 3: Fragrance -->
+          <article class="story-product-card">
+            <div class="story-product-image">
+              <span class="story-prod-badge">FRAGRANCES</span>
+              <img src="asset/Neroli Reed Diffuser.jpg" alt="Neroli Reed Diffuser" loading="lazy" />
+              <a href="category.html?cat=Diffusers & Aromas" class="story-prod-quicklink">View Diffuser</a>
+            </div>
+            <div class="story-product-info">
+              <span class="story-prod-category">Cold Reed Diffusion</span>
+              <h3 class="story-prod-title">Neroli Reed Diffuser</h3>
+              <p class="story-prod-notes">Orange Blossom • Italian Bergamot • Petitgrain</p>
+              <div class="story-prod-price-row">
+                <span class="story-prod-price">₹1,299</span>
+                <span class="story-prod-orig">₹1,599</span>
+              </div>
+              <a href="category.html?cat=Diffusers & Aromas" class="story-prod-btn">Explore Diffusers</a>
+            </div>
+          </article>
+
+          <!-- Item 4: Accessories -->
+          <article class="story-product-card">
+            <div class="story-product-image">
+              <span class="story-prod-badge">ACCESSORIES</span>
+              <img src="asset/Accessories.jpg" alt="Candle Care Accessories Kit" loading="lazy" />
+              <a href="category.html?cat=Candle Accessories" class="story-prod-quicklink">View Kit</a>
+            </div>
+            <div class="story-product-info">
+              <span class="story-prod-category">Sacred Care Ritual</span>
+              <h3 class="story-prod-title">Brass Wick Trimmer &amp; Snuffer Set</h3>
+              <p class="story-prod-notes">Solid Matte Gold Brass • Velvet Storage Pouch</p>
+              <div class="story-prod-price-row">
+                <span class="story-prod-price">₹799</span>
+                <span class="story-prod-orig">₹999</span>
+              </div>
+              <a href="category.html?cat=Candle Accessories" class="story-prod-btn">Explore Accessories</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: EDITORIAL INVITATION FOOTER STRIP -->
+    <section class="story-invite-strip">
+      <div class="story-container">
+        <div class="story-invite-box">
+          <span class="story-badge">JOIN THE ATELIER</span>
+          <h2 class="story-invite-title">Bring Stillness to Your Home Today</h2>
+          <p class="story-invite-text">
+            Complimentary shipping on orders above ₹999 across India. Cash on Delivery available.
+          </p>
+          <div class="story-invite-actions">
+            <a href="full-catalog.html" class="story-btn story-btn-gold">Browse Full Catalog</a>
+            <a href="https://wa.me/919762831995?text=Hello%20The%20Candlorre,%20I'd%20love%20fragrance%20recommendations" 
+               target="_blank" rel="noopener" class="story-btn story-btn-outline">Concierge WhatsApp Assistance</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- LUXURY FOOTER -->
@@ -392,7 +770,7 @@
             <li><a href="full-catalog.html?category=Diffusers and Aromas">Reed Diffusers &amp; Oils</a></li>
             <li><a href="full-catalog.html?category=Metal Collection">Luxury Brass &amp; Metal</a></li>
             <li><a href="full-catalog.html?category=Wooden Collection">Wooden Wick Sanctuary</a></li>
-            <li><a href="full-catalog.html">Bespoke Gift Boxes</a></li>
+            <li><a href="category.html?cat=Candle%20Accessories">Candle Accessories &amp; Care</a></li>
             <li><a href="full-catalog.html">Complete Catalog </a></li>
           </ul>
         </div>
@@ -415,7 +793,7 @@
             <li><a href="tracking.html">Track Your Order</a></li>
             <li><a href="contact-us.html">Contact Us &amp; Help Desk</a></li>
             <li><a href="faq.html">Frequently Asked Questions</a></li>
-            <li><a href="about-us.html">About Our Atelier</a></li>
+            <li><a href="our-story.html">About Our Atelier</a></li>
             <li><a href="faq.html#candle-care">Candle Care &amp; Burn Guide</a></li>
             <li><a href="contact-us.html#gifting">Corporate &amp; Wedding Gifting</a></li>
           </ul>
@@ -495,9 +873,15 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Universal Scripts -->
   <script src="js/core/data.js"></script>
-  <script src="js/shopify.js"></script>
+  <script src="js/core/state.js"></script>
   <script src="js/core/nav.js"></script>
+  <script src="js/shopify.js"></script>
+  <script src="js/features/toast.js"></script>
+  <script src="js/features/cart.js"></script>
+  <script src="js/features/wishlist.js"></script>
+  <script src="js/features/events.js"></script>
 </body>
+
 </html>

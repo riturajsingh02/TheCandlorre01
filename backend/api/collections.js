@@ -22,8 +22,8 @@ router.get('/', async (req, res) => {
         { id: 'cat_3', title: 'Glass Jar Collection', handle: 'glass-jar-collection', available: true },
         { id: 'cat_4', title: 'Diffusers & Aromas', handle: 'diffusers-aromas', available: true },
         { id: 'cat_5', title: 'Candle Accessories', handle: 'candle-accessories', available: true },
-        { id: 'cat_6', title: 'Home Décor', handle: 'home-decor', status: 'Coming Soon', available: false },
-        { id: 'cat_7', title: 'Articles / Journal', handle: 'journal', status: 'Coming Soon', available: false }
+        { id: 'cat_6', title: 'Home Décor', handle: 'home-decor', available: true },
+        { id: 'cat_7', title: 'Our Story & Philosophy', handle: 'our-story', available: true }
       ];
     }
     return sendSuccess(res, { collections });

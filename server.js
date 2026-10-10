@@ -140,6 +140,14 @@ app.get('/', (req, res) => {
   res.sendFile(resolveFrontendFile('index.html'));
 });
 
+app.get(['/our-story', '/our-story.html'], (req, res) => {
+  res.sendFile(resolveFrontendFile('our-story.html'));
+});
+
+app.get(['/about-us', '/about-us.html', '/about'], (req, res) => {
+  res.sendFile(resolveFrontendFile('our-story.html'));
+});
+
 // Global Error Handler
 app.use(errorHandler);
 

@@ -263,7 +263,52 @@ document.addEventListener('DOMContentLoaded', () => {
   setupEventListeners();
   setupLuxuryShowcaseSections();
   initDynamicHeader();
+  initStoryScrollAnimation();
 });
+
+/* =========================================================
+   SCROLL-TRIGGERED ANIMATION FOR 'OUR STORY' SECTION
+   ========================================================= */
+function initStoryScrollAnimation() {
+  const storySection = document.getElementById('our-story');
+  if (!storySection) return;
+
+  // Arm the animation by adding scroll-animate-ready class
+  storySection.classList.add('scroll-animate-ready');
+
+  // If user prefers reduced motion or IntersectionObserver is not supported, reveal immediately
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    storySection.classList.add('is-animated');
+    return;
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    storySection.classList.add('is-animated');
+    return;
+  }
+
+  // Check if section is already in or past viewport on load
+  const rect = storySection.getBoundingClientRect();
+  if (rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85) {
+    storySection.classList.add('is-animated');
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        storySection.classList.add('is-animated');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '0px 0px -10% 0px',
+    threshold: 0.12
+  });
+
+  observer.observe(storySection);
+}
 
 /* =========================================================
    HEADER SEARCH BAR & MODAL LOGIC
