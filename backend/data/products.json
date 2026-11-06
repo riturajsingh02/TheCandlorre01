@@ -1330,5 +1330,135 @@
     "desc": "Set of three architectural matte black metal candle holders of varying heights for striking modern tablescapes.",
     "dimensions": "Tiered Set of 3 (Heights 20, 25, 30 cm)",
     "stock": 15
+  },
+  {
+    "id": 101,
+    "handle": "contemporary-slotted-metal-tealight-lanterns-set-of-2",
+    "title": "Contemporary Slotted Metal Tealight Lanterns - set of 2",
+    "category": "Home Decor",
+    "price": 1199,
+    "origPrice": 1299,
+    "burn": "Lifetime Lantern Set",
+    "badge": "NEW ARRIVAL",
+    "isComingSoon": false,
+    "notes": {
+      "top": "Brushed Metallic Finish",
+      "heart": "Slotted Geometric Light Patterns",
+      "base": "Heavy Iron Construction"
+    },
+    "image": "asset/Lanterns.jpeg",
+    "images": [
+      "asset/Lanterns.jpeg",
+      "asset/Lanterns2.jpeg",
+      "asset/Lanterns3.jpeg",
+      "asset/Lanterns4.jpeg"
+    ],
+    "desc": "Contemporary slotted metal tealight lanterns in a set of 2, casting intricate geometric light patterns across living spaces.",
+    "dimensions": "Set of 2 Lanterns (18 × 18 × 25 cm)",
+    "stock": 20
+  },
+  {
+    "id": 102,
+    "handle": "eclipse-chrome-dipped-glass-candle",
+    "title": "Eclipse chrome dipped glass candle",
+    "category": "Premium Luxury Candles",
+    "price": 699,
+    "origPrice": 849,
+    "burn": "40-50 Hours",
+    "badge": "BESTSELLER",
+    "isComingSoon": false,
+    "notes": {
+      "top": "Silver Sage & Crisp Bergamot",
+      "heart": "White Jasmine & Cashmere",
+      "base": "White Musk & Cedarwood"
+    },
+    "image": "asset/Eclipse chrome.jpeg",
+    "images": [
+      "asset/Eclipse chrome.jpeg",
+      "asset/Eclipse chrome2.jpeg",
+      "asset/Eclipse chrome3.jpeg",
+      "asset/Eclipse chrome4.jpeg"
+    ],
+    "desc": "Sleek chrome-dipped glass jar candle combining modern metallic mirror finish with premium botanical soy wax and calming aromatherapy.",
+    "dimensions": "8.5 × 8.5 × 10 cm (280g)",
+    "stock": 25
+  },
+  {
+    "id": 103,
+    "handle": "brown-glass-golden-metal-candle-tea-light-holder-set-of-2",
+    "title": "Brown glass golden metal Candle/tea light holder - set of 2",
+    "category": "Home Decor",
+    "price": 999,
+    "origPrice": 1199,
+    "burn": "Lifetime Holder Set",
+    "badge": "NEW ARRIVAL",
+    "isComingSoon": false,
+    "notes": {
+      "top": "Amber Glass & Brushed Gold",
+      "heart": "Warm Hearth Glow",
+      "base": "Sturdy Metal Framework"
+    },
+    "image": "asset/Brown glass.jpeg",
+    "images": [
+      "asset/Brown glass.jpeg",
+      "asset/Brown glass2.jpeg",
+      "asset/Brown glass3.jpeg",
+      "asset/Brown glass4.jpeg"
+    ],
+    "desc": "Luxurious brown glass and golden metal candle/tealight holder set of 2, radiating warm ambient light and elegant vintage charm.",
+    "dimensions": "Set of 2 Holders (10 × 10 × 12 cm)",
+    "stock": 20
+  },
+  {
+    "id": 104,
+    "handle": "harvest-infusion-fruit-basket-jar-candle-3-wicks",
+    "title": "Harvest infusion- fruit basket jar candle - 3 wicks",
+    "category": "Premium Luxury Candles",
+    "price": 1249,
+    "origPrice": 1399,
+    "burn": "55-70 Hours",
+    "badge": "BESTSELLER",
+    "isComingSoon": false,
+    "notes": {
+      "top": "Ripe Orchard Apple & Pear",
+      "heart": "Spiced Clove, Fig & Peach",
+      "base": "Warm Vanilla & Sweet Amber"
+    },
+    "image": "asset/Harvest infusion.jpeg",
+    "images": [
+      "asset/Harvest infusion.jpeg",
+      "asset/Harvest infusion2.jpeg",
+      "asset/Harvest infusion3.jpeg",
+      "asset/Harvest infusion4.jpeg"
+    ],
+    "desc": "Harvest Infusion fruit basket 3-wick jar candle, hand-poured with botanical soy wax and a rich, mouthwatering fusion of orchard fruits and warm spices.",
+    "dimensions": "12 × 12 × 11 cm (500g Wax · 3 Wicks)",
+    "stock": 18
+  },
+  {
+    "id": 105,
+    "handle": "midnight-black-taper-candles-set-of-4",
+    "title": "Midnight black Taper candles- set of 4",
+    "category": "Premium Luxury Candles",
+    "price": 649,
+    "origPrice": 799,
+    "burn": "8-10 Hours each",
+    "badge": "NEW ARRIVAL",
+    "isComingSoon": false,
+    "notes": {
+      "top": "Smoky Tobacco & Black Pepper",
+      "heart": "Dark Cocoa & Leather",
+      "base": "Rich Amber & Cedar"
+    },
+    "image": "asset/Midnight black Taper.jpeg",
+    "images": [
+      "asset/Midnight black Taper.jpeg",
+      "asset/Midnight black Taper2.jpeg",
+      "asset/Midnight black Taper3.jpeg",
+      "asset/Midnight black Taper4.jpeg"
+    ],
+    "desc": "Set of 4 elegant midnight black hand-dipped taper candles, smokeless and dripless, designed for sophisticated candle holders and dramatic dinner tablescapes.",
+    "dimensions": "2.2 cm ⌀ × 25 cm Height (Set of 4)",
+    "stock": 30
   }
 ]
